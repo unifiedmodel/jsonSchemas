@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://localhost/jsonschemas/DataTypes.schema.json",
+  "$id": "https://unifiedmodel.github.io/jsonSchemas/DataTypes.schema.json",
   "type": "object",
   "title": "List of custom definitions (DataTypes)",
   "properties": {
