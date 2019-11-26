@@ -1,0 +1,134 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://localhost/jsonschemas/CompanyData.schema.json",
+    "type": "object",
+    "title": "The Company Data Domain Schema",
+    "description": "Contains the public registered information about an entity",
+    "additionalProperties": false,
+    "properties": {
+        "EntityId": {
+            "type": "integer",
+            "title": "Internal Id for entities",
+            "description": "Contains Axesor360 unique ID for the entity",
+            "examples": [
+                2684748
+            ]
+        },
+        "VendorEntityId": {
+            "type": "string",
+            "title": "Vendor Id for Entities",
+            "description": "External Id (from vendors) for the entity",
+            "examples": [
+                "987857"
+            ]
+        },
+        "EntityName": {
+            "type": "string",
+            "title": "Entity name",
+            "description": "Full name or business name of the entity",
+            "examples": [
+                "AXESOR CONOCER PARA DECIDIR SA"
+            ]
+        },
+        "LastUpdate": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Info about last update",
+            "description": "Date of last update of the date contained",
+            "examples": [
+                "2019-10-29T18:25:43.511Z"
+            ]
+        },
+        "PublicationsList": {
+            "type": "array",
+            "title": "List of Publications",
+            "description": "List of publications or document filings concerning events related to the entity",
+            "additionalProperties": false,
+            "properties": {
+                "VendorReferenceId": {
+                    "type": "integer",
+                    "title": "Vendor Reference Id",
+                    "description": "Internal vendor code thar references the specific publication"
+                },
+                "Type": {
+                    "type": "string",
+                    "title": "Publication related type",
+                    "description": "Act or event type that describes the subject of the event published",
+                    "examples": [
+                        "Constitución",
+                        "Ampliación de capital"
+                    ]
+                },
+                "TypeGroup": {
+                    "type": "string",
+                    "title": "Publication related group type",
+                    "description": "Parent group for act or event types that describes the subject of the event published",
+                    "examples": [
+                        "Actos de Capital",
+                        "Procesos de Fusión o Escisión"
+                    ]
+                },
+                "VendorTypeId": {
+                    "type": "integer",
+                    "title": "Vendor Type Id",
+                    "description": "Internal vendor code used to refer its specific act or event type"
+                },
+                "VendorTypeGroupId": {
+                    "type": "integer",
+                    "title": "Vendor Type Group Id",
+                    "description": "Internal vendor code used to refer its specific act or event parent group type"
+                },
+                "PublicationDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "title": "Date of Publication",
+                    "description": "Date of publication of the event in the original source",
+                    "examples": [
+                        "1996-05-20T00:00:00.000Z"
+                    ]
+                },
+                "FillingDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "title": "Date of Filling",
+                    "description": "Date of filling of the event in the register or similiar",
+                    "examples": [
+                        "1996-04-24T00:00:00.000Z"
+                    ]
+                },
+                "Source": {
+                    "type": "string",
+                    "title": "Publication Source",
+                    "description": "Source or media whereas the related event was published",
+                    "examples": [
+                        "Boletín Oficial del Registro Mercantil"
+                    ]
+                },
+                "FullText": {
+                    "type": "string",
+                    "title": "Full detail of the event",
+                    "description": "Full text published on the original source",
+                    "examples": [
+                        "Constitución. Comienzo de operaciones: 08-03-1996. Duración: INDEF. Objeto social: CONSULTORIA, SOPORTE, DESARROLLO, EXPLOTACION, DISTRIBUCION Y VENTA DE PRODUCTOS..."
+                    ]
+                },
+                "PublicationReference": {
+                    "type": "string",
+                    "title": "Publication Reference code",
+                    "description": "External code that unequivocal appoints to the event in the original source",
+                    "examples": ["158201"]
+                },
+                "PublicationName": {
+                    "type": "string",
+                    "title": "Original name",
+                    "description": "Name of the entity in the moment of the event (could be different from the actual one)",
+                    "examples": ["Infotel Información y Telecomunicaciones SA"]
+                },
+                "FiledIn":{
+                    "type":"string",
+                    "title": "Place of event"
+                }               
+            }
+        }
+    }
+}

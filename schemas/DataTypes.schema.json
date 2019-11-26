@@ -1,0 +1,371 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://localhost/jsonschemas/DataTypes.schema.json",
+  "type": "object",
+  "title": "List of custom definitions (DataTypes)",
+  "properties": {
+    "IdentificationNumber": {
+      "type": "object",
+      "title": "The Identification Number data type",
+      "properties": {
+        "Type": {
+          "type": "string",
+          "title": "Identification type",
+          "description": "Fiscal or register id of an entity, depends on the type or the country (VAT or others)",
+          "examples": [
+            "NIF",
+            "Easy Number"
+          ]
+        },
+        "Number": {
+          "type": "string",
+          "title": "Identification number or code",
+          "description": "The specific number or code that represents an identifier of the company",
+          "examples": [
+            "A18413302",
+            "00000462465921"
+          ]
+        },
+        "CheckCode": {
+          "type": "string",
+          "title": "Check code",
+          "description": "Additional code for identification number verification, such as Digito Verificador in Colombia"
+        }
+      }
+    },
+    "Address": {
+      "type": "object",
+      "title": "The Address data type",
+      "properties": {
+        "FullAddress": {
+          "type": "string",
+          "title": "Full Address",
+          "description": "Full address in an unique field",
+          "examples": [
+            "C/ GRAHAM BELL, Nº 1, POL. IND. SAN ISIDRO, EDIF. AXESOR"
+          ]
+        },
+        "ZIPCode": {
+          "type": "string",
+          "title": "ZIP code of the address",
+          "description": "ZIP code of the addres, using local classification",
+          "examples": [
+            "18100"
+          ]
+        },
+        "GeoLevel1": {
+          "type": "string",
+          "title": "Level 1 of administrative division",
+          "description": "Depending on the country, the smallest unit region for the address",
+          "examples": [
+            "Armilla"
+          ]
+        },
+        "GeoLevel2": {
+          "type": "string",
+          "title": "Level 2 of administrative division",
+          "description": "Depending on the country, the second unit region for the address",
+          "examples": [
+            "Granada"
+          ]
+        },
+        "GeoLevel3": {
+          "type": "string",
+          "title": "Level 3 of administrative division",
+          "description": "Depending on the country, the third unit region for the address",
+          "examples": [
+            "Andalucía"
+          ]
+        },
+        "GeoLevel4": {
+          "type": "string",
+          "title": "Level 2 of administrative division",
+          "description": "Depending on the country, the largest unit region for the address"
+        },
+        "CountryISO": {
+          "type": "string",
+          "title": "Country (ISO)",
+          "description": "The three-digit ISO code for the country of the addresss",
+          "examples": [
+            "ESP"
+          ]
+        },
+        "Status": {
+          "type": "string",
+          "title": "Official status of the address",
+          "description": "Local details concerning the current status of the address",
+          "examples": [
+            "Habido"
+          ]
+        },
+        "OtherDetail": {
+          "type": "string",
+          "title": "Additional info for the address",
+          "description": "Any other detail concerning the address"
+        }
+      }
+    },
+    "Activity": {
+      "type": "object",
+      "title": "The Activity data type",
+      "properties": {
+        "Type": {
+          "type": "string",
+          "title": "Type of activity",
+          "description": "Activity specific type or codification",
+          "examples": [
+            "CNAE"
+          ]
+        },
+        "Classification": {
+          "type": "string",
+          "title": "Activity classification system",
+          "description": "Classification system used for the current activity (NACE or others) ",
+          "examples": [
+            "NACE"
+          ]
+        },
+        "Version": {
+          "type": "string",
+          "title": "Activity classification system version",
+          "description": "Classification system version used for the current activity",
+          "examples": [
+            "4.0"
+          ]
+        },
+        "Code": {
+          "type": "string",
+          "title": "Activity code",
+          "description": "Activity code according to the classification system",
+          "examples": [
+            "6311"
+          ]
+        },
+        "Description": {
+          "type": "string",
+          "title": "Activity description",
+          "description": "Detailed text describing the activity of the entity",
+          "examples": [
+            "Proceso de datos, hosting y actividades relacionadas"
+          ]
+        },
+        "CoreBusiness": {
+          "type": "boolean",
+          "title": "Main Activity indicador",
+          "description": "Indicates if this activity is the main activity of the company or not",
+          "examples": [
+            true
+          ]
+        }
+      }
+    },
+    "Sales": {
+      "type": "object",
+      "title": "The Sales data type",
+      "description": "Contains specific information about the sales figures of the entity",
+      "properties": {
+        "CurrencyISO": {
+          "type": "string",
+          "title": "Sales currency",
+          "description": "ISO code describing the currency used for the sales data",
+          "examples": [
+            "EUR"
+          ]
+        },
+        "TotalSales": {
+          "type": "number",
+          "title": "Sales amount",
+          "description": "Total sales amount for the selected period or minimum value in case of range",
+          "examples": [
+            15963705.36
+          ]
+        },
+        "RangeMaxSales": {
+          "type": "number",
+          "title": "Range: Maximum Sales",
+          "description": "Maximum value of the sales in case of range",
+          "examples": [
+            500000000.00
+          ]
+        },
+        "Estimated": {
+          "type": "boolean",
+          "title": "Estimated Sales",
+          "description": "True if the sales amount is estimated (not the actual amount)",
+          "examples": [
+            false
+          ]
+        },
+        "SalesBreakdown": {
+          "type": "array",
+          "title": "Sales breakdown",
+          "description": "Any sales breakdown related to the sales parent amount or range",
+          "properties": {
+            "BreakdownType": {
+              "type": "string",
+              "title": "Breakdown type",
+              "description": "Describes and sorts specific breakdowns of the sales amount or range ",
+              "examples": [
+                "Ventas por países",
+                "Ventas por actividad"
+              ]
+            },
+            "BreakdownDetail": {
+              "type": "array",
+              "title": "Sales breakdown specific data",
+              "properties": {
+                "Description": {
+                  "type": "string",
+                  "title": "Breakdown value description",
+                  "description": "Text with the detail of the child value",
+                  "examples": [
+                    "Ventas en España",
+                    "Ventas al sector retail"
+                  ]
+                },
+                "CurrencyISO": {
+                  "type": "string",
+                  "title": "Sales currency",
+                  "description": "ISO code describing the currency used for the child data",
+                  "examples": [
+                    "EUR"
+                  ]
+                },
+                "TotalSales": {
+                  "type": "number",
+                  "title": "Sales amount",
+                  "description": "Child sales amount for the selected period or minimum value in case of range",
+                  "examples": [
+                    30054.22
+                  ]
+                },
+                "RangeMax": {
+                  "type": "number",
+                  "title": "Range: Maximum Sales",
+                  "description": "Maximum value of the child value in case of range",
+                  "examples": [
+                    5000000.35
+                  ]
+                },
+                "Percentage": {
+                  "type": "number",
+                  "title": "Percentage of sales",
+                  "description": "Shows the child value in percentage",
+                  "examples": [
+                    50.0
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Employees": {
+      "type": "object",
+      "title": "The Employees data type",
+      "description": "Contains specific information about the number od employees of the entity",
+      "properties": {
+        "EmployeesNumber": {
+          "type": "number",
+          "title": "Number of employees",
+          "description": "Number of employees for the selected period or minimum value in case of range",
+          "examples": [
+            129.0
+          ]
+        },
+        "RangeMaxEmployees": {
+          "type": "number",
+          "title": "Range: Maximum Employees",
+          "description": "Maximum value of the number of employees in case of range",
+          "examples": [
+            150
+          ]
+        },
+        "Estimated": {
+          "type": "boolean",
+          "title": "Estimated Employees",
+          "description": "True if the number of employees is estimated (not the actual)",
+          "examples": [
+            false
+          ]
+        },
+        "MeasureType": {
+          "type": "string",
+          "title": "Employees' type of measure",
+          "description": "Shows if the Employees number is the total number or the average number",
+          "enum": [
+            "total",
+            "avg"
+          ],
+          "default": "total"
+        },
+        "EmployeesBreakdown": {
+          "type": "array",
+          "title": "Employees breakdown",
+          "description": "Any employees breakdown related to the employees parent value or range",
+          "properties": {
+            "BreakdownType": {
+              "type": "string",
+              "title": "Breakdown type",
+              "description": "Describes and sorts specific breakdowns of the employees number or range",
+              "examples": [
+                "Empleados fijos vs temporales",
+                "Empleados hombres vs empleados mujeres"
+              ]
+            },
+            "BreakdownDetail": {
+              "type": "array",
+              "title": "Employees breakdown specific data",
+              "properties": {
+                "Description": {
+                  "type": "string",
+                  "title": "Breakdown value description",
+                  "description": "Text with the detail of the child value",
+                  "examples": [
+                    "Fijos",
+                    "Mujeres"
+                  ]
+                },
+                "MeasureType": {
+                  "type": "string",
+                  "title": "Employees' type of measure",
+                  "description": "Shows if the child value is the total number or the average number",
+                  "enum": [
+                    "total",
+                    "avg"
+                  ],
+                  "default": "total"
+                },
+                "EmployeesNumber": {
+                  "type": "number",
+                  "title": "Employees number",
+                  "description": "Child sales amount for the selected period or minimum value in case of range",
+                  "examples": [
+                    84.0
+                  ]
+                },
+                "RangeMax": {
+                  "type": "number",
+                  "title": "Range: Maximum employees",
+                  "description": "Maximum value of the child value in case of range",
+                  "examples": [
+                    150.0
+                  ]
+                },
+                "Percentage": {
+                  "type": "number",
+                  "title": "Percentage of employees",
+                  "description": "Shows the child value in percentage",
+                  "examples": [
+                    74.5
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

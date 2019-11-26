@@ -1,0 +1,106 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://localhost/jsonschemas/CompanyDataSummary.schema.json",
+    "type": "object",
+    "title": "The Company Data Summary Domain Schema",
+    "description": "Contains a summary of public registered information about an entity",
+    "additionalProperties": false,
+    "properties": {
+        "EntityId": {
+            "type": "integer",
+            "title": "Internal Id for entities",
+            "description": "Contains Axesor360 unique ID for the entity",
+            "examples": [
+                2684748
+            ]
+        },
+        "VendorEntityId": {
+            "type": "string",
+            "title": "Vendor Id for Entities",
+            "description": "External Id (from vendors) for the entity",
+            "examples": [
+                "987857"
+            ]
+        },
+        "EntityName": {
+            "type": "string",
+            "title": "Entity name",
+            "description": "Full name or business name of the entity",
+            "examples": [
+                "AXESOR CONOCER PARA DECIDIR SA"
+            ]
+        },
+        "LastUpdate": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Info about last update",
+            "description": "Date of last update of the date contained",
+            "examples": [
+                "2019-11-25T08:25:43.511Z"
+            ]
+        },
+        "AnnualPublicationsList": {
+            "type": "array",
+            "title": "List of Publications sorted by year",
+            "description": "List of years with publications or document filings concerning events related to the entity, gro",
+            "additionalProperties": false,
+            "properties": {
+                "Year": {
+                    "type": "integer",
+                    "title": "Publication year",
+                    "description": "Year of the group of publications"
+                },
+                "TypeGroupsList": {
+                    "type": "array",
+                    "title": "List of types or groups",
+                    "description": "List of publications sorted by type or group",
+                    "properties": {
+                        "Type": {
+                            "type": "string",
+                            "title": "Publication related type",
+                            "description": "Act or event type that describes the subject of the event published",
+                            "examples": [
+                                "Constitución",
+                                "Ampliación de capital"
+                            ]
+                        },
+                        "TypeGroup": {
+                            "type": "string",
+                            "title": "Publication related group type",
+                            "description": "Parent group for act or event types that describes the subject of the event published",
+                            "examples": [
+                                "Actos de Capital",
+                                "Procesos de Fusión o Escisión"
+                            ]
+                        },
+                        "VendorTypeId": {
+                            "type": "integer",
+                            "title": "Vendor Type Id",
+                            "description": "Internal vendor code used to refer its specific act or event type"
+                        },
+                        "VendorTypeGroupId": {
+                            "type": "integer",
+                            "title": "Vendor Type Group Id",
+                            "description": "Internal vendor code used to refer its specific act or event parent group type"
+                        },
+                        "Priority": {
+                            "type": "integer",
+                            "title": "Type priority",
+                            "description": "Marks the priority of the type amongst the others. The higher the value, the higher the prioriry"
+                        },
+                        "Detail": {
+                            "type": "string",
+                            "title": "Type or group detail",
+                            "description": "Type or group detail: number of events, deposit year, etc.",
+                            "examples": [
+                                "2",
+                                "ejer. 2000, 2001",
+                                "ejer 2017 consolidado"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
