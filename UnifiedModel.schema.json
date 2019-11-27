@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://unifiedmodel.github.io/jsonSchemas/UnifiedModel.schema.json",
     "type": "object",
-    "title": "The Axesor Unified Model Schema",
+    "title": "The Unified Model Schema",
     "required": [
         "BasicProfile"
     ],
