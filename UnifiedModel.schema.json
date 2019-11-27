@@ -12,6 +12,9 @@
         },
         "CompanyDataSummary": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyDataSummary.schema.json"
+        },
+        "CompanyData": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyDataSummary.schema.json"
         }
     }
 }
