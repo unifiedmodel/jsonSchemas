@@ -14,7 +14,7 @@
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyDataSummary.schema.json"
         },
         "CompanyData": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyDataSummary.schema.json"
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyData.schema.json"
         }
     }
 }
