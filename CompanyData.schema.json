@@ -115,7 +115,7 @@
                     "title": "Publication URL",
                     "description": "Link (URI) to the original publication (pdf, image...)"
                 },
-                "DepositEnrollmentYear":{
+                "DepositEnrollmentYear": {
                     "type": "integer",
                     "title": "Year of deposit or enrollment",
                     "description": "Year of account deposit (Spain, Portugal...) or enrollment (Colombia)"
@@ -155,12 +155,110 @@
                             "description": "Internal vendor code used to refer its specific act or event parent group type"
                         },
                         "OtherData": {
-                            
+                            "type": "array",
+                            "title": "Other data",
+                            "description": "Custom data related to the event, depending on the type",
+                            "properties": {
+                                "Datatype": {
+                                    "type": "string",
+                                    "title": "Other data's datatype",
+                                    "description": "Schema datatype for the event data used",
+                                    "examples": [
+                                        "integer",
+                                        "string",
+                                        "address"
+                                    ]
+                                },
+                                "Tag": {
+                                    "type": "string",
+                                    "title": "Other data's tag",
+                                    "description": "Tag that describes the event data used",
+                                    "examples": [
+                                        "Forma Social"
+                                    ]
+                                },
+                                "Value": {
+                                    "type": "string",
+                                    "title": "Other data's value",
+                                    "description": "Value for the event data used",
+                                    "examples": [
+                                        "Sociedad Anónima"
+                                    ]
+                                }
+                            }
+                        },
+                        "RelatedEntities": {
+                            "type": "array",
+                            "title": "Related entities",
+                            "description": "Related entities taking part in the event",
+                            "properties": {
+                                "VendorId": {
+                                    "type": "string",
+                                    "title": "Vendor Id of the related entity",
+                                    "description": "External Id (from vendors) of the related entity",
+                                    "examples": [
+                                        "9187801"
+                                    ]
+                                },
+                                "AlternativeVendorId": {
+                                    "type": "string",
+                                    "title": "Alternative Vendor Id of the related entity",
+                                    "description": "Second External Id (from vendors) of the related entity, sometimes used for canonical name identifiers"
+                                },
+                                "Name": {
+                                    "type": "string",
+                                    "title": "Related Entity name",
+                                    "description": "Full name or business name of the related entity",
+                                    "examples": [
+                                        "AXERMARIS SPAIN HOLDING SL"
+                                    ]
+                                },
+                                "AlternativeName": {
+                                    "type": "string",
+                                    "title": "Alternative name of the related entity",
+                                    "description": "Alternative version name (from vendors) of the related entity, sometimes used for canonical names"
+                                },
+                                "IdentificationNumber": {
+                                    "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                    "additionalProperties": false
+                                },
+                                "Type": {
+                                    "type": "string",
+                                    "title": "Relationship type",
+                                    "description": "Type that describes the relationship between the related entity and its parent",
+                                    "examples": [
+                                        "Sociedad beneficiaria"
+                                    ]
+                                },
+                                "TypeGroup": {
+                                    "type": "string",
+                                    "title": "Relationship group type",
+                                    "description": "Classification that sorts the relationship between the related entity and its parent",
+                                    "examples": [
+                                        "Escisión"
+                                    ]
+                                },
+                                "Detail": {
+                                    "type": "string",
+                                    "title": "Detailed text",
+                                    "description": "Text with additional information about the relationship between both entities"
+                                },
+                                "StartingDate": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "title": "Relationship' starting date",
+                                    "description": "Starting date in case of, for example, a time-limited designation"
+                                },
+                                "FinishingDate": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "title": "Relationship' finishing date",
+                                    "description": "Finishing date in case of, for example, a time-limited designation"
+                                }
+                            }
                         }
                     }
-
                 }
-                
             }
         }
     }
