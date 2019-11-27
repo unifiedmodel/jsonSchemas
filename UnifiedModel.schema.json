@@ -8,10 +8,10 @@
     ],
     "properties": {
         "BasicProfile": {
-            "$ref": "http://localhost/jsonschemas/BasicProfile.schema.json"
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/BasicProfile.schema.json"
         },
         "CompanyDataSummary": {
-            "$ref": "http://localhost/jsonschemas/CompanyDataSummary.schema.json"
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyDataSummary.schema.json"
         }
     }
 }
