@@ -54,7 +54,8 @@
                     "type": "array",
                     "title": "List of types or groups",
                     "description": "List of publications sorted by type or group",
-                    "properties": {
+                    "additionalItems": false,
+                    "items": {
                         "Type": {
                             "type": "string",
                             "title": "Publication related type",
