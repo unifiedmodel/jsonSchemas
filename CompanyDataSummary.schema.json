@@ -42,9 +42,9 @@
         "AnnualPublicationsList": {
             "type": "array",
             "title": "List of Publications sorted by year",
-            "description": "List of years with publications or document filings concerning events related to the entity, gro",
-            "additionalProperties": false,
-            "properties": {
+            "description": "List of years with publications or document filings concerning events related to the entity",
+            "additionalItems": false,
+            "items": {
                 "Year": {
                     "type": "integer",
                     "title": "Publication year",
