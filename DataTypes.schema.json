@@ -36,6 +36,7 @@
     "Address": {
       "type": "object",
       "title": "The Address data type",
+      "description": "Data typed used for any address.The GeoLevel1 must be used for the most generic location, using the rest in order for more specific locations",
       "properties": {
         "FullAddress": {
           "type": "string",
@@ -56,9 +57,9 @@
         "GeoLevel1": {
           "type": "string",
           "title": "Level 1 of administrative division",
-          "description": "Depending on the country, the smallest unit region for the address",
+          "description": "Depending on the country, the largest unit region for the address",
           "examples": [
-            "Armilla"
+            "Andalucía"
           ]
         },
         "GeoLevel2": {
@@ -74,13 +75,13 @@
           "title": "Level 3 of administrative division",
           "description": "Depending on the country, the third unit region for the address",
           "examples": [
-            "Andalucía"
+            "Armilla"
           ]
         },
         "GeoLevel4": {
           "type": "string",
-          "title": "Level 2 of administrative division",
-          "description": "Depending on the country, the largest unit region for the address"
+          "title": "Level 4 of administrative division",
+          "description": "Depending on the country, the smallest unit region for the address"
         },
         "CountryISO": {
           "type": "string",
