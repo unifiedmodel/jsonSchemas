@@ -179,6 +179,30 @@
     "Employees": {
       "$ref": "DataTypes.schema.json#/properties/Employees",
       "additionalProperties": false
+    },
+    "SharedCapital": {
+      "type": "object",
+      "title": "Shared capital",
+      "description": "Dataset with contact information of the entity",
+      "additionalProperties": false,
+      "properties": {
+        "Value": {
+          "type": "number",
+          "title": "Shared Capital value",
+          "description": "Curren shared capital of the entity",
+          "examples": [
+            1983691.00
+          ]
+        },
+        "CurrencyISO": {
+          "type": "string",
+          "title": "Capital value currency",
+          "description": "ISO code describing the currency used for the capital value",
+          "examples": [
+            "EUR"
+          ]
+        }
+      }
     }
   }
 }
