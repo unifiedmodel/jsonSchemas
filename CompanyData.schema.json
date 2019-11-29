@@ -71,6 +71,14 @@
                             "1996-04-24T00:00:00.000Z"
                         ]
                     },
+                    "Year": {
+                        "type": "integer",
+                        "title": "Year of filing date",
+                        "description": "Year of filing of the event in the register or similiar",
+                        "examples": [
+                            1996
+                        ]
+                    },
                     "FiledIn": {
                         "type": "string",
                         "title": "Filed in",
@@ -128,6 +136,50 @@
                         "title": "Year of deposit or enrollment",
                         "description": "Year of account deposit (Spain, Portugal...) or enrollment (Colombia)"
                     },
+                    "ReferenceDetails": {
+                        "type": "object",
+                        "title": "Reference details",
+                        "description": "Contains specific information that references the original publication. The RefLevel1 must be used for the most generic value, using the rest for subsequent details",
+                        "additionalProperties": false,
+                        "properties": {
+                            "Date": {
+                                "type": "string",
+                                "format": "date-time",
+                                "title": "Reference date",
+                                "description": "Reference date, usually the same that the filing date"
+                            },
+                            "RefLevel1": {
+                                "type": "string",
+                                "title": "Level 1 Reference detail",
+                                "description": "Generic field used for a level one detail of a reference (e.g. Borme's Volume)"
+                            },
+                            "RefLevel2": {
+                                "type": "string",
+                                "title": "Level 2 Reference detail",
+                                "description": "Generic field used for a level two detail of a reference (e.g. Borme's Book)"
+                            },
+                            "RefLevel3": {
+                                "type": "string",
+                                "title": "Level 3 Reference detail",
+                                "description": "Generic field used for a level three detail of a reference (e.g. Borme's Folio)"
+                            },
+                            "RefLevel4": {
+                                "type": "string",
+                                "title": "Level 4 Reference detail",
+                                "description": "Generic field used for a level four detail of a reference (e.g. Borme's Section)"
+                            },
+                            "RefLevel5": {
+                                "type": "string",
+                                "title": "Level 5 Reference detail",
+                                "description": "Generic field used for a level five detail of a reference (e.g. Borme's Sheet)"
+                            },
+                            "RefLevel6": {
+                                "type": "string",
+                                "title": "Level 6 Reference detail",
+                                "description": "Generic field used for a level six detail of a reference (e.g. Borme's Inscription)"
+                            }
+                        }
+                    },
                     "EventsList": {
                         "type": "array",
                         "title": "List of events",
@@ -177,50 +229,6 @@
                                     "examples": [
                                         "Constitución: Inscripción de la creación formal de la Sociedad para dar comienzo a sus operaciones, adquiriendo, a su vez, personalidad jurídica"
                                     ]
-                                },
-                                "ReferenceDetails": {
-                                    "type": "object",
-                                    "title": "Reference details",
-                                    "description": "Contains specific information that references the original publication. The RefLevel1 must be used for the most generic value, using the rest for subsequent details",
-                                    "additionalProperties": false,
-                                    "properties": {
-                                        "Date": {
-                                            "type": "string",
-                                            "format": "date-time",
-                                            "title": "Reference date",
-                                            "description": "Reference date, usually the same that the filing date"
-                                        },
-                                        "RefLevel1": {
-                                            "type": "string",
-                                            "title": "Level 1 Reference detail",
-                                            "description": "Generic field used for a level one detail of a reference (e.g. Borme's Volume)"
-                                        },
-                                        "RefLevel2": {
-                                            "type": "string",
-                                            "title": "Level 2 Reference detail",
-                                            "description": "Generic field used for a level two detail of a reference (e.g. Borme's Book)"
-                                        },
-                                        "RefLevel3": {
-                                            "type": "string",
-                                            "title": "Level 3 Reference detail",
-                                            "description": "Generic field used for a level three detail of a reference (e.g. Borme's Folio)"
-                                        },
-                                        "RefLevel4": {
-                                            "type": "string",
-                                            "title": "Level 4 Reference detail",
-                                            "description": "Generic field used for a level four detail of a reference (e.g. Borme's Section)"
-                                        },
-                                        "RefLevel5": {
-                                            "type": "string",
-                                            "title": "Level 5 Reference detail",
-                                            "description": "Generic field used for a level five detail of a reference (e.g. Borme's Sheet)"
-                                        },
-                                        "RefLevel6": {
-                                            "type": "string",
-                                            "title": "Level 6 Reference detail",
-                                            "description": "Generic field used for a level six detail of a reference (e.g. Borme's Inscription)"
-                                        }
-                                    }
                                 },
                                 "OtherData": {
                                     "type": "array",
