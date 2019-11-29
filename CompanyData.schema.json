@@ -43,217 +43,225 @@
             "type": "array",
             "title": "List of Publications",
             "description": "List of publications or document filings concerning one or more events related to the entity",
-            "additionalProperties": false,
-            "properties": {
-                "VendorReferenceId": {
-                    "type": "integer",
-                    "title": "Vendor Reference Id",
-                    "description": "Internal vendor code thar references the specific publication"
-                },
-                "PublicationDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "title": "Date of Publication",
-                    "description": "Date of publication of the event in the original source",
-                    "examples": [
-                        "1996-05-20T00:00:00.000Z"
-                    ]
-                },
-                "FilingDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "title": "Date of Filing",
-                    "description": "Date of filing of the event in the register or similiar",
-                    "examples": [
-                        "1996-04-24T00:00:00.000Z"
-                    ]
-                },
-                "FiledIn": {
-                    "type": "string",
-                    "title": "Filed in",
-                    "description": "Place or administration where the events where filed",
-                    "examples": [
-                        "Granada",
-                        "Cámara de Comercio de Bogotá"
-                    ]
-                },
-                "Source": {
-                    "type": "string",
-                    "title": "Publication Source",
-                    "description": "Source or media whereas the related event was published",
-                    "examples": [
-                        "Boletín Oficial del Registro Mercantil"
-                    ]
-                },
-                "FullText": {
-                    "type": "string",
-                    "title": "Full detail of the event",
-                    "description": "Full text published on the original source",
-                    "examples": [
-                        "Constitución. Comienzo de operaciones: 08-03-1996. Duración: INDEF. Objeto social: CONSULTORIA, SOPORTE, DESARROLLO, EXPLOTACION, DISTRIBUCION Y VENTA DE PRODUCTOS..."
-                    ]
-                },
-                "PublicationReference": {
-                    "type": "string",
-                    "title": "Publication Reference code",
-                    "description": "External code that unequivocal appoints to the event in the original source",
-                    "examples": [
-                        "158201"
-                    ]
-                },
-                "PublicationName": {
-                    "type": "string",
-                    "title": "Original name",
-                    "description": "Name of the entity in the moment of the event (could be different from the actual one)",
-                    "examples": [
-                        "Infotel Información y Telecomunicaciones SA"
-                    ]
-                },
-                "PublicationURL": {
-                    "type": "string",
-                    "format": "uri-reference",
-                    "title": "Publication URL",
-                    "description": "Link (URI) to the original publication (pdf, image...)"
-                },
-                "DepositEnrollmentYear": {
-                    "type": "integer",
-                    "title": "Year of deposit or enrollment",
-                    "description": "Year of account deposit (Spain, Portugal...) or enrollment (Colombia)"
-                },
-                "EventsList": {
-                    "type": "array",
-                    "title": "List of events",
-                    "description": "List of different events related to the parent publication",
-                    "additionalProperties": false,
-                    "properties": {
-                        "Type": {
-                            "type": "string",
-                            "title": "Publication related type",
-                            "description": "Act or event type that describes the subject of the event published",
-                            "examples": [
-                                "Constitución",
-                                "Ampliación de capital"
-                            ]
-                        },
-                        "TypeGroup": {
-                            "type": "string",
-                            "title": "Publication related group type",
-                            "description": "Parent group for act or event types that describes the subject of the event published",
-                            "examples": [
-                                "Actos de Capital",
-                                "Procesos de Fusión o Escisión"
-                            ]
-                        },
-                        "VendorTypeId": {
-                            "type": "integer",
-                            "title": "Vendor Type Id",
-                            "description": "Internal vendor code used to refer its specific act or event type"
-                        },
-                        "VendorTypeGroupId": {
-                            "type": "integer",
-                            "title": "Vendor Type Group Id",
-                            "description": "Internal vendor code used to refer its specific act or event parent group type"
-                        },
-                        "OtherData": {
-                            "type": "array",
-                            "title": "Other data",
-                            "description": "Custom data related to the event, depending on the type",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "VendorReferenceId": {
+                        "type": "integer",
+                        "title": "Vendor Reference Id",
+                        "description": "Internal vendor code thar references the specific publication"
+                    },
+                    "PublicationDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Date of Publication",
+                        "description": "Date of publication of the event in the original source",
+                        "examples": [
+                            "1996-05-20T00:00:00.000Z"
+                        ]
+                    },
+                    "FilingDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Date of Filing",
+                        "description": "Date of filing of the event in the register or similiar",
+                        "examples": [
+                            "1996-04-24T00:00:00.000Z"
+                        ]
+                    },
+                    "FiledIn": {
+                        "type": "string",
+                        "title": "Filed in",
+                        "description": "Place or administration where the events where filed",
+                        "examples": [
+                            "Granada",
+                            "Cámara de Comercio de Bogotá"
+                        ]
+                    },
+                    "Source": {
+                        "type": "string",
+                        "title": "Publication Source",
+                        "description": "Source or media whereas the related event was published",
+                        "examples": [
+                            "Boletín Oficial del Registro Mercantil"
+                        ]
+                    },
+                    "FullText": {
+                        "type": "string",
+                        "title": "Full detail of the event",
+                        "description": "Full text published on the original source",
+                        "examples": [
+                            "Constitución. Comienzo de operaciones: 08-03-1996. Duración: INDEF. Objeto social: CONSULTORIA, SOPORTE, DESARROLLO, EXPLOTACION, DISTRIBUCION Y VENTA DE PRODUCTOS..."
+                        ]
+                    },
+                    "PublicationReference": {
+                        "type": "string",
+                        "title": "Publication Reference code",
+                        "description": "External code that unequivocal appoints to the event in the original source",
+                        "examples": [
+                            "158201"
+                        ]
+                    },
+                    "PublicationName": {
+                        "type": "string",
+                        "title": "Original name",
+                        "description": "Name of the entity in the moment of the event (could be different from the actual one)",
+                        "examples": [
+                            "Infotel Información y Telecomunicaciones SA"
+                        ]
+                    },
+                    "PublicationURL": {
+                        "type": "string",
+                        "format": "uri-reference",
+                        "title": "Publication URL",
+                        "description": "Link (URI) to the original publication (pdf, image...)"
+                    },
+                    "DepositEnrollmentYear": {
+                        "type": "integer",
+                        "title": "Year of deposit or enrollment",
+                        "description": "Year of account deposit (Spain, Portugal...) or enrollment (Colombia)"
+                    },
+                    "EventsList": {
+                        "type": "array",
+                        "title": "List of events",
+                        "description": "List of different events related to the parent publication",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
                             "properties": {
-                                "Datatype": {
-                                    "type": "string",
-                                    "title": "Other data's datatype",
-                                    "description": "Schema datatype for the event data used",
-                                    "examples": [
-                                        "integer",
-                                        "string",
-                                        "address"
-                                    ]
-                                },
-                                "Tag": {
-                                    "type": "string",
-                                    "title": "Other data's tag",
-                                    "description": "Tag that describes the event data used",
-                                    "examples": [
-                                        "Forma Social"
-                                    ]
-                                },
-                                "Value": {
-                                    "type": "string",
-                                    "title": "Other data's value",
-                                    "description": "Value for the event data used",
-                                    "examples": [
-                                        "Sociedad Anónima"
-                                    ]
-                                }
-                            }
-                        },
-                        "RelatedEntities": {
-                            "type": "array",
-                            "title": "Related entities",
-                            "description": "Related entities taking part in the event",
-                            "properties": {
-                                "VendorId": {
-                                    "type": "string",
-                                    "title": "Vendor Id of the related entity",
-                                    "description": "External Id (from vendors) of the related entity",
-                                    "examples": [
-                                        "9187801"
-                                    ]
-                                },
-                                "AlternativeVendorId": {
-                                    "type": "string",
-                                    "title": "Alternative Vendor Id of the related entity",
-                                    "description": "Second External Id (from vendors) of the related entity, sometimes used for canonical name identifiers"
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "title": "Related Entity name",
-                                    "description": "Full name or business name of the related entity",
-                                    "examples": [
-                                        "AXERMARIS SPAIN HOLDING SL"
-                                    ]
-                                },
-                                "AlternativeName": {
-                                    "type": "string",
-                                    "title": "Alternative name of the related entity",
-                                    "description": "Alternative version name (from vendors) of the related entity, sometimes used for canonical names"
-                                },
-                                "IdentificationNumber": {
-                                    "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
-                                    "additionalProperties": false
-                                },
                                 "Type": {
                                     "type": "string",
-                                    "title": "Relationship type",
-                                    "description": "Type that describes the relationship between the related entity and its parent",
+                                    "title": "Publication related type",
+                                    "description": "Act or event type that describes the subject of the event published",
                                     "examples": [
-                                        "Sociedad beneficiaria"
+                                        "Constitución",
+                                        "Ampliación de capital"
                                     ]
                                 },
                                 "TypeGroup": {
                                     "type": "string",
-                                    "title": "Relationship group type",
-                                    "description": "Classification that sorts the relationship between the related entity and its parent",
+                                    "title": "Publication related group type",
+                                    "description": "Parent group for act or event types that describes the subject of the event published",
                                     "examples": [
-                                        "Escisión"
+                                        "Actos de Capital",
+                                        "Procesos de Fusión o Escisión"
                                     ]
                                 },
-                                "Detail": {
-                                    "type": "string",
-                                    "title": "Detailed text",
-                                    "description": "Text with additional information about the relationship between both entities"
+                                "VendorTypeId": {
+                                    "type": "integer",
+                                    "title": "Vendor Type Id",
+                                    "description": "Internal vendor code used to refer its specific act or event type"
                                 },
-                                "StartingDate": {
-                                    "type": "string",
-                                    "format": "date-time",
-                                    "title": "Relationship' starting date",
-                                    "description": "Starting date in case of, for example, a time-limited designation"
+                                "VendorTypeGroupId": {
+                                    "type": "integer",
+                                    "title": "Vendor Type Group Id",
+                                    "description": "Internal vendor code used to refer its specific act or event parent group type"
                                 },
-                                "FinishingDate": {
-                                    "type": "string",
-                                    "format": "date-time",
-                                    "title": "Relationship' finishing date",
-                                    "description": "Finishing date in case of, for example, a time-limited designation"
+                                "OtherData": {
+                                    "type": "array",
+                                    "title": "Other data",
+                                    "description": "Custom data related to the event, depending on the type",
+                                    "properties": {
+                                        "Datatype": {
+                                            "type": "string",
+                                            "title": "Other data's datatype",
+                                            "description": "Schema datatype for the event data used",
+                                            "examples": [
+                                                "integer",
+                                                "string",
+                                                "address"
+                                            ]
+                                        },
+                                        "Tag": {
+                                            "type": "string",
+                                            "title": "Other data's tag",
+                                            "description": "Tag that describes the event data used",
+                                            "examples": [
+                                                "Forma Social"
+                                            ]
+                                        },
+                                        "Value": {
+                                            "type": "string",
+                                            "title": "Other data's value",
+                                            "description": "Value for the event data used",
+                                            "examples": [
+                                                "Sociedad Anónima"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "RelatedEntities": {
+                                    "type": "array",
+                                    "title": "Related entities",
+                                    "description": "Related entities taking part in the event",
+                                    "properties": {
+                                        "VendorId": {
+                                            "type": "string",
+                                            "title": "Vendor Id of the related entity",
+                                            "description": "External Id (from vendors) of the related entity",
+                                            "examples": [
+                                                "9187801"
+                                            ]
+                                        },
+                                        "AlternativeVendorId": {
+                                            "type": "string",
+                                            "title": "Alternative Vendor Id of the related entity",
+                                            "description": "Second External Id (from vendors) of the related entity, sometimes used for canonical name identifiers"
+                                        },
+                                        "Name": {
+                                            "type": "string",
+                                            "title": "Related Entity name",
+                                            "description": "Full name or business name of the related entity",
+                                            "examples": [
+                                                "AXERMARIS SPAIN HOLDING SL"
+                                            ]
+                                        },
+                                        "AlternativeName": {
+                                            "type": "string",
+                                            "title": "Alternative name of the related entity",
+                                            "description": "Alternative version name (from vendors) of the related entity, sometimes used for canonical names"
+                                        },
+                                        "IdentificationNumber": {
+                                            "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                            "additionalProperties": false
+                                        },
+                                        "Type": {
+                                            "type": "string",
+                                            "title": "Relationship type",
+                                            "description": "Type that describes the relationship between the related entity and its parent",
+                                            "examples": [
+                                                "Sociedad beneficiaria"
+                                            ]
+                                        },
+                                        "TypeGroup": {
+                                            "type": "string",
+                                            "title": "Relationship group type",
+                                            "description": "Classification that sorts the relationship between the related entity and its parent",
+                                            "examples": [
+                                                "Escisión"
+                                            ]
+                                        },
+                                        "Detail": {
+                                            "type": "string",
+                                            "title": "Detailed text",
+                                            "description": "Text with additional information about the relationship between both entities"
+                                        },
+                                        "StartingDate": {
+                                            "type": "string",
+                                            "format": "date-time",
+                                            "title": "Relationship' starting date",
+                                            "description": "Starting date in case of, for example, a time-limited designation"
+                                        },
+                                        "FinishingDate": {
+                                            "type": "string",
+                                            "format": "date-time",
+                                            "title": "Relationship' finishing date",
+                                            "description": "Finishing date in case of, for example, a time-limited designation"
+                                        }
+                                    }
                                 }
                             }
                         }
