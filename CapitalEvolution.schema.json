@@ -1,0 +1,153 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/CapitalEvolution.schema.json",
+    "type": "object",
+    "title": "The Capital Evolution Data Domain Schema",
+    "description": "Contains the evolution of the movements of capital of an entity",
+    "additionalProperties": false,
+    "properties": {
+        "EntityId": {
+            "type": "integer",
+            "title": "Internal Id for entities",
+            "description": "Contains Axesor360 unique ID for the entity",
+            "examples": [
+                2684748
+            ]
+        },
+        "VendorEntityId": {
+            "type": "string",
+            "title": "Vendor Id for Entities",
+            "description": "External Id (from vendors) for the entity",
+            "examples": [
+                "987857"
+            ]
+        },
+        "EntityName": {
+            "type": "string",
+            "title": "Entity name",
+            "description": "Full name or business name of the entity",
+            "examples": [
+                "AXESOR CONOCER PARA DECIDIR SA"
+            ]
+        },
+        "LastUpdate": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Info about last update",
+            "description": "Date of last update of the date contained",
+            "examples": [
+                "2019-10-29T18:25:43.511Z"
+            ]
+        },
+        "CapitalMovementsList": {
+            "type": "array",
+            "title": "List of capital movements",
+            "description": "Contains a record for each capital movement ocurred in the entity's history",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Capital movement date",
+                        "description": "Date of filing or publication of the capital movement"
+                    },
+                    "Type": {
+                        "type": "string",
+                        "title": "Capital event type",
+                        "description": "Event type related to the capital movement",
+                        "examples": [
+                            "Ampliación de capital",
+                            "Reducción de capital"
+                        ]
+                    },
+                    "PublicationSource": {
+                        "type": "string",
+                        "title": "Publication source",
+                        "description": "Publication source of the capital movement event",
+                        "examples": [
+                            "BORME"
+                        ]
+                    },
+                    "PublicationVendorReferenceId": {
+                        "type": "integer",
+                        "title": "Publication Vendor Reference Id",
+                        "description": "Internal vendor code for the especific event reference"
+                    },
+                    "SuscribedAmount": {
+                        "type": "number",
+                        "title": "Capital' subscribed amount",
+                        "description": "Amount of capital subscribed in the specific event",
+                        "examples": [
+                            284150.00
+                        ]
+                    },
+                    "PaidUpAmount": {
+                        "type": "number",
+                        "title": "Capital's paid-up amount",
+                        "description": "Amount of capital, related to capital suscribed, already paid-up in the specific event",
+                        "examples": [
+                            284150.00
+                        ]
+                    },
+                    "SharedCapital": {
+                        "type": "number",
+                        "title": "Shared capital",
+                        "description": "Total shared capital of the entity",
+                        "examples": [
+                            1983691.00
+                        ]
+                    },
+                    "PaidUpCapital": {
+                        "type": "number",
+                        "title": "Capital's paid-up amount",
+                        "description": "Total amount of the shared capital of the entity already paid-up",
+                        "examples": [
+                            1983691.00
+                        ]
+                    },
+                    "NumberOfShares": {
+                        "type": "number",
+                        "title": "Number of Shares",
+                        "description": "Breakdown of capital by number of shares ",
+                        "examples": [
+                            1983691
+                        ]
+                    },
+                    "NominalValue": {
+                        "type": "number",
+                        "title": "Nominal value",
+                        "description": "Nominal value for each share",
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "SharesNature": {
+                        "type": "string",
+                        "title": "Shares' nature",
+                        "description": "Describes the nature of the shares; e.g. nominal shares"
+                    },
+                    "CapitalDetail": {
+                        "type": "string",
+                        "title": "Capital's other details",
+                        "description": "Any other information concerning the capital related event"
+                    },
+                    "CurrentEvent": {
+                        "type" : "boolean",
+                        "title": ":",
+                        "description": "True if this event is the more recent of the list"
+                    },
+                      "CurrencyISO": {
+                        "type": "string",
+                        "title": "Capital value currency",
+                        "description": "ISO code describing the currency used for the capital value",
+                        "examples": [
+                            "EUR"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

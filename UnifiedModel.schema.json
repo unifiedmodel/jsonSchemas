@@ -15,6 +15,9 @@
         },
         "CompanyData": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyData.schema.json"
+        },
+        "CapitalEvolution": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CapitalEvolution.schema.json"
         }
     }
 }

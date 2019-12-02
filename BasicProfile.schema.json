@@ -189,10 +189,22 @@
         "Value": {
           "type": "number",
           "title": "Shared Capital value",
-          "description": "Curren shared capital of the entity",
+          "description": "Current shared capital of the entity",
           "examples": [
             1983691.00
           ]
+        },
+        "NumberOfShares": {
+          "type": "number",
+          "title": "Number of Shares",
+          "description": "Breakdown of capital by number of shares ",
+          "examples": [1983691]
+        },
+        "NominalValue": {
+          "type": "number",
+          "title": "Nominal value",
+          "description": "Nominal value for each share",
+          "examples": [1]
         },
         "CurrencyISO": {
           "type": "string",
