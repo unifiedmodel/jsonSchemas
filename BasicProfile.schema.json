@@ -73,7 +73,6 @@
     "StartDate": {
       "type": "string",
       "title": "Starting date of the entity",
-      "format": "date-time",
       "description": "The entity started its activity in this day",
       "examples": [
         "2016-03-08T00:00:00.000Z"
