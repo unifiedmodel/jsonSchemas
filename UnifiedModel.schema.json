@@ -18,6 +18,9 @@
         },
         "CapitalEvolution": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/CapitalEvolution.schema.json"
+        },
+        "EmployeesEvolution": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/EmployeesEvolution.schema.json"
         }
     }
 }
