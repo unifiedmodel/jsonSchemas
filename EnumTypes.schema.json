@@ -3,9 +3,8 @@
     "$id": "https://unifiedmodel.github.io/jsonSchemas/EnumTypes.schema.json",
     "type": "object",
     "title": "List of custom enumerated types (EnumTypes)",
-    "definitions": {
+    "properties": {
         "enumSize": {
-            "description": "Size of an entity" ,
             "enum": [
                 "Micro",
                 "Small",
