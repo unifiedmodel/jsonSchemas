@@ -114,7 +114,7 @@
       "type": "string",
       "title": "Size of the entity",
       "description": "Size of the entity, according to local criteria",
-      "enum": [
+      "anyOf": [
          {"$ref": "EnumTypes.schema.json#/properties/enumSize"}
       ],
       "examples": [
