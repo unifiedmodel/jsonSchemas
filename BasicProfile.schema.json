@@ -114,11 +114,11 @@
       "type": "string",
       "title": "Size of the entity",
       "description": "Size of the entity, according to local criteria",
-      "properties": {
-        "value": {"$ref": "EnumTypes.schema.json#/properties/enumSize"}
-      },
+      "enum": [
+         {"$ref": "EnumTypes.schema.json#/properties/enumSize"}
+      ],
       "examples": [
-        "Mediana"
+        "Medium"
       ]
     },
     "Address": {
