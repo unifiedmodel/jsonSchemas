@@ -114,6 +114,9 @@
       "type": "string",
       "title": "Size of the entity",
       "description": "Size of the entity, according to local criteria",
+      "properties": {
+        "value": {"$ref": "EnumTypes.schema.json#/properties/enumSize"}
+      },
       "examples": [
         "Mediana"
       ]
@@ -197,13 +200,17 @@
           "type": "number",
           "title": "Number of Shares",
           "description": "Breakdown of capital by number of shares ",
-          "examples": [1983691]
+          "examples": [
+            1983691
+          ]
         },
         "NominalValue": {
           "type": "number",
           "title": "Nominal value",
           "description": "Nominal value for each share",
-          "examples": [1]
+          "examples": [
+            1
+          ]
         },
         "CurrencyISO": {
           "type": "string",
