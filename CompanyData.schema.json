@@ -6,39 +6,6 @@
     "description": "Contains the public registered information about an entity",
     "additionalProperties": false,
     "properties": {
-        "EntityId": {
-            "type": "integer",
-            "title": "Internal Id for entities",
-            "description": "Contains Axesor360 unique ID for the entity",
-            "examples": [
-                2684748
-            ]
-        },
-        "VendorEntityId": {
-            "type": "string",
-            "title": "Vendor Id for Entities",
-            "description": "External Id (from vendors) for the entity",
-            "examples": [
-                "987857"
-            ]
-        },
-        "EntityName": {
-            "type": "string",
-            "title": "Entity name",
-            "description": "Full name or business name of the entity",
-            "examples": [
-                "AXESOR CONOCER PARA DECIDIR SA"
-            ]
-        },
-        "LastUpdate": {
-            "type": "string",
-            "format": "date-time",
-            "title": "Info about last update",
-            "description": "Date of last update of the date contained",
-            "examples": [
-                "2019-10-29T18:25:43.511Z"
-            ]
-        },
         "PublicationsList": {
             "type": "array",
             "title": "List of Publications",
