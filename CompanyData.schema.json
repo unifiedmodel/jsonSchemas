@@ -297,6 +297,39 @@
                                             "format": "date-time",
                                             "title": "Relationship' finishing date",
                                             "description": "Finishing date in case of, for example, a time-limited designation"
+                                        },
+                                        "OtherData": {
+                                            "type": "array",
+                                            "title": "Other data",
+                                            "description": "Custom data of the related entity, like extra codes or alternative names",
+                                            "properties": {
+                                                "Datatype": {
+                                                    "type": "string",
+                                                    "title": "Other data's datatype",
+                                                    "description": "Schema datatype for the data used",
+                                                    "examples": [
+                                                        "integer",
+                                                        "string",
+                                                        "address"
+                                                    ]
+                                                },
+                                                "Tag": {
+                                                    "type": "string",
+                                                    "title": "Other data's tag",
+                                                    "description": "Tag that describes the data used",
+                                                    "examples": [
+                                                        "Alternativa name"
+                                                    ]
+                                                },
+                                                "Value": {
+                                                    "type": "string",
+                                                    "title": "Other data's value",
+                                                    "description": "Value for the data used",
+                                                    "examples": [
+                                                        "Infotel Información y Telecomunicaciones SA"
+                                                    ]
+                                                }
+                                            }
                                         }
                                     }
                                 }
