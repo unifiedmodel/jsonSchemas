@@ -1,0 +1,468 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/PublicRecords.schema.json",
+    "type": "object",
+    "title": "The Public Records Domain Schema",
+    "description": "Contains negative public records concerning an entity",
+    "additionalProperties": false,
+    "properties": {
+        "PublicRecordsList": {
+            "type": "array",
+            "title": "List of Public Records",
+            "description": "List of publications concerning one or more negative events related to the entity",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "VendorReferenceId": {
+                        "type": "integer",
+                        "title": "Vendor Reference Id",
+                        "description": "Internal vendor code thar references the specific record"
+                    },
+                    "TypeGroup": {
+                        "type": "string",
+                        "title": "Record group type",
+                        "description": "Parent group type for a record that describes the subject of the event published",
+                        "examples": [
+                            "INCIDENCIAS CON ADMINISTRACIONES PÚBLICAS",
+                            "PROCESOS JUDICIALES",
+                            "ASNEF EMPRESAS"
+                        ]
+                    },
+                    "Type": {
+                        "type": "string",
+                        "title": "Record type",
+                        "description": "Type that describes the subject of the event published",
+                        "examples": [
+                            "Incidencias con la Administración Autonómica",
+                            "Procedimientos ante Juzgados de lo Social",
+                            "Impagos de ASNEF Empresas"
+                        ]
+                    },
+                    "VendorTypeId": {
+                        "type": "integer",
+                        "title": "Vendor Type Id",
+                        "description": "Internal vendor code used to refer its specific act or event type"
+                    },
+                    "VendorTypeGroupId": {
+                        "type": "integer",
+                        "title": "Vendor Type Group Id",
+                        "description": "Internal vendor code used to refer its specific act or event parent group type"
+                    },
+                    "Source": {
+                        "type": "string",
+                        "title": "Publication Source",
+                        "description": "Source or media whereas the related record was published",
+                        "examples": [
+                            "Boletín Oficial del Registro Mercantil",
+                            "Agencia Estatal Boletín Oficial del Estado (AEBOE)",
+                            "Boletín Oficial de la Provincia"
+                        ]
+                    },
+                    "Status": {
+                        "type": "string",
+                        "title": "Current Status",
+                        "description": "Current status of the record (active, finished, etc)"
+                    },
+                    "Priority": {
+                        "type": "integer",
+                        "title": "Type's priority",
+                        "description": "Used to sort or tag a record depending on its priority"
+                    },
+                    "Location": {
+                        "type": "string",
+                        "title": "Record's location",
+                        "description": "Place where the event of the record happened (e.g. a court)",
+                        "examples": [
+                            "Juízo Local Cível da Guarda - Juiz 1",
+                            "Tribunal de 1º Instancia de Bogotá"
+                        ]
+                    },
+                    "FiledBy": {
+                        "type": "string",
+                        "title": "Filed by",
+                        "description": "Public institution who submitted the information of the record",
+                        "examples": [
+                            "CIRCUITO CIVIL",
+                            "Agencia Estatal Boletín Oficial del Estado (AEBOE)",
+                            "Poder Judicial de España"
+                        ]
+                    },
+                    "MatchingType": {
+                        "type": "string",
+                        "title": "Entity Matching Type",
+                        "description": "Describes the fields used to match the entity against the original record's info",
+                        "examples": [
+                            "By Name",
+                            "By VAT"
+                        ]
+                    },
+                    "MatchingPercentage": {
+                        "type": "number",
+                        "title": "Entity Matching Percentage",
+                        "description": "Describes, from 0 to 100, the matching percentage of the matching type used against the original record's info"
+                    },
+                    "LastUpdate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Last Update",
+                        "description": "Update date of the last event related to the record",
+                        "examples": [
+                            "2017-08-31T00:00:00.000Z"
+                        ]
+                    },
+                    "ReferencesList": {
+                        "type": "array",
+                        "title": "List of references",
+                        "description": "Contains any code published in the source of the record",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Type": {
+                                    "type": "string",
+                                    "title": "Reference related type",
+                                    "description": "Describes the nature of the reference code",
+                                    "examples": [
+                                        "Número de expediente",
+                                        "Número de obligación"
+                                    ]
+                                },
+                                "Reference": {
+                                    "type": "string",
+                                    "title": "Reference number or code",
+                                    "description": "Code or number of the reference",
+                                    "examples": [
+                                        "76/2019"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "StagesList": {
+                        "type": "array",
+                        "title": "List of stages of the record",
+                        "description": "In case the record contains multiple stages, here will be listed with its own information",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "VendorReferenceId": {
+                                    "type": "integer",
+                                    "title": "Vendor Reference Stage Id",
+                                    "description": "Internal vendor code thar references the specific stage"
+                                },
+                                "Stage": {
+                                    "type": "string",
+                                    "title": "Stage name",
+                                    "description": "Contains the description of the specific stage",
+                                    "examples": [
+                                        "ACTAS DE INFRACCIÓN-SANCIÓN",
+                                        "EMBARGO"
+                                    ]
+                                },
+                                "Priority": {
+                                    "type": "integer",
+                                    "title": "Stage priority",
+                                    "description": "Used to sort or tag a record depending on its priority"
+                                },
+                                "FullText": {
+                                    "type": "string",
+                                    "title": "Text published with the full detail of the specific stage",
+                                    "description": ""
+                                },
+                                "PublicationsList": {
+                                    "type": "array",
+                                    "title": "List of stage publications",
+                                    "description": "Contains info about the different times an stage was published",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "PublicatedIn": {
+                                                "type": "string",
+                                                "title": "Publicated In",
+                                                "description": "Points to the concrete source of the stage's publication",
+                                                "examples": [
+                                                    "B.O.P. MÁLAGA Nº46, 2019 PÁGINA 23"
+                                                ]
+                                            },
+                                            "Date": {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "title": "Last Update",
+                                                "description": "Update date of the last event related to the record",
+                                                "examples": [
+                                                    "2019-03-08T00:00:00.000Z"
+                                                ]
+                                            },
+                                            "IsMainDate": {
+                                                "type": "boolean",
+                                                "title": "Is Main Date?",
+                                                "description": "If true, represents the main one in an array of publications"
+                                            }
+                                        }
+                                    }
+                                },
+                                "AdditionalDatesList": {
+                                    "type": "array",
+                                    "title": "List of additional dates of the stage",
+                                    "description": "Incudes any other date different from date of publication",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Type": {
+                                                "type": "string",
+                                                "title": "Additional date type",
+                                                "description": "Describes the nature of the specific date",
+                                                "examples": [
+                                                    "Fecha de Incidencia",
+                                                    "Fecha de Inicio",
+                                                    "Fecha de Fin"
+                                                ]
+                                            },
+                                            "Date": {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "title": "Additional Date",
+                                                "description": "The specific value for the additional date",
+                                                "examples": [
+                                                    "2018-12-17T00:00:00.000Z"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "AmountsList": {
+                                    "type": "array",
+                                    "title": "List of amounts",
+                                    "description": "Includes all the amounts related to the record (global or in a specific stage",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "CurrencyISO": {
+                                                "type": "string",
+                                                "title": "Amount value currency",
+                                                "description": "ISO code describing the currency used for the amount value",
+                                                "examples": [
+                                                    "EUR"
+                                                ]
+                                            },
+                                            "Type": {
+                                                "type": "string",
+                                                "title": "Amount type",
+                                                "description": "Describes the subject of the amount",
+                                                "examples": [
+                                                    "Importe Total",
+                                                    "Monto"
+                                                ]
+                                            },
+                                            "Amount": {
+                                                "type": "number",
+                                                "title": "Amount value",
+                                                "description": "Contains the exact amount value (money) or the minimum value in case of range",
+                                                "examples": [
+                                                    515000,
+                                                    607.75
+                                                ]
+                                            },
+                                            "RangeMaxAmount": {
+                                                "type": "number",
+                                                "title": "Range: Maximum Amount",
+                                                "description": "Maximum value of the amount in case of range",
+                                                "examples": [
+                                                    500000000.00
+                                                ]
+                                            },
+                                            "Detail": {
+                                                "type": "string",
+                                                "title": "Amount detail",
+                                                "description": "Any other detail related to the record amount"
+                                            }
+                                        }
+                                    }
+                                },
+                                "DetailsList": {
+                                    "type": "array",
+                                    "title": "List with other stage details",
+                                    "description": "Includes any other detail about the record in a specific stage",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Type": {
+                                                "type": "string",
+                                                "title": "Additional detail type",
+                                                "description": "Describes the nature of the specific detail"
+                                            },
+                                            "DetailsDataList": {
+                                                "type": "array",
+                                                "title": "List of Detail Data",
+                                                "description": "All the data relative to this detail",
+                                                "additionalItems": false,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "Datatype": {
+                                                            "type": "string",
+                                                            "title": "Detail data's datatype",
+                                                            "description": "Schema datatype for the data",
+                                                            "examples": [
+                                                                "integer",
+                                                                "string",
+                                                                "address"
+                                                            ]
+                                                        },
+                                                        "Tag": {
+                                                            "type": "string",
+                                                            "title": "Detail data's tag",
+                                                            "description": "Tag that describes the data",
+                                                            "examples": [
+                                                                "Tipo de Documento"
+                                                            ]
+                                                        },
+                                                        "Value": {
+                                                            "type": "string",
+                                                            "title": "Detail data's value",
+                                                            "description": "Value for the data",
+                                                            "examples": [
+                                                                "Cheque"
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "AddressesList": {
+                                    "type": "array",
+                                    "title": "List of record addresses",
+                                    "description": "Incudes any other date different from date of publication",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Type": {
+                                                "type": "string",
+                                                "title": "Address type",
+                                                "description": "Describes the nature of the specific address",
+                                                "examples": [
+                                                    "Domicilio de la Administración",
+                                                    "Domicilio del Juzgado",
+                                                    "Domicilio Particular"
+                                                ]
+                                            },
+                                            "Address": {
+                                                "title": "Address value",
+                                                "$ref": "DataTypes.schema.json#/properties/Address"
+                                            }
+                                        }
+                                    }
+                                },
+                                "OtherDataList": {
+                                    "type": "array",
+                                    "title": "List of Other Data",
+                                    "description": "Any other data relative to this stage",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Datatype": {
+                                                "type": "string",
+                                                "title": "Other data's datatype",
+                                                "description": "Schema datatype for the data",
+                                                "examples": [
+                                                    "integer",
+                                                    "string",
+                                                    "address"
+                                                ]
+                                            },
+                                            "Tag": {
+                                                "type": "string",
+                                                "title": "Other data's tag",
+                                                "description": "Tag that describes the data",
+                                                "examples": [
+                                                    "Tipo de Documento"
+                                                ]
+                                            },
+                                            "Value": {
+                                                "type": "string",
+                                                "title": "Other data's value",
+                                                "description": "Value for the data",
+                                                "examples": [
+                                                    "Cheque"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "RelatedEntitiesList": {
+                                    "type": "array",
+                                    "title": "Related entities",
+                                    "description": "Related entities taking part in the record",
+                                    "properties": {
+                                        "VendorId": {
+                                            "type": "string",
+                                            "title": "Vendor Id of the related entity",
+                                            "description": "External Id (from vendors) of the related entity"
+                                        },
+                                        "Name": {
+                                            "type": "string",
+                                            "title": "Related Entity name",
+                                            "description": "Full name or business name of the related entity",
+                                            "examples": [
+                                                "COMUNIDAD CASTILLA LA MANCHA",
+                                                "MERCADONA sa"
+                                            ]
+                                        },
+                                        "IdentificationNumber": {
+                                            "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                            "additionalProperties": false
+                                        },
+                                        "Type": {
+                                            "type": "string",
+                                            "title": "Relationship type",
+                                            "description": "Type that describes the relationship between the related entity and its parent",
+                                            "examples": [
+                                                "Demandante",
+                                                "Demandado",
+                                                "Insolvente",
+                                                "Deudor"
+                                            ]
+                                        },
+                                        "TypeGroup": {
+                                            "type": "string",
+                                            "title": "Relationship group type",
+                                            "description": "Classification that sorts the relationship between the related entity and its parent",
+                                            "examples": [
+                                                "Deudores"
+                                            ]
+                                        },
+                                        "Detail": {
+                                            "type": "string",
+                                            "title": "Detailed text",
+                                            "description": "Text with additional information about the relationship between both entities"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
