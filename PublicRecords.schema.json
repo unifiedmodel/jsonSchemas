@@ -344,120 +344,120 @@
                                             }
                                         }
                                     }
-                                },
-                                "AddressesList": {
-                                    "type": "array",
-                                    "title": "List of record addresses",
-                                    "description": "Incudes any other date different from date of publication",
-                                    "additionalItems": false,
-                                    "items": {
-                                        "type": "object",
-                                        "additionalProperties": false,
-                                        "properties": {
-                                            "Type": {
-                                                "type": "string",
-                                                "title": "Address type",
-                                                "description": "Describes the nature of the specific address",
-                                                "examples": [
-                                                    "Domicilio de la Administración",
-                                                    "Domicilio del Juzgado",
-                                                    "Domicilio Particular"
-                                                ]
-                                            },
-                                            "Address": {
-                                                "title": "Address value",
-                                                "$ref": "DataTypes.schema.json#/properties/Address"
-                                            }
-                                        }
-                                    }
-                                },
-                                "OtherDataList": {
-                                    "type": "array",
-                                    "title": "List of Other Data",
-                                    "description": "Any other data relative to this stage",
-                                    "additionalItems": false,
-                                    "items": {
-                                        "type": "object",
-                                        "additionalProperties": false,
-                                        "properties": {
-                                            "Datatype": {
-                                                "type": "string",
-                                                "title": "Other data's datatype",
-                                                "description": "Schema datatype for the data",
-                                                "examples": [
-                                                    "integer",
-                                                    "string",
-                                                    "address"
-                                                ]
-                                            },
-                                            "Tag": {
-                                                "type": "string",
-                                                "title": "Other data's tag",
-                                                "description": "Tag that describes the data",
-                                                "examples": [
-                                                    "Tipo de Documento"
-                                                ]
-                                            },
-                                            "Value": {
-                                                "type": "string",
-                                                "title": "Other data's value",
-                                                "description": "Value for the data",
-                                                "examples": [
-                                                    "Cheque"
-                                                ]
-                                            }
-                                        }
-                                    }
-                                },
-                                "RelatedEntitiesList": {
-                                    "type": "array",
-                                    "title": "Related entities",
-                                    "description": "Related entities taking part in the record",
-                                    "properties": {
-                                        "VendorId": {
-                                            "type": "string",
-                                            "title": "Vendor Id of the related entity",
-                                            "description": "External Id (from vendors) of the related entity"
-                                        },
-                                        "Name": {
-                                            "type": "string",
-                                            "title": "Related Entity name",
-                                            "description": "Full name or business name of the related entity",
-                                            "examples": [
-                                                "COMUNIDAD CASTILLA LA MANCHA",
-                                                "MERCADONA sa"
-                                            ]
-                                        },
-                                        "IdentificationNumber": {
-                                            "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
-                                            "additionalProperties": false
-                                        },
-                                        "Type": {
-                                            "type": "string",
-                                            "title": "Relationship type",
-                                            "description": "Type that describes the relationship between the related entity and its parent",
-                                            "examples": [
-                                                "Demandante",
-                                                "Demandado",
-                                                "Insolvente",
-                                                "Deudor"
-                                            ]
-                                        },
-                                        "TypeGroup": {
-                                            "type": "string",
-                                            "title": "Relationship group type",
-                                            "description": "Classification that sorts the relationship between the related entity and its parent",
-                                            "examples": [
-                                                "Deudores"
-                                            ]
-                                        },
-                                        "Detail": {
-                                            "type": "string",
-                                            "title": "Detailed text",
-                                            "description": "Text with additional information about the relationship between both entities"
-                                        }
-                                    }
                                 }
+                            }
+                        }
+                    },
+                    "AddressesList": {
+                        "type": "array",
+                        "title": "List of record addresses",
+                        "description": "Incudes any other date different from date of publication",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Type": {
+                                    "type": "string",
+                                    "title": "Address type",
+                                    "description": "Describes the nature of the specific address",
+                                    "examples": [
+                                        "Domicilio de la Administración",
+                                        "Domicilio del Juzgado",
+                                        "Domicilio Particular"
+                                    ]
+                                },
+                                "Address": {
+                                    "title": "Address value",
+                                    "$ref": "DataTypes.schema.json#/properties/Address"
+                                }
+                            }
+                        }
+                    },
+                    "OtherDataList": {
+                        "type": "array",
+                        "title": "List of Other Data",
+                        "description": "Any other data relative to this stage",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Datatype": {
+                                    "type": "string",
+                                    "title": "Other data's datatype",
+                                    "description": "Schema datatype for the data",
+                                    "examples": [
+                                        "integer",
+                                        "string",
+                                        "address"
+                                    ]
+                                },
+                                "Tag": {
+                                    "type": "string",
+                                    "title": "Other data's tag",
+                                    "description": "Tag that describes the data",
+                                    "examples": [
+                                        "Tipo de Documento"
+                                    ]
+                                },
+                                "Value": {
+                                    "type": "string",
+                                    "title": "Other data's value",
+                                    "description": "Value for the data",
+                                    "examples": [
+                                        "Cheque"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "RelatedEntitiesList": {
+                        "type": "array",
+                        "title": "Related entities",
+                        "description": "Related entities taking part in the record",
+                        "properties": {
+                            "VendorId": {
+                                "type": "string",
+                                "title": "Vendor Id of the related entity",
+                                "description": "External Id (from vendors) of the related entity"
+                            },
+                            "Name": {
+                                "type": "string",
+                                "title": "Related Entity name",
+                                "description": "Full name or business name of the related entity",
+                                "examples": [
+                                    "COMUNIDAD CASTILLA LA MANCHA",
+                                    "MERCADONA sa"
+                                ]
+                            },
+                            "IdentificationNumber": {
+                                "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                "additionalProperties": false
+                            },
+                            "Type": {
+                                "type": "string",
+                                "title": "Relationship type",
+                                "description": "Type that describes the relationship between the related entity and its parent",
+                                "examples": [
+                                    "Demandante",
+                                    "Demandado",
+                                    "Insolvente",
+                                    "Deudor"
+                                ]
+                            },
+                            "TypeGroup": {
+                                "type": "string",
+                                "title": "Relationship group type",
+                                "description": "Classification that sorts the relationship between the related entity and its parent",
+                                "examples": [
+                                    "Deudores"
+                                ]
+                            },
+                            "Detail": {
+                                "type": "string",
+                                "title": "Detailed text",
+                                "description": "Text with additional information about the relationship between both entities"
                             }
                         }
                     }
