@@ -43,36 +43,24 @@
                         "description": "Internal vendor code for the especific event reference"
                     },
                     "SuscribedAmount": {
-                        "type": "number",
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
                         "title": "Capital' subscribed amount",
-                        "description": "Amount of capital subscribed in the specific event",
-                        "examples": [
-                            284150.00
-                        ]
+                        "description": "Amount of capital subscribed in the specific event"
                     },
                     "PaidUpAmount": {
-                        "type": "number",
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
                         "title": "Capital's paid-up amount",
-                        "description": "Amount of capital, related to capital suscribed, already paid-up in the specific event",
-                        "examples": [
-                            284150.00
-                        ]
+                        "description": "Amount of capital, related to capital suscribed, already paid-up in the specific event"
                     },
                     "SharedCapital": {
-                        "type": "number",
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
                         "title": "Shared capital",
-                        "description": "Total shared capital of the entity",
-                        "examples": [
-                            1983691.00
-                        ]
+                        "description": "Total shared capital of the entity"
                     },
                     "PaidUpCapital": {
-                        "type": "number",
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
                         "title": "Capital's paid-up amount",
-                        "description": "Total amount of the shared capital of the entity already paid-up",
-                        "examples": [
-                            1983691.00
-                        ]
+                        "description": "Total amount of the shared capital of the entity already paid-up"
                     },
                     "NumberOfShares": {
                         "type": "number",
@@ -99,14 +87,6 @@
                         "type": "string",
                         "title": "Capital's other details",
                         "description": "Any other information concerning the capital related event"
-                    },
-                      "CurrencyISO": {
-                        "type": "string",
-                        "title": "Capital value currency",
-                        "description": "ISO code describing the currency used for the capital value",
-                        "examples": [
-                            "EUR"
-                        ]
                     }
                 }
             }
