@@ -196,7 +196,7 @@
       "description": "Dataset with contact information of the entity",
       "additionalProperties": false,
       "properties": {
-        "Value": {
+        "TotalAmount": {
           "$ref": "DataTypes.schema.json#/properties/Amount",
           "additionalProperties": false,
           "title": "Shared Capital value",
