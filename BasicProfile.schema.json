@@ -102,6 +102,14 @@
         2017
       ]
     },
+    "LastAccountsUploadedByVendor": {
+      "type": "integer",
+      "title": "Last Accounts uploaded by Vendor",
+      "description": "Indicates the last annual accounts supplied by the vendor and available to use",
+      "examples": [
+        2017
+      ]
+    },
     "CountryISO": {
       "type": "string",
       "title": "Country of the entity (ISO)",
