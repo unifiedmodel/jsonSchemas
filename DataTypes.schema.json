@@ -277,7 +277,6 @@
         },
         "Value": {
           "type": "number",
-          "multipleOf": 0.001,
           "title": "Sales amount",
           "description": "Total amount or minimum value in case of range",
           "examples": [
@@ -286,7 +285,6 @@
         },
         "RangeMax": {
           "type": "number",
-          "multipleOf": 0.001,
           "title": "Range: Maximum Amount",
           "description": "Maximum value  in case of range",
           "examples": [
@@ -343,7 +341,6 @@
                 },
                 "Value": {
                   "type": "number",
-                  "multipleOf": 0.001,
                   "title": "Sales amount",
                   "description": "Child amount for the selected period or minimum value in case of range",
                   "examples": [
@@ -352,7 +349,6 @@
                 },
                 "RangeMax": {
                   "type": "number",
-                  "multipleOf": 0.001,
                   "title": "Range: Maximum Sales",
                   "description": "Maximum value of the child value in case of range",
                   "examples": [
