@@ -183,7 +183,7 @@
       }
     },
     "Sales": {
-      "$ref": "DataTypes.schema.json#/properties/Sales",
+      "$ref": "DataTypes.schema.json#/properties/Amount",
       "additionalProperties": false
     },
     "Employees": {
@@ -197,12 +197,10 @@
       "additionalProperties": false,
       "properties": {
         "Value": {
-          "type": "number",
+          "$ref": "DataTypes.schema.json#/properties/Amount",
+          "additionalProperties": false,
           "title": "Shared Capital value",
-          "description": "Current shared capital of the entity",
-          "examples": [
-            1983691.00
-          ]
+          "description": "Current shared capital of the entity"
         },
         "NumberOfShares": {
           "type": "number",
@@ -218,14 +216,6 @@
           "description": "Nominal value for each share",
           "examples": [
             1
-          ]
-        },
-        "CurrencyISO": {
-          "type": "string",
-          "title": "Capital value currency",
-          "description": "ISO code describing the currency used for the capital value",
-          "examples": [
-            "EUR"
           ]
         }
       }
