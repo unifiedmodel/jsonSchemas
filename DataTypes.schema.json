@@ -275,7 +275,7 @@
             "EUR"
           ]
         },
-        "TotalAmount": {
+        "Value": {
           "type": "number",
           "multipleOf": 0.001,
           "title": "Sales amount",
@@ -341,7 +341,7 @@
                     "EUR"
                   ]
                 },
-                "TotalAmount": {
+                "Value": {
                   "type": "number",
                   "multipleOf": 0.001,
                   "title": "Sales amount",
