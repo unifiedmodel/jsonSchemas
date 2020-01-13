@@ -262,6 +262,122 @@
         }
       }
     },
+    "Amount": {
+      "type": "object",
+      "title": "The Amount data type",
+      "description": "Contains specific information about any amount used in the JSON",
+      "properties": {
+        "CurrencyISO": {
+          "type": "string",
+          "title": "Sales currency",
+          "description": "ISO code describing the currency used for the sales data",
+          "examples": [
+            "EUR"
+          ]
+        },
+        "TotalAmount": {
+          "type": "number",
+          "multipleOf": 0.001,
+          "title": "Sales amount",
+          "description": "Total amount or minimum value in case of range",
+          "examples": [
+            15963705.36
+          ]
+        },
+        "RangeMax": {
+          "type": "number",
+          "multipleOf": 0.001,
+          "title": "Range: Maximum Amount",
+          "description": "Maximum value  in case of range",
+          "examples": [
+            500000000.00
+          ]
+        },
+        "Estimated": {
+          "type": "boolean",
+          "title": "Estimated Sales",
+          "description": "True if the amount is estimated (not the actual amount)",
+          "examples": [
+            false
+          ]
+        },
+        "HelpText": {
+          "type": "string",
+          "title": "Help text",
+          "description": "Short generic explanation about the content of the amount data"
+        },
+        "AmountBreakdown": {
+          "type": "array",
+          "title": "Amount breakdown",
+          "description": "Any breakdown related to the parent amount or range",
+          "properties": {
+            "BreakdownType": {
+              "type": "string",
+              "title": "Breakdown type",
+              "description": "Describes and sorts specific breakdowns of the amount or range ",
+              "examples": [
+                "Ventas por países",
+                "Ventas por actividad"
+              ]
+            },
+            "BreakdownDetail": {
+              "type": "array",
+              "title": "Breakdown' specific data",
+              "properties": {
+                "Description": {
+                  "type": "string",
+                  "title": "Breakdown value description",
+                  "description": "Text with the detail of the child value",
+                  "examples": [
+                    "Ventas en España",
+                    "Ventas al sector retail"
+                  ]
+                },
+                "CurrencyISO": {
+                  "type": "string",
+                  "title": "Sales currency",
+                  "description": "ISO code describing the currency used for the child data",
+                  "examples": [
+                    "EUR"
+                  ]
+                },
+                "TotalAmount": {
+                  "type": "number",
+                  "multipleOf": 0.001,
+                  "title": "Sales amount",
+                  "description": "Child amount for the selected period or minimum value in case of range",
+                  "examples": [
+                    30054.22
+                  ]
+                },
+                "RangeMax": {
+                  "type": "number",
+                  "multipleOf": 0.001,
+                  "title": "Range: Maximum Sales",
+                  "description": "Maximum value of the child value in case of range",
+                  "examples": [
+                    5000000.35
+                  ]
+                },
+                "Percentage": {
+                  "type": "number",
+                  "title": "Percentage of sales",
+                  "description": "Shows the child value in percentage",
+                  "examples": [
+                    50.0
+                  ]
+                },
+                "HelpText": {
+                  "type": "string",
+                  "title": "Help text",
+                  "description": "Short generic explanation about the content of the child data"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "Employees": {
       "type": "object",
       "title": "The Employees data type",
@@ -300,6 +416,11 @@
             "avg"
           ],
           "default": "total"
+        },
+        "HelpText": {
+          "type": "string",
+          "title": "Help text",
+          "description": "Short generic explanation about the content of the amount data"
         },
         "EmployeesBreakdown": {
           "type": "array",
