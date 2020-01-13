@@ -248,14 +248,6 @@
                                         "type": "object",
                                         "additionalProperties": false,
                                         "properties": {
-                                            "CurrencyISO": {
-                                                "type": "string",
-                                                "title": "Amount value currency",
-                                                "description": "ISO code describing the currency used for the amount value",
-                                                "examples": [
-                                                    "EUR"
-                                                ]
-                                            },
                                             "Type": {
                                                 "type": "string",
                                                 "title": "Amount type",
@@ -266,21 +258,9 @@
                                                 ]
                                             },
                                             "Amount": {
-                                                "type": "number",
+                                                "$ref": "DataTypes.schema.json#/properties/Amount",
                                                 "title": "Amount value",
-                                                "description": "Contains the exact amount value (money) or the minimum value in case of range",
-                                                "examples": [
-                                                    515000,
-                                                    607.75
-                                                ]
-                                            },
-                                            "RangeMaxAmount": {
-                                                "type": "number",
-                                                "title": "Range: Maximum Amount",
-                                                "description": "Maximum value of the amount in case of range",
-                                                "examples": [
-                                                    500000000.00
-                                                ]
+                                                "description": "Contains the exact amount value (money) or the minimum value in case of range"
                                             },
                                             "Detail": {
                                                 "type": "string",

@@ -13,6 +13,7 @@
             "additionalItems": false,
             "items": {
                 "type": "object",
+                "additionalProperties": true,
                 "properties": {
                     "Date": {
                         "type": "string",
