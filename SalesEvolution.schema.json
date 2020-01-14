@@ -1,0 +1,157 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/SalesEvolution.schema.json",
+    "type": "object",
+    "title": "The Sales Evolution Data Domain Schema",
+    "description": "Contains the sales evolution of an entity",
+    "additionalProperties": false,
+    "definitions": {
+        "Sales": {
+            "$comment": "Used to shorten the refs to the Amount datatype",
+            "$id": "#Sales",
+            "$ref": "DataTypes.schema.json#/properties/Amount",
+            "additionalProperties": false
+        }
+    },
+    "properties": {
+        "SalesEvolutionList": {
+            "type": "array",
+            "title": "Sales Evolution List",
+            "description": "List with the evolution of sales of the company throughtout the years",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Year": {
+                        "type": "integer",
+                        "title": "Sales year",
+                        "description": "Year related to the employees sales"
+                    },
+                    "TotalSales": {
+                        "$ref": "#Sales",
+                        "additionalProperties": false,
+                        "title": "Total Sales",
+                        "description": "Sales amount of the entity in the specific year",
+                        "examples": [
+                            {
+                                "Value": 15963705.00,
+                                "Estimated": false,
+                                "CurrencyISO": "EUR"
+                            }
+                        ]
+                    },
+                    "PublicationVendorReferenceId": {
+                        "type": "integer",
+                        "title": "Publication Vendor Reference Id",
+                        "description": "Internal vendor code for the origian source of the info"
+                    },
+                    "Source": {
+                        "type": "string",
+                        "title": "Sales data source",
+                        "description": "Indicates the original source where the data was gathered",
+                        "examples": [
+                            "Balance de AXESOR CONOCER PARA DECIDIR SA (2017)"
+                        ]
+                    },
+                    "CurrentEvent": {
+                        "type": "boolean",
+                        "title": ":",
+                        "description": "True if this event of the data is the more recent of the list"
+                    },
+                    "BreakdownsList": {
+                        "type": "array",
+                        "title": "Breakdowns list",
+                        "description": "Contains a list of different breakdowns with concrete detail of the number of employees",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "TypeGroup": {
+                                    "type": "string",
+                                    "title": "Breakdown type",
+                                    "description": "Description of the subject of the concrete breakdown",
+                                    "examples": [
+                                        "Por tipo de cargo",
+                                        "Por tipo de contrato"
+                                    ]
+                                },
+                                "PublicationVendorReferenceId": {
+                                    "type": "integer",
+                                    "title": "Vendor Reference Id",
+                                    "description": "External Id used to point to the source reference of the data"
+                                },
+                                "VendorTypeId": {
+                                    "type": "integer",
+                                    "title": "Vendor Reference Id",
+                                    "description": "External Id used to sort the typegroup of the data"
+                                },
+                                "Source": {
+                                    "type": "string",
+                                    "title": "Employees data source",
+                                    "description": "Indicates the original source where the data was gathered",
+                                    "examples": [
+                                        "Memoria de AXESOR CONOCER PARA DECIDIR SA (2017)"
+                                    ]
+                                },
+                                "PublicationPageNumber": {
+                                    "type": "integer",
+                                    "title": "Publication page number",
+                                    "description": "Page number where the amount is located in the original source"
+                                },
+                                "CurrentEvent": {
+                                    "type": "boolean",
+                                    "title": ":",
+                                    "description": "True if this event of the data is the more recent of the list"
+                                },
+                                "DetailsList": {
+                                    "type": "array",
+                                    "title": "List of detailed values",
+                                    "description": "Includes each employees value for the current breakdown",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Type": {
+                                                "type": "string",
+                                                "title": "Breakdown type",
+                                                "description": "Description of the subject of the concrete breakdown",
+                                                "examples": [
+                                                    "SERVICIOS DE INFORMACIÓN",
+                                                    "PRESTACIÓN DE SERVICIOS"
+                                                ]
+                                            },
+                                            "PublicationVendorReferenceId": {
+                                                "type": "integer",
+                                                "title": "Vendor Reference Id",
+                                                "description": "External Id used to point to the source reference of the data"
+                                            },
+                                            "VendorTypeId": {
+                                                "type": "integer",
+                                                "title": "Vendor Reference Id",
+                                                "description": "External Id used to used to sort the type of the data"
+                                            },
+                                            "TotalSales": {
+                                                "$ref": "#Sales",
+                                                "additionalProperties": false,
+                                                "title": "Total Sales",
+                                                "description": "Sales detail of the entity in the specific year",
+                                                "examples": [
+                                                    {
+                                                        "Value": 1596303.00,
+                                                        "Estimated": false,
+                                                        "CurrencyISO": "EUR"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
