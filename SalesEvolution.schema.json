@@ -8,7 +8,6 @@
     "definitions": {
         "Sales": {
             "$comment": "Used to shorten the refs to the Amount datatype",
-            "$id": "#Sales",
             "$ref": "DataTypes.schema.json#/properties/Amount",
             "additionalProperties": false
         }
@@ -28,7 +27,7 @@
                         "description": "Year related to the employees sales"
                     },
                     "TotalSales": {
-                        "$ref": "#Sales",
+                        "$ref": "definitions#Sales",
                         "additionalProperties": false,
                         "title": "Total Sales",
                         "description": "Sales amount of the entity in the specific year",
@@ -132,7 +131,7 @@
                                                 "description": "External Id used to used to sort the type of the data"
                                             },
                                             "TotalSales": {
-                                                "$ref": "#Sales",
+                                                "$ref": "definitions#Sales",
                                                 "additionalProperties": false,
                                                 "title": "Total Sales",
                                                 "description": "Sales detail of the entity in the specific year",
