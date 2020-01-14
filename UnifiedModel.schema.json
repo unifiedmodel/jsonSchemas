@@ -22,6 +22,9 @@
         "EmployeesEvolution": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/EmployeesEvolution.schema.json"
         },
+        "SalesEvolution": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/SalesEvolution.schema.json"
+        },
         "PublicRecords": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/PublicRecords.schema.json"
         }
