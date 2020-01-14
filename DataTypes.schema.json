@@ -164,6 +164,7 @@
       "type": "object",
       "title": "The Amount data type",
       "description": "Contains specific information about any amount used in the JSON",
+      "additionalProperties": false,
       "properties": {
         "CurrencyISO": {
           "type": "string",
