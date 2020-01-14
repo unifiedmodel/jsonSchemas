@@ -27,7 +27,7 @@
                         "description": "Year related to the employees sales"
                     },
                     "TotalSales": {
-                        "$ref": "definitions#Sales",
+                        "$ref": "#/definitions/Sales",
                         "additionalProperties": false,
                         "title": "Total Sales",
                         "description": "Sales amount of the entity in the specific year",
@@ -131,7 +131,7 @@
                                                 "description": "External Id used to used to sort the type of the data"
                                             },
                                             "TotalSales": {
-                                                "$ref": "definitions#Sales",
+                                                "$ref": "#/definitions/Sales",
                                                 "additionalProperties": false,
                                                 "title": "Total Sales",
                                                 "description": "Sales detail of the entity in the specific year",
