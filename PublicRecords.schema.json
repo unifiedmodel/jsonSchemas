@@ -200,6 +200,21 @@
                                                     "2019-03-08T00:00:00.000Z"
                                                 ]
                                             },
+                                            "Year": {
+                                                "type": "integer",
+                                                "title": "Publication year",
+                                                "description": "Year of the publication (sometimes used to get the PDF from vendors)"
+                                            },
+                                            "PublicationNumber": {
+                                                "type": "string",
+                                                "title": "Publication number",
+                                                "description": "Number or reference of the publication (sometimes used to get the PDF from vendors)"
+                                            },
+                                            "PageNumber": {
+                                                "type": "integer",
+                                                "title": "Page number",
+                                                "description": "Page number of the record in the original publication (sometimes used to get the PDF from vendors)"
+                                            },
                                             "IsMainDate": {
                                                 "type": "boolean",
                                                 "title": "Is Main Date?",
