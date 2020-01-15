@@ -22,13 +22,13 @@
                     },
                     "TypeGroup": {
                         "type": "string",
-                        "title": "Record group type",
+                        "title": "Record group type (enum)",
                         "description": "Parent group type for a record that describes the subject of the event published",
-                        "examples": [
-                            "INCIDENCIAS CON ADMINISTRACIONES PÚBLICAS",
-                            "PROCESOS JUDICIALES",
-                            "ASNEF EMPRESAS"
-                        ]
+                        "anyOf": [
+                            {
+                              "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsGroupType"
+                            }
+                          ]
                     },
                     "Type": {
                         "type": "string",

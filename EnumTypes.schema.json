@@ -12,6 +12,14 @@
                 "Large",
                 "Unknown"
             ]
+        },
+        "enumPublicRecordsGroupType": {
+            "enum": [
+                "Bankruptcy, Insolvency and Restructuring",
+                "Judicial and Administrative",
+                "Defaulted Payments",
+                "Other"
+            ]
         }
     }
 }
