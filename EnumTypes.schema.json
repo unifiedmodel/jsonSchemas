@@ -9,7 +9,8 @@
                 "Micro",
                 "Small",
                 "Medium",
-                "Large"
+                "Large",
+                "Unknown"
             ]
         }
     }

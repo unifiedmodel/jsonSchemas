@@ -120,13 +120,25 @@
     },
     "Size": {
       "type": "string",
-      "title": "Size of the entity",
+      "title": "Size of the entity (enum)",
       "description": "Size of the entity, according to local criteria",
       "anyOf": [
-         {"$ref": "EnumTypes.schema.json#/properties/enumSize"}
+        {
+          "$ref": "EnumTypes.schema.json#/properties/enumSize"
+        }
       ],
       "examples": [
         "Medium"
+      ]
+    },
+    "trSize": {
+      "type": "string",
+      "title": "Size of the entity (translatable)",
+      "description": "Contains the 'Size' value translated to the language requested",
+      "examples": [
+        "Mediano",
+        "Medium",
+        "Moyenne"
       ]
     },
     "Address": {
