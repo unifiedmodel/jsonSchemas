@@ -40,15 +40,20 @@
                             "Impagos de ASNEF Empresas"
                         ]
                     },
+                    "TypeHelp": {
+                        "type": "string",
+                        "title": "Event type help",
+                        "description": "Short generic explanation about the meaning of the event type"
+                    },
                     "VendorTypeId": {
                         "type": "integer",
                         "title": "Vendor Type Id",
                         "description": "Internal vendor code used to refer its specific act or event type"
                     },
-                    "VendorTypeGroupId": {
+                    "VendorSubtypeId": {
                         "type": "integer",
                         "title": "Vendor Type Group Id",
-                        "description": "Internal vendor code used to refer its specific act or event parent group type"
+                        "description": "Internal vendor code used to refer its specific act or event subtype"
                     },
                     "Source": {
                         "type": "string",
@@ -163,6 +168,11 @@
                                         "ACTAS DE INFRACCIÓN-SANCIÓN",
                                         "EMBARGO"
                                     ]
+                                },
+                                "StageHelp": {
+                                    "type": "string",
+                                    "title": "Stage type help",
+                                    "description": "Short generic explanation about the meaning of the stage of the record"
                                 },
                                 "Priority": {
                                     "type": "integer",
