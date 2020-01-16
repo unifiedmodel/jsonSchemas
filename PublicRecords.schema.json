@@ -26,9 +26,9 @@
                         "description": "Parent group type for a record that describes the subject of the event published",
                         "anyOf": [
                             {
-                              "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsGroupType"
+                                "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsGroupType"
                             }
-                          ]
+                        ]
                     },
                     "Type": {
                         "type": "string",
@@ -229,6 +229,44 @@
                                                 "type": "boolean",
                                                 "title": "Is Main Date?",
                                                 "description": "If true, represents the main one in an array of publications"
+                                            },
+                                            "OtherDataList": {
+                                                "type": "array",
+                                                "title": "List of Other Data",
+                                                "description": "Any other data relative to this publication",
+                                                "additionalItems": false,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "Datatype": {
+                                                            "type": "string",
+                                                            "title": "Other data's datatype",
+                                                            "description": "Schema datatype for the data",
+                                                            "examples": [
+                                                                "integer",
+                                                                "string",
+                                                                "address"
+                                                            ]
+                                                        },
+                                                        "Tag": {
+                                                            "type": "string",
+                                                            "title": "Other data's tag",
+                                                            "description": "Tag that describes the data",
+                                                            "examples": [
+                                                                "Tipo de Documento"
+                                                            ]
+                                                        },
+                                                        "Value": {
+                                                            "type": "string",
+                                                            "title": "Other data's value",
+                                                            "description": "Value for the data",
+                                                            "examples": [
+                                                                "Cheque"
+                                                            ]
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
