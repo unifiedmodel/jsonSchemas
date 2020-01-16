@@ -20,6 +20,15 @@
                 "Defaulted Payments",
                 "Other"
             ]
+        },
+        "enumEmployeesEvolutionTypeGroup": {
+            "enum": [
+                "By type of contract",
+                "By job title",
+                "By gender",
+                "Paid vs unpaid staff",
+                "By type of working day"
+            ]
         }
     }
 }
