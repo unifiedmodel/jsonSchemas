@@ -59,11 +59,28 @@
                             "properties": {
                                 "TypeGroup": {
                                     "type": "string",
-                                    "title": "Breakdown type",
+                                    "title": "Breakdown type (enum)",
+                                    "description": "Description of the subject of the concrete breakdown",
+                                    "anyOf": [
+                                        {
+                                          "$ref": "EnumTypes.schema.json#/properties/enumEmployeesEvolutionTypeGroup"
+                                        }
+                                      ],
+                                    "examples": [
+                                        "By type of contract",
+                                        "By job title",
+                                        "By gender",
+                                        "Paid vs unpaid staff",
+                                        "By type of working day"
+                                    ]
+                                },
+                                "trTypeGroup": {
+                                    "type": "string",
+                                    "title": "Breakdown type (translatable)",
                                     "description": "Description of the subject of the concrete breakdown",
                                     "examples": [
-                                        "Por tipo de cargo",
-                                        "Por tipo de contrato"
+                                        "Por tipo de contrato",
+                                        "Por puesto de trabajo"
                                     ]
                                 },
                                 "VendorReferenceId": {
