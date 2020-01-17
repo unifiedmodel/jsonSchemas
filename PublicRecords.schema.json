@@ -50,10 +50,10 @@
                         "title": "Vendor Type Id",
                         "description": "Internal vendor code used to refer its specific act or event type"
                     },
-                    "VendorSubtypeId": {
+                    "VendorSuperTypeId": {
                         "type": "integer",
-                        "title": "Vendor Type Group Id",
-                        "description": "Internal vendor code used to refer its specific act or event subtype"
+                        "title": "Vendor Super Type Id",
+                        "description": "Internal vendor code used to refer its specific  parent act or event type"
                     },
                     "Source": {
                         "type": "string",
