@@ -29,6 +29,14 @@
                 "Paid vs unpaid staff",
                 "By type of working day"
             ]
+        },
+        "enumSalesEvolutionTypeGroup": {
+            "enum": [
+                "By location",
+                "By activity",
+                "By product",
+                "By customers"
+            ]
         }
     }
 }
