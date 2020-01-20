@@ -60,7 +60,7 @@
                     },
                     "BreakdownsList": {
                         "type": "array",
-                        "title": "Breakdowns list",
+                        "title": "Breakdowns list (enum)",
                         "description": "Contains a list of different breakdowns with concrete detail of the number of employees",
                         "additionalItems": false,
                         "items": {
@@ -68,12 +68,15 @@
                             "additionalProperties": false,
                             "properties": {
                                 "TypeGroup": {
+                                    "$ref":"EnumTypes.schema.json#/properties/enumSalesEvolutionTypeGroup",
                                     "type": "string",
                                     "title": "Breakdown type",
                                     "description": "Description of the subject of the concrete breakdown",
                                     "examples": [
-                                        "Por tipo de cargo",
-                                        "Por tipo de contrato"
+                                        "By location",
+                                        "By activity",
+                                        "By product",
+                                        "By customers"
                                     ]
                                 },
                                 "PublicationVendorReferenceId": {
@@ -121,6 +124,11 @@
                                                     "SERVICIOS DE INFORMACIÓN",
                                                     "PRESTACIÓN DE SERVICIOS"
                                                 ]
+                                            },
+                                            "TypeAttribute": {
+                                                "type":"string",
+                                                "title": "Attribute of the type",
+                                                "description": "Used for some types that need a context to sort them, like sales by location"
                                             },
                                             "PublicationVendorReferenceId": {
                                                 "type": "integer",
