@@ -43,7 +43,7 @@
                     "PublicationVendorReferenceId": {
                         "type": "integer",
                         "title": "Publication Vendor Reference Id",
-                        "description": "Internal vendor code for the origian source of the info"
+                        "description": "Internal vendor code for the original source of the info"
                     },
                     "Source": {
                         "type": "string",
@@ -55,7 +55,7 @@
                     },
                     "CurrentEvent": {
                         "type": "boolean",
-                        "title": ":",
+                        "title": "Current Event",
                         "description": "True if this event of the data is the more recent of the list"
                     },
                     "BreakdownsList": {
@@ -101,7 +101,7 @@
                                 },
                                 "CurrentEvent": {
                                     "type": "boolean",
-                                    "title": ":",
+                                    "title": "Current Event",
                                     "description": "True if this event of the data is the more recent of the list"
                                 },
                                 "DetailsList": {
