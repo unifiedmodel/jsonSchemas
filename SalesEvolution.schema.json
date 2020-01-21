@@ -68,7 +68,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "TypeGroup": {
-                                    "$ref":"EnumTypes.schema.json#/properties/enumSalesEvolutionTypeGroup",
+                                    "$ref": "EnumTypes.schema.json#/properties/enumSalesEvolutionTypeGroup",
                                     "type": "string",
                                     "title": "Breakdown type",
                                     "description": "Description of the subject of the concrete breakdown",
@@ -77,6 +77,15 @@
                                         "By activity",
                                         "By product",
                                         "By customers"
+                                    ]
+                                },
+                                "trTypeGroup": {
+                                    "type": "string",
+                                    "title": "Breakdown type (translatable)",
+                                    "description": "Description of the subject of the concrete breakdown",
+                                    "examples": [
+                                        "Por geografía",
+                                        "Por actividad"
                                     ]
                                 },
                                 "PublicationVendorReferenceId": {
@@ -126,7 +135,7 @@
                                                 ]
                                             },
                                             "TypeAttribute": {
-                                                "type":"string",
+                                                "type": "string",
                                                 "title": "Attribute of the type",
                                                 "description": "Used for some types that need a context to sort them, like sales by location"
                                             },
