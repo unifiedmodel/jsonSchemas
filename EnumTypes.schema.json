@@ -13,6 +13,24 @@
                 "Unknown"
             ]
         },
+        "enumScale": {
+            "enum": [
+                "Units",
+                "Thousands",
+                "Millions"
+            ]
+        },
+        "enumPeriod": {
+            "enum": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "BiMonthly",
+                "Quarterly",
+                "SixMonthly",
+                "Yearly"
+            ]
+        },
         "enumPublicRecordsGroupType": {
             "enum": [
                 "Bankruptcy, Insolvency and Restructuring",
