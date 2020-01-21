@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/FinancialStatements.schema.json",
+    "type": "object",
+    "title": "The Financial Statements Data Domain Schema",
+    "description": "Contains any general-purpose set of financial statements, like balance sheets, income statements, cash flow or ratios",
+    "additionalProperties": false,
+    "properties": {
+        
+    }
+}

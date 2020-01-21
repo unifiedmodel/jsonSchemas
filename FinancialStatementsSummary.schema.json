@@ -1,0 +1,115 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/FinancialStatementsSummary.schema.json",
+    "type": "object",
+    "title": "The Financial Statements Data Domain Schema",
+    "description": "Contains a list of the financial statements, like balance sheets, income statements, cash flow or ratios, available to get for an entity",
+    "additionalProperties": false,
+    "properties": {
+        "FinancialStatementsList": {
+            "type": "array",
+            "title": "List of Financial Statements' general info",
+            "description": "List of Financial Statements' of an entity, including only the main info (not the values), sorted by period",
+            "additionalItems": false,
+            "items": {
+                "Year": {
+                    "type": "integer",
+                    "title": "Statements year",
+                    "description": "In case of a yearly period, indicated the year when statements facts happened"
+                },
+                "Type": {
+                    "type": "string",
+                    "title": "Statements type",
+                    "description": "Shows the statements type, usually Annual Accounts",
+                    "examples": [
+                        "Annual Accounts",
+                        "Income Tax"
+                    ]
+                },
+                "PeriodType": {
+                    "$ref": "EnumTypes.schema.json#/properties/enumPeriod",
+                    "title": "Period type",
+                    "description": "The span of time covered by a set of financial statements",
+                    "examples": [
+                        "Monthly",
+                        "Yearly"
+                    ]
+                },
+                "PeriodDesc": {
+                    "type": "string",
+                    "title": "Period description",
+                    "description": "In case of any period different from yearly, it is used for the period description value",
+                    "examples": [
+                        "1Q2018",
+                        "Feb 2019"
+                    ]
+                },
+                "FilingDate": {
+                    "type": "string",
+                    "title": "Date of Filing",
+                    "description": "Date of filing of the current statements",
+                    "examples": [
+                        "March 2018"
+                    ]
+                },
+                "StartingDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "title": "Starting date",
+                    "description": "Initial date of the current statements"
+                },
+                "ClosingDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "title": "Closing date",
+                    "description": "Closing date of the current statements"
+                },
+                "Format": {
+                    "type": "string",
+                    "title": "Statements format",
+                    "description": "Specific format of the rule used to fill the statements",
+                    "Examples": [
+                        "Abreviado",
+                        "Plenas NIIF",
+                        "Normales NPGC"
+                    ]
+                },
+                "IsConsolidated": {
+                    "type": "boolean",
+                    "title": "Is consolidated",
+                    "description": "True if the statements are consolidated instead of individual accounts"
+                },
+                "IsAvailable": {
+                    "type": "boolean",
+                    "title": "Is available",
+                    "description": "True if the statements' content has been processed and it is available for the end consumer"
+                },
+                "IsUpdateable": {
+                    "type": "boolean",
+                    "title": "Is updateable",
+                    "description": "True if the statements are not currently available for the end consumer but they may be ordered and processed under request (in some scenarios)"
+                },
+                "IsNotOfficial": {
+                    "type": "boolean",
+                    "title": "Is not official",
+                    "description": "True if the statements were not obtained from an official source"
+                },
+                "IncludeAttachments": {
+                    "type": "boolean",
+                    "title": "Include attachments",
+                    "description": "True if the original document with the statements (PDF, image) is included"
+                },
+                "PublicationVendorReferenceId": {
+                    "type": "integer",
+                    "title": "Publication Vendor Reference Id",
+                    "description": "External Id used to point to the source reference of the filing event"
+                },
+                "StatementsVendorReferenceId": {
+                    "type": "integer",
+                    "title": "Statements Vendor Reference Id",
+                    "description": "External Id used to point to the source reference of the statements data"
+                }
+            }
+        }
+    }
+}
