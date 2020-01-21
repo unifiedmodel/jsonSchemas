@@ -106,11 +106,6 @@
                                         "Memoria de AXESOR CONOCER PARA DECIDIR SA (2017)"
                                     ]
                                 },
-                                "PublicationPageNumber": {
-                                    "type": "integer",
-                                    "title": "Publication page number",
-                                    "description": "Page number where the amount is located in the original source"
-                                },
                                 "CurrentEvent": {
                                     "type": "boolean",
                                     "title": "Current Event",
@@ -148,6 +143,11 @@
                                                 "type": "integer",
                                                 "title": "Vendor Reference Id",
                                                 "description": "External Id used to used to sort the type of the data"
+                                            },
+                                            "PublicationPageNumber": {
+                                                "type": "integer",
+                                                "title": "Publication page number",
+                                                "description": "Page number where the amount is located in the original source"
                                             },
                                             "TotalSales": {
                                                 "$ref": "#/definitions/Sales",
