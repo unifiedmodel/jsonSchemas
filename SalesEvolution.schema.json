@@ -136,7 +136,7 @@
                                             },
                                             "PublicationVendorReferenceId": {
                                                 "type": "integer",
-                                                "title": "PublicationVendor Reference Id",
+                                                "title": "Publication Vendor Reference Id",
                                                 "description": "External Id used to point to the source reference of the data"
                                             },
                                             "VendorTypeId": {
