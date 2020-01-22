@@ -30,6 +30,16 @@
                             "Reducción de capital"
                         ]
                     },
+                    "VendorTypeId": {
+                        "type": "integer",
+                        "title": "Vendor Type Id",
+                        "description": "Internal vendor code thar references the specific type"
+                    },
+                    "TypeHelp": {
+                        "type": "string",
+                        "title": "Event type help",
+                        "description": "Short generic explanation about the meaning of the event type"
+                    },
                     "PublicationSource": {
                         "type": "string",
                         "title": "Publication source",
