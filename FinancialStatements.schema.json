@@ -11,7 +11,7 @@
             "title": "List of Financial Statements with their detail",
             "description": "List of Financial Statements of an entity, including all the financial elements sorted by period",
             "additionalProperties": false,
-            "items": {
+            "properties": {
                 "FinancialStatementsSummaryList": {
                     "type": "array",
                     "title": "List of Financial Statements' general info",
