@@ -51,9 +51,14 @@
                                 ]
                             },
                             "PeriodType": {
-                                "$ref": "EnumTypes.schema.json#/properties/enumPeriod",
+                                "type": "string",
                                 "title": "Period type",
                                 "description": "The span of time covered by a set of financial statements",
+                                "anyOf": [
+                                    {
+                                        "$ref": "EnumTypes.schema.json#/properties/enumPeriod"
+                                    }
+                                ],
                                 "examples": [
                                     "Monthly",
                                     "Yearly"
