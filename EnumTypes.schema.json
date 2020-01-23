@@ -55,6 +55,17 @@
                 "By product",
                 "By customers"
             ]
+        },
+        "enumFinancialStatementsSection": {
+            "enum": [
+                "Financial summary",
+                "Balance sheet",
+                "Income statement",
+                "Cash Flow statement",
+                "Statement of changes in equity",
+                "Ratios",
+                "Sectoral comparative"
+            ]
         }
     }
 }
