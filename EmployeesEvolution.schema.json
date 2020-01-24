@@ -63,9 +63,9 @@
                                     "description": "Description of the subject of the concrete breakdown",
                                     "anyOf": [
                                         {
-                                          "$ref": "EnumTypes.schema.json#/properties/enumEmployeesEvolutionTypeGroup"
+                                            "$ref": "EnumTypes.schema.json#/properties/enumEmployeesEvolutionTypeGroup"
                                         }
-                                      ],
+                                    ],
                                     "examples": [
                                         "By type of contract",
                                         "By job title",
@@ -107,7 +107,25 @@
                                     "description": "Includes each employees value for the current breakdown",
                                     "additionalItems": false,
                                     "items": {
-                                        "$ref": "DataTypes.schema.json#/properties/Employees"
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Type": {
+                                                "type": "string",
+                                                "title": "Detail type",
+                                                "description": "Describes each type of employee according to the current group",
+                                                "examples": [
+                                                    "Fijos",
+                                                    "Temporales",
+                                                    "Directivos"
+                                                ]
+                                            },
+                                            "Value": {
+                                                "$ref": "DataTypes.schema.json#/properties/Employees",
+                                                "title": "Detail value",
+                                                "description": "Value of employees for the specific type"
+                                            }
+                                        }
                                     }
                                 }
                             }
