@@ -120,6 +120,11 @@
                                                     "Directivos"
                                                 ]
                                             },
+                                            "VendorTypeId": {
+                                                "type": "integer",
+                                                "title": "Vendor Type Id",
+                                                "description": "External Id used to point to the source reference of the type"
+                                            },
                                             "Value": {
                                                 "$ref": "DataTypes.schema.json#/properties/Employees",
                                                 "title": "Detail value",
