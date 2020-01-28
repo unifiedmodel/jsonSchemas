@@ -94,6 +94,15 @@
                                     "Normales NPGC"
                                 ]
                             },
+                            "Source": {
+                                "type": "string",
+                                "title": "Data source",
+                                "description": "Indicates the source where financial statements have been gathered",
+                                "examples": [
+                                    "Registro Mercantil",
+                                    "Superintendencia de Sociedades"
+                                ]
+                            },
                             "IsConsolidated": {
                                 "type": "boolean",
                                 "title": "Is consolidated",
