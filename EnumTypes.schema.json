@@ -66,6 +66,16 @@
                 "Ratios",
                 "Sectoral comparative"
             ]
+        },"enumFrequencyDataType": {
+            "enum": [
+                "Percent",
+                "Percentage",
+                "Ratio",
+                "Days",
+                "Weeks",
+                "Months",
+                "Years"
+            ]
         }
     }
 }

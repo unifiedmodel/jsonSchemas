@@ -275,6 +275,36 @@
           "description": "Short generic explanation about the content of the amount data"
         }
       }
+    },
+    "FrequencyMeasure": {
+      "type": "object",
+      "title": "The Frequency Measure data type",
+      "description": "Used for frequency measures, as days, percents or ratios",
+      "additionalProperties": false,
+      "properties": {
+        "FreqType": {
+          "$ref": "EnumTypes.schema.json#/properties/enumFrequencyDataType",
+          "type": "string",
+          "title": "Data type (enum)",
+          "description": "Type of measure, according to an enum",
+          "examples": [
+            "Days",
+            "Ratio",
+            "Percent"
+          ]
+        },
+        "FreqValue": {
+          "type": "string",
+          "title": "Data value",
+          "description": "Value of the frequency measure, linked to the type above",
+          "examples": [
+            "0.34",
+            "15 %",
+            "3.24",
+            "25"
+          ]
+        }
+      }
     }
   }
 }

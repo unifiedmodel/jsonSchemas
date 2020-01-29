@@ -279,7 +279,14 @@
                                                         ]
                                                     },
                                                     "Value": {
-                                                        "type": "number",
+                                                        "oneOf": [
+                                                            {
+                                                                "$ref": "DataTypes.schema.json#/properties/Amount"
+                                                            },
+                                                            {
+                                                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure"
+                                                            }
+                                                        ],
                                                         "title": "Value",
                                                         "description": "Contains the single value filed by the entity for an element in the current period",
                                                         "examples": [
@@ -298,7 +305,14 @@
                                                         ]
                                                     },
                                                     "SectoralValue": {
-                                                        "type": "number",
+                                                        "oneOf": [
+                                                            {
+                                                                "$ref": "DataTypes.schema.json#/properties/Amount"
+                                                            },
+                                                            {
+                                                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure"
+                                                            }
+                                                        ],
                                                         "title": "Sectoral value",
                                                         "description": "Contains the sectoral average value for this element, according to sectoral dimensions like size or activity",
                                                         "examples": [
