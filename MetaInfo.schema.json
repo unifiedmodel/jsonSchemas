@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/MetaInfo.schema.json",
+    "type": "object",
+    "title": "Metainfo Schema",
+    "description": "Includes metainfo for the unified report, including some properties that would affect the whole report",
+    "properties": {
+        "EntityId": {
+            "type": "integer",
+            "title": "Internal Id for entities",
+            "description": "Contains Axesor360 unique ID for the entity",
+            "examples": [
+                2684748
+            ]
+        },
+        "VendorEntityId": {
+            "type": "string",
+            "title": "Vendor Id for Entities",
+            "description": "External Id (from vendors) for the entity",
+            "examples": [
+                "987857"
+            ]
+        },
+        "LastUpdate": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Info about last update",
+            "description": "Date of last update of the date contained",
+            "examples": [
+                "2019-10-29T18:25:43.511Z"
+            ]
+        },
+        "Language": {
+            "type": "string",
+            "title": "Report language",
+            "description": "Sets the language for the content of the report",
+            "examples": [
+                "ES",
+                "PT",
+                "EN"
+            ]
+        },
+        "DefaultCurrencyISO": {
+            "type": "string",
+            "title": "Default currency",
+            "description": "ISO code describing fallback currency used for each Amount datatype",
+            "examples": [
+                "EUR"
+            ]
+        },
+        "DefaultScale": {
+            "$ref": "EnumTypes.schema.json#/properties/enumScale",
+            "title": "Default amount scale",
+            "description": "Indicates the fallback scale value used for eacht Amount datatype",
+            "examples": [
+                "Thousands",
+                "Millions"
+            ]
+        }
+    }
+}

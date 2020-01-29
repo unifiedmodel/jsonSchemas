@@ -7,6 +7,9 @@
         "BasicProfile"
     ],
     "properties": {
+        "MetaInfo": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/MetaInfo.schema.json"
+        },
         "BasicProfile": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/BasicProfile.schema.json"
         },
