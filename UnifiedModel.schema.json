@@ -30,6 +30,9 @@
         },
         "PublicRecords": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/PublicRecords.schema.json"
+        },
+        "FinancialStatements": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/FinancialStatements.schema.json"
         }
     }
 }
