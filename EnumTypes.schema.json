@@ -76,6 +76,13 @@
                 "Months",
                 "Years"
             ]
+        },
+        "enumConnotation": {
+            "enum": [
+                "Positive",
+                "Negative",
+                "Neutral"
+            ]
         }
     }
 }
