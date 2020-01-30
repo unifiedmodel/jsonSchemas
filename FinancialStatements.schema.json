@@ -322,6 +322,15 @@
                                                     0.9888,
                                                     -0.6484
                                                 ]
+                                            },
+                                            "Connotation": {
+                                                "$ref": "EnumTypes.schema.json#/properties/enumConnotation",
+                                                "type": "string",
+                                                "title": "Value's connotation (enum)",
+                                                "description": "Shows the tendency or connotation of the value",
+                                                "examples": [
+                                                    "Positive", "Negative", "Neutral"
+                                                ]
                                             }
                                         }
                                     }
