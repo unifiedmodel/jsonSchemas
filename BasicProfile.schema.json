@@ -89,7 +89,7 @@
     "BusinessType": {
       "type": "string",
       "title": "Entity type within a group of entities",
-      "description": "In holding or business groups, show the role of the company within them",
+      "description": "In holding or business groups, shows the role of the company within them",
       "examples": [
         "Filial de grupo"
       ]

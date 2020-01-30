@@ -32,7 +32,7 @@
                                 "Type": {
                                     "type": "string",
                                     "title": "Publication related type",
-                                    "description": "Act or event type that describes the subject of the event published",
+                                    "description": "Act or event type that describe the subject of the event published",
                                     "examples": [
                                         "Constitución",
                                         "Ampliación de capital"
@@ -41,7 +41,7 @@
                                 "TypeGroup": {
                                     "type": "string",
                                     "title": "Publication related group type",
-                                    "description": "Parent group for act or event types that describes the subject of the event published",
+                                    "description": "Parent group for act or event types that describe the event's published subject",
                                     "examples": [
                                         "Actos de Capital",
                                         "Procesos de Fusión o Escisión"
@@ -55,12 +55,12 @@
                                 "VendorTypeGroupId": {
                                     "type": "integer",
                                     "title": "Vendor Type Group Id",
-                                    "description": "Internal vendor code used to refer its specific act or event parent group type"
+                                    "description": "Internal vendor code used to refer its specific parent act or event group type"
                                 },
                                 "Priority": {
                                     "type": "integer",
                                     "title": "Type priority",
-                                    "description": "Marks the priority of the type amongst the others. The higher the value, the higher the prioriry"
+                                    "description": "Marks the priority of the type amongst others. Higher the value, higher the prioriry"
                                 },
                                 "Detail": {
                                     "type": "string",
