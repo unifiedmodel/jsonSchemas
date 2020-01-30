@@ -105,7 +105,12 @@
                     "IsAvailable": {
                         "type": "boolean",
                         "title": "Is available",
-                        "description": "True if the statements' content has been processed and are available for the end consumer"
+                        "description": "True if the statements' content has been processed and are available for the end consumer in the Sections list"
+                    },
+                    "IsAvailableByVendor": {
+                        "type": "boolean",
+                        "title": "Is available by vendor",
+                        "description": "True if the statements' content has not been included in the Sections list, but the vendor has that info in its services"
                     },
                     "IsUpdateable": {
                         "type": "boolean",
