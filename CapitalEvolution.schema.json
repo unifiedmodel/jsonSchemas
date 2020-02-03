@@ -82,7 +82,7 @@
                         ]
                     },
                     "NominalValue": {
-                        "type": "number",
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
                         "title": "Nominal value",
                         "description": "Nominal value for each share",
                         "examples": [
