@@ -30,7 +30,7 @@
                 "2019-10-29T18:25:43.511Z"
             ]
         },
-        "Language": {
+        "LanguageISO": {
             "type": "string",
             "title": "Report language",
             "description": "Sets the language for the content of the report",
