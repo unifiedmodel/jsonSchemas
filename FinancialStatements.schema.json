@@ -294,7 +294,7 @@
                                                 ]
                                             },
                                             "Variation": {
-                                                "type": "number",
+                                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
                                                 "title": "Variation",
                                                 "description": "Contains the variation between values, to track the performance of the element over different periods",
                                                 "examples": [
@@ -320,7 +320,7 @@
                                                 ]
                                             },
                                             "SectoralVariation": {
-                                                "type": "number",
+                                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
                                                 "title": "Sectoral variation",
                                                 "description": "Contains the variation between sectoral values, to track the performance of the element over different periods",
                                                 "examples": [
