@@ -46,7 +46,7 @@
                     },
                     "PeriodType": {
                         "type": "string",
-                        "title": "Period type",
+                        "title": "Period type (enum)",
                         "description": "Timespan covered by a set of financial statements",
                         "anyOf": [
                             {
@@ -56,6 +56,16 @@
                         "examples": [
                             "Monthly",
                             "Yearly"
+                        ]
+                    },
+                    "trPeriodType": {
+                        "type": "string",
+                        "title": "Period type (translatable)",
+                        "description": "Timespan covered by a set of financial statements",
+                        "examples": [
+                            "Anual",
+                            "Mensual",
+                            "Trimestral"
                         ]
                     },
                     "FilingDate": {
@@ -334,7 +344,9 @@
                                                 "title": "Value's connotation (enum)",
                                                 "description": "Shows the tendency or connotation of the value",
                                                 "examples": [
-                                                    "Positive", "Negative", "Neutral"
+                                                    "Positive",
+                                                    "Negative",
+                                                    "Neutral"
                                                 ]
                                             }
                                         }
