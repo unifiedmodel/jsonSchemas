@@ -88,7 +88,21 @@
     },
     "BusinessType": {
       "type": "string",
-      "title": "Entity type within a group of entities",
+      "anyOf": [
+        {
+          "$ref": "EnumTypes.schema.json#/properties/enumBusinessType"
+        }
+      ],
+      "title": "Entity type within a group of entities (enum)",
+      "description": "In holding or business groups, shows the role of the company within them",
+      "examples": [
+        "Parent company",
+        "Self employed"
+      ]
+    },
+    "trBusinessType": {
+      "type": "string",
+      "title": "Entity type within a group of entities (translatable)",
       "description": "In holding or business groups, shows the role of the company within them",
       "examples": [
         "Filial de grupo"
