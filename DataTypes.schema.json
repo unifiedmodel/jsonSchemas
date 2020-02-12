@@ -294,12 +294,12 @@
           ]
         },
         "FreqValue": {
-          "type": ["number","string"],
+          "type": "number",
           "title": "Data value",
           "description": "Value of the frequency measure, linked to the type above",
           "examples": [
             0.34,
-            "15 %",
+            "15%",
             3.24,
             "25"
           ]
