@@ -33,38 +33,38 @@
         },
         "enumPublicRecordsGroupType": {
             "enum": [
-                "Bankruptcy, Insolvency and Restructuring",
-                "Judicial and Administrative",
-                "Defaulted Payments",
+                "BankruptcyInsolvencyRestructuring",
+                "JudicialAdministrative",
+                "DefaultedPayments",
                 "Other"
             ]
         },
         "enumEmployeesEvolutionTypeGroup": {
             "enum": [
-                "By type of contract",
-                "By job title",
-                "By gender",
-                "Paid vs unpaid staff",
-                "By type of working day"
+                "ByTypeOfContract",
+                "ByJobTitle",
+                "ByGender",
+                "PaidVsUnpaidStaff",
+                "ByTypeOfWorkingDay"
             ]
         },
         "enumSalesEvolutionTypeGroup": {
             "enum": [
-                "By location",
-                "By activity",
-                "By product",
-                "By customers"
+                "ByLocation",
+                "ByActivity",
+                "ByProduct",
+                "ByCustomers"
             ]
         },
         "enumFinancialStatementsSection": {
             "enum": [
-                "Financial summary",
-                "Balance sheet",
-                "Income statement",
-                "Cash Flow statement",
-                "Statement of changes in equity",
+                "FinancialSummary",
+                "BalanceSheet",
+                "IncomeStatement",
+                "CashFlowStatement",
+                "StatementOfChangesInEquity",
                 "Ratios",
-                "Sectoral comparative"
+                "SectoralComparative"
             ]
         },
         "enumFrequencyDataType": {
@@ -87,10 +87,10 @@
         },
         "enumBusinessType": {
             "enum": [
-                "Self employed",
-                "Affiliated company",
-                "Group subsidiary",
-                "Parent company"
+                "SelfEmployed",
+                "AffiliatedCompany",
+                "GroupSubsidiary",
+                "ParentCompany"
             ]
         }
     }
