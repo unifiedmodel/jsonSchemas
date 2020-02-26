@@ -58,7 +58,7 @@
                             "Yearly"
                         ]
                     },
-                    "trPeriodType": {
+                    "TrPeriodType": {
                         "type": "string",
                         "title": "Period type (translatable)",
                         "description": "Timespan covered by a set of financial statements",
@@ -173,7 +173,7 @@
                             "Profit and Loss Statements"
                         ]
                     },
-                    "trSection": {
+                    "TrSection": {
                         "type": "string",
                         "title": "Section name (translatable)",
                         "description": "Name of the section, describing the content included",

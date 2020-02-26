@@ -79,7 +79,7 @@
                                         "By customers"
                                     ]
                                 },
-                                "trTypeGroup": {
+                                "TrTypeGroup": {
                                     "type": "string",
                                     "title": "Breakdown type (translatable)",
                                     "description": "Description of the subject of the concrete breakdown",
