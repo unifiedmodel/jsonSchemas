@@ -92,6 +92,25 @@
                 "GroupSubsidiary",
                 "ParentCompany"
             ]
+        },
+        "enumFinancialElement": {
+            "enum": [
+                "Liquidity",
+                "Solvency",
+                "Indebtedness",
+                "BorrowingCost",
+                "EconomicRateOfReturn",
+                "FinancialProfitability",
+                "AssetTurnover",
+                "StockTurnover",
+                "AveragePaymentTerm",
+                "AveragePaymentCollectionTerm",
+                "Turnover",
+                "WorkingCapital",
+                "FreeCashFlow",
+                "Ebitda",
+                "EBT",
+                "FinancialYearResult"
+            ]
         }
     }
-}
