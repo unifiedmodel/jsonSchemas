@@ -248,6 +248,12 @@
                                         "20000"
                                     ]
                                 },
+                                "ElementEnum": {
+                                    "type": "string",
+                                    "$ref": "EnumTypes.schema.json#/properties/enumFinancialElement",
+                                    "title": "Element enum values",
+                                    "description": "Used on those elements (like ratios) which are enumerated in the enumFinancialElement EnumType"
+                                },
                                 "ElementHelp": {
                                     "type": "string",
                                     "title": "Element help",
