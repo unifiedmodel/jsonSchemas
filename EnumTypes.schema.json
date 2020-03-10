@@ -112,6 +112,21 @@
                 "EBT",
                 "FinancialYearResult"
             ]
+        },
+        "enumDataTypes": {
+            "enum": [
+                "String",
+                "Number",
+                "Integer",
+                "Boolean",
+                "Date",
+                "IdentificationNumber",
+                "Address",
+                "Activity",
+                "Amount",
+                "Employees",
+                "FrequencyMeasure"
+            ]
         }
     }
 }
