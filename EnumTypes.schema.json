@@ -127,6 +127,11 @@
                 "Employees",
                 "FrequencyMeasure"
             ]
+        },
+        "enumPublicRecordsSummaryType": {
+            "enum": [
+                "JudicialClaimsByProceeding"
+            ]
         }
     }
 }

@@ -1,0 +1,138 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/PublicRecordsSummary.schema.json",
+    "type": "object",
+    "title": "Public Records Summary Domain Schem",
+    "description": "",
+    "additionalProperties": false,
+    "properties": {
+        "PublicRecordsSummaryList": {
+            "type": "array",
+            "title": "",
+            "description": "",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "SummaryMode": {
+                        "type": "string",
+                        "required": [
+                            "Single",
+                            "Multiple"
+                        ],
+                        "title": "Summary mode",
+                        "description": "Distinguish if the content includes evolution data (Multiple) or a single-shot photo (Single)"
+                    },
+                    "SummaryType": {
+                        "type": "string",
+                        "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsSummaryType",
+                        "title": "Summary Type (enum)",
+                        "description": "",
+                        "examples": []
+                    },
+                    "TrSummaryType": {
+                        "type": "string",
+                        "title": "Summary Type (translatable)",
+                        "description": "",
+                        "examples": []
+                    },
+                    "TypeGroup": {
+                        "type": "string",
+                        "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsGroupType",
+                        "title": "Type Group (enum)",
+                        "description": "",
+                        "examples": []
+                    },
+                    "TrTypeGroup": {
+                        "type": "string",
+                        "title": "Type Group (translatable)",
+                        "description": "",
+                        "examples": []
+                    },
+                    "HelpText": {
+                        "type": "string",
+                        "title": "Help Text",
+                        "description": "Short generic explanation about the meaning of the summary"
+                    },
+                    "RecordsList": {
+                        "type": "array",
+                        "title": "List of Records",
+                        "description": "",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "RecordType": {
+                                    "type": "string",
+                                    "title": "Record type",
+                                    "description": "",
+                                    "examples": []
+                                },
+                                "HelpText": {
+                                    "type": "string",
+                                    "title": "Help Text",
+                                    "description": "Short generic explanation about the meaning of the record"
+                                },
+                                "PeriodsList": {
+                                    "type": "array",
+                                    "title": "List of periods",
+                                    "description": "",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "RecordDate": {
+                                                "type": "string",
+                                                "format": "date",
+                                                "title": "Record date",
+                                                "description": "Date of the event described. Used specially in multiple-mode"
+                                            },
+                                            "ValuesList": {
+                                                "type": "array",
+                                                "title": "List of values",
+                                                "description": "",
+                                                "additionalItems": false,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "Datatype": {
+                                                            "$ref": "EnumTypes.schema.json#/properties/enumDataType",
+                                                            "type": "string",
+                                                            "title": "Other data's datatype",
+                                                            "description": "Schema datatype for the data used",
+                                                            "examples": [
+                                                                "integer",
+                                                                "string",
+                                                                "address"
+                                                            ]
+                                                        },
+                                                        "Tag": {
+                                                            "type": "string",
+                                                            "title": "Other data's tag",
+                                                            "description": "Tag that describes the data used",
+                                                            "examples": []
+                                                        },
+                                                        "Value": {
+                                                            "type": "string",
+                                                            "title": "Other data's value",
+                                                            "description": "Value for the data used",
+                                                            "examples": []
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
