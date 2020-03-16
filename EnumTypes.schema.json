@@ -110,7 +110,8 @@
                 "FreeCashFlow",
                 "Ebitda",
                 "EBT",
-                "FinancialYearResult"
+                "FinancialYearResult",
+                "FinancialAutonomy"
             ]
         },
         "enumDataTypes": {
