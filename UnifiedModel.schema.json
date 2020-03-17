@@ -28,6 +28,9 @@
         "SalesEvolution": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/SalesEvolution.schema.json"
         },
+        "PublicRecordsSummary": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/PublicRecordsSummary.schema.json"
+        },
         "PublicRecords": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/PublicRecords.schema.json"
         },
