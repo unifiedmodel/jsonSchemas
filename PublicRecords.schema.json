@@ -212,7 +212,7 @@
                                             },
                                             "Date": {
                                                 "type": "string",
-                                                "format": "date-time",
+                                                "format": "date",
                                                 "title": "Last Update",
                                                 "description": "Update date of the last event related to the record",
                                                 "examples": [
@@ -301,7 +301,7 @@
                                             },
                                             "Date": {
                                                 "type": "string",
-                                                "format": "date-time",
+                                                "format": "date",
                                                 "title": "Additional Date",
                                                 "description": "The specific value for the additional date",
                                                 "examples": [

@@ -22,7 +22,7 @@
                     },
                     "PublicationDate": {
                         "type": "string",
-                        "format": "date-time",
+                        "format": "date",
                         "title": "Date of Publication",
                         "description": "Date of publication of the event in the original source",
                         "examples": [
@@ -31,7 +31,7 @@
                     },
                     "FilingDate": {
                         "type": "string",
-                        "format": "date-time",
+                        "format": "date",
                         "title": "Date of Filing",
                         "description": "Date of filing of the event in the register or similiar",
                         "examples": [
@@ -111,7 +111,7 @@
                         "properties": {
                             "Date": {
                                 "type": "string",
-                                "format": "date-time",
+                                "format": "date",
                                 "title": "Reference date",
                                 "description": "Reference date, usually the same that the filing date"
                             },

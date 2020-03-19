@@ -17,7 +17,7 @@
                 "properties": {
                     "Date": {
                         "type": "string",
-                        "format": "date-time",
+                        "format": "date",
                         "title": "Capital movement date",
                         "description": "Date of filing or publication of the capital movement"
                     },

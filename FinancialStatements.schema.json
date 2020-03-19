@@ -78,13 +78,13 @@
                     },
                     "StartingDate": {
                         "type": "string",
-                        "format": "date-time",
+                        "format": "date",
                         "title": "Starting date",
                         "description": "Initial date of the current statements"
                     },
                     "ClosingDate": {
                         "type": "string",
-                        "format": "date-time",
+                        "format": "date",
                         "title": "Closing date",
                         "description": "Closing date of the current statements"
                     },
