@@ -15,7 +15,7 @@
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
-                    "PublicRecordsTypeGroup": {
+                    "TypeGroup": {
                         "type": "string",
                         "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsGroupType",
                         "title": "Type Group (enum)",
@@ -27,7 +27,7 @@
                             "Other"
                         ]
                     },
-                    "TrPublicRecordsTypeGroup": {
+                    "TrTypeGroup": {
                         "type": "string",
                         "title": "Type Group (translatable)",
                         "description": "Indicates the parent type of a public record",
@@ -36,7 +36,7 @@
                             "Impagos"
                         ]
                     },
-                    "PublicRecordsType": {
+                    "Type": {
                         "type": "string",
                         "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsType",
                         "title": "Type of Public Record (enum)",
@@ -47,7 +47,7 @@
                             "InsolvencyProceeding"
                         ]
                     },
-                    "TrPublicRecordsType": {
+                    "TrType": {
                         "type": "string",
                         "title": "Type of Public Record",
                         "description": "Indicates the type or source of a public record",

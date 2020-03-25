@@ -41,18 +41,43 @@
                     },
                     "Type": {
                         "type": "string",
-                        "title": "Record type",
-                        "description": "Type that describes the subject of the event published",
+                        "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsType",
+                        "title": "Type of Public Record (enum)",
+                        "description": "Indicates the type or source of a public record, according to an enum",
                         "examples": [
-                            "Incidencias con la Administración Autonómica",
-                            "Procedimientos ante Juzgados de lo Social",
-                            "Impagos de ASNEF Empresas"
+                            "RAI",
+                            "ASNEF",
+                            "InsolvencyProceeding"
+                        ]
+                    },
+                    "TrType": {
+                        "type": "string",
+                        "title": "Type of Public Record",
+                        "description": "Indicates the type or source of a public record",
+                        "examples": [
+                            "Deudas en RAI",
+                            "Deudas en ASNEF",
+                            "Procedimiento de Concurso de Acreedores"
                         ]
                     },
                     "TypeHelp": {
                         "type": "string",
                         "title": "Event type help",
                         "description": "Short generic explanation about the meaning of the event type"
+                    },
+                    "SubType": {
+                        "type": "string",
+                        "title": "SubType of Public Record",
+                        "description": "Indicates a subtype of a public record, for some complex hierarchies",
+                        "examples": [
+                            "Incidencias con la Administración Local",
+                            "Procedimientos por la Ley de Enjuiciamiento Civil 1/2000"
+                        ]
+                    },
+                    "SubTypeHelp": {
+                        "type": "string",
+                        "title": "Event type help",
+                        "description": "Short generic explanation about the meaning of this subtype"
                     },
                     "VendorTypeId": {
                         "type": "integer",
@@ -63,6 +88,11 @@
                         "type": "integer",
                         "title": "Vendor Super Type Id",
                         "description": "Internal vendor code used to refer its specific  parent act or event type"
+                    },
+                    "VendorSubTypeId": {
+                        "type": "integer",
+                        "title": "Vendor Sub Type Id",
+                        "description": "Internal vendor code used to refer its specific child act or event type"
                     },
                     "Source": {
                         "type": "string",
