@@ -355,7 +355,7 @@
                                     "title": "IBAN",
                                     "description": "IBAN code of the account with the entity"
                                 },
-                                "OverallElementsList": {
+                                "FinancialElementsList": {
                                     "type": "array",
                                     "title": "List of details",
                                     "description": "Full list of the financial elements breaked down for each entity",
