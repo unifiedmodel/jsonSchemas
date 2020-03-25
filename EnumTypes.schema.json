@@ -39,6 +39,13 @@
                 "Other"
             ]
         },
+        "enumPublicRecordsType": {
+            "enum": [
+                "RAI",
+                "ASNEF",
+                "InsolvencyProceeding"
+            ]
+        },
         "enumEmployeesEvolutionTypeGroup": {
             "enum": [
                 "ByTypeOfContract",
