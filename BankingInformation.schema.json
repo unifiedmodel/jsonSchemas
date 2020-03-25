@@ -1,0 +1,463 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/BankingInformation.schema.json",
+    "type": "object",
+    "title": "The Banking Information  Domain Schema",
+    "description": "Contains everything related to banking information of an entity",
+    "additionalProperties": false,
+    "properties": {
+        "BankingInformationSummariesList": {
+            "type": "array",
+            "title": "List of banking information summaries",
+            "description": "List of summaries of different banking products and bills of the entity",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "BankingInformationType": {
+                        "type": "string",
+                        "$ref": "EnumTypes.schema.json#/properties/enumBankingInformationType",
+                        "title": "Type (enum)",
+                        "description": "Specifies the type of banking info according to an enum",
+                        "examples": [
+                            "Credit Report"
+                        ]
+                    },
+                    "TrBankingInformationType": {
+                        "type": "string",
+                        "title": "Type (translatable)",
+                        "description": "Specifies the type of banking info",
+                        "examples": [
+                            "Reporte Crediticio Consolidado",
+                            "Deuda Total",
+                            "Avales",
+                            "Fuentes de Financiación"
+                        ]
+                    },
+                    "Source": {
+                        "type": "string",
+                        "title": "Data source",
+                        "description": "Indicates the source of collected banking information",
+                        "examples": [
+                            "SBS",
+                            "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
+                        ]
+                    },
+                    "HelpText": {
+                        "type": "string",
+                        "title": "Help Text",
+                        "description": "Short generic explanation about the meaning of the summary"
+                    },
+                    "SummariesList": {
+                        "type": "array",
+                        "title": "List of summaries",
+                        "description": "List of summaries related to a specific type of banking information",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "SummaryMode": {
+                                    "type": "string",
+                                    "required": [
+                                        "Single",
+                                        "Multiple"
+                                    ],
+                                    "title": "Summary mode",
+                                    "description": "Distinguish if the content includes evolution data (Multiple) or a single-shot photo (Single)"
+                                },
+                                "SummaryType": {
+                                    "type": "string",
+                                    "$ref": "EnumTypes.schema.json#/properties/enumBankingInformationSummaryType",
+                                    "title": "Summary Type (enum)",
+                                    "description": "Type of aggregation used in the current summary, under an enum",
+                                    "examples": [
+                                        "Total",
+                                        "ByFinancialEntities"
+                                    ]
+                                },
+                                "TrSummaryType": {
+                                    "type": "string",
+                                    "title": "Summary Type (translatable)",
+                                    "description": "Type of aggregation used in the current summary, under an enum",
+                                    "examples": [
+                                        "Total",
+                                        "Desglose por Entidades Financieras"
+                                    ]
+                                },
+                                "RecordsList": {
+                                    "type": "array",
+                                    "title": "List of Records",
+                                    "description": "Each element of the list of records of the summary, including all of their values",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "RecordType": {
+                                                "type": "string",
+                                                "title": "Record type",
+                                                "description": "",
+                                                "examples": []
+                                            },
+                                            "HelpText": {
+                                                "type": "string",
+                                                "title": "Help Text",
+                                                "description": "Short generic explanation about the meaning of the record"
+                                            },
+                                            "PeriodsList": {
+                                                "type": "array",
+                                                "title": "List of periods",
+                                                "description": "",
+                                                "additionalItems": false,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "RecordDate": {
+                                                            "type": "string",
+                                                            "format": "date",
+                                                            "title": "Record date",
+                                                            "description": "Date of the event described. Used specially in multiple-mode"
+                                                        },
+                                                        "ValuesList": {
+                                                            "type": "array",
+                                                            "title": "List of values",
+                                                            "description": "",
+                                                            "additionalItems": false,
+                                                            "items": {
+                                                                "type": "object",
+                                                                "additionalProperties": false,
+                                                                "properties": {
+                                                                    "Datatype": {
+                                                                        "$ref": "EnumTypes.schema.json#/properties/enumDataType",
+                                                                        "type": "string",
+                                                                        "title": "Other data's datatype",
+                                                                        "description": "Schema datatype for the data used",
+                                                                        "examples": [
+                                                                            "integer",
+                                                                            "string",
+                                                                            "address"
+                                                                        ]
+                                                                    },
+                                                                    "Tag": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's tag",
+                                                                        "description": "Tag that describes the data used",
+                                                                        "examples": []
+                                                                    },
+                                                                    "Value": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's value",
+                                                                        "description": "Value for the data used",
+                                                                        "examples": []
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "BankingInformationDetailsList": {
+            "type": "array",
+            "title": "List of banking information summaries",
+            "description": "List of summaries of different banking products and bills of the entity",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "BankingInformationType": {
+                        "type": "string",
+                        "$ref": "EnumTypes.schema.json#/properties/enumBankingInformationType",
+                        "title": "Type (enum)",
+                        "description": "Specifies the type of banking info according to an enum",
+                        "examples": [
+                            "Credit Report"
+                        ]
+                    },
+                    "TrBankingInformationType": {
+                        "type": "string",
+                        "title": "Type (translatable)",
+                        "description": "Specifies the type of banking info",
+                        "examples": [
+                            "Reporte Crediticio Consolidado",
+                            "Deuda Total",
+                            "Avales",
+                            "Fuentes de Financiación"
+                        ]
+                    },
+                    "Source": {
+                        "type": "string",
+                        "title": "Data source",
+                        "description": "Indicates the source of collected banking information",
+                        "examples": [
+                            "SBS",
+                            "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
+                        ]
+                    },
+                    "HelpText": {
+                        "type": "string",
+                        "title": "Help Text",
+                        "description": "Short generic explanation about the meaning of the summary"
+                    },
+                    "OverallInfo": {
+                        "type": "object",
+                        "title": "Overall Info",
+                        "additionalProperties": false,
+                        "properties": {
+                            "OverallElementsList": {
+                                "type": "array",
+                                "title": "List of details",
+                                "description": "Full list of the financial elements added up from all the financial entities",
+                                "additionalItems": false,
+                                "items": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "ElementTitle": {
+                                            "type": "string",
+                                            "title": "Element title",
+                                            "description": "Name of the current financial element or line",
+                                            "examples": [
+                                                "Activo no corriente"
+                                            ]
+                                        },
+                                        "ElementCode": {
+                                            "type": "string",
+                                            "title": "Element code",
+                                            "description": "Code (usually numeric) used to referr a financial element according to official regulations",
+                                            "examples": [
+                                                "10000",
+                                                "20000"
+                                            ]
+                                        },
+                                        "ElementHelp": {
+                                            "type": "string",
+                                            "title": "Element help",
+                                            "description": "Short generic explanation about the content of the element"
+                                        },
+                                        "ElementDetail": {
+                                            "type": "string",
+                                            "title": "Element detail",
+                                            "description": "Any other detail about the element"
+                                        },
+                                        "Indentation": {
+                                            "type": "integer",
+                                            "title": "Indentation level",
+                                            "descripcion": "Indentation of the title of element (left to right)"
+                                        },
+                                        "Order": {
+                                            "type": "integer",
+                                            "title": "Order level",
+                                            "descripcion": "Position of the element in the section (up to down)"
+                                        },
+                                        "VendorElementId": {
+                                            "type": "integer",
+                                            "title": "Vendor Element Id",
+                                            "description": "Id that points the specific element to vendor's coding"
+                                        },
+                                        "ElementValues": {
+                                            "type": "array",
+                                            "title": "Element's values",
+                                            "description": "Set of values of the element, including its single value and variation over previous periods",
+                                            "additionalItems": false,
+                                            "items": {
+                                                "type": "object",
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "Period": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "title": "Period identifier",
+                                                        "description": "Indicates a date to distinguish every periodical statement",
+                                                        "examples": [
+                                                            "2019-01-31"
+                                                        ]
+                                                    },
+                                                    "Value": {
+                                                        "oneOf": [
+                                                            {
+                                                                "$ref": "DataTypes.schema.json#/properties/Amount"
+                                                            },
+                                                            {
+                                                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure"
+                                                            }
+                                                        ],
+                                                        "title": "Value",
+                                                        "description": "Contains the single value filed by the entity for an element in the current period",
+                                                        "examples": []
+                                                    },
+                                                    "Variation": {
+                                                        "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                                                        "title": "Variation",
+                                                        "description": "Contains the variation between values, to track the performance of the element over different periods",
+                                                        "examples": [
+                                                            1.00,
+                                                            0.9854,
+                                                            -0.2412
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "FinancialEntitiesList": {
+                        "type": "array",
+                        "title": "List of Financial Entities",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Name": {
+                                    "type": "string",
+                                    "title": "Name",
+                                    "description": "Name of the financial entity",
+                                    "examples": [
+                                        "BANCO DE CRÉDITO DEL PERÚ"
+                                    ]
+                                },
+                                "IdentificationNumber":
+                                {
+                                    "type": "string",
+                                    "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                    "title": "Identification Number",
+                                    "description": "Id/VAT of the Financial Entity"
+                                },
+                                "Address": {
+                                    "type": "string",
+                                    "$ref": "DataTypes.schema.json#/properties/Address",
+                                    "title": "Address",
+                                    "description": "Financial entity's address"
+                                },
+                                "AccountNumber": {
+                                    "type": "string",
+                                    "title": "Account number",
+                                    "description": "Number of account with the entity"
+                                },
+                                "IBAN": {
+                                    "type": "string",
+                                    "title": "IBAN",
+                                    "description": "IBAN code of the account with the entity"
+                                },
+                                "OverallElementsList": {
+                                    "type": "array",
+                                    "title": "List of details",
+                                    "description": "Full list of the financial elements breaked down for each entity",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "ElementTitle": {
+                                                "type": "string",
+                                                "title": "Element title",
+                                                "description": "Name of the current financial element or line",
+                                                "examples": [
+                                                    "Activo no corriente"
+                                                ]
+                                            },
+                                            "ElementCode": {
+                                                "type": "string",
+                                                "title": "Element code",
+                                                "description": "Code (usually numeric) used to referr a financial element according to official regulations",
+                                                "examples": [
+                                                    "10000",
+                                                    "20000"
+                                                ]
+                                            },
+                                            "ElementHelp": {
+                                                "type": "string",
+                                                "title": "Element help",
+                                                "description": "Short generic explanation about the content of the element"
+                                            },
+                                            "ElementDetail": {
+                                                "type": "string",
+                                                "title": "Element detail",
+                                                "description": "Any other detail about the element"
+                                            },
+                                            "Indentation": {
+                                                "type": "integer",
+                                                "title": "Indentation level",
+                                                "descripcion": "Indentation of the title of element (left to right)"
+                                            },
+                                            "Order": {
+                                                "type": "integer",
+                                                "title": "Order level",
+                                                "descripcion": "Position of the element in the section (up to down)"
+                                            },
+                                            "VendorElementId": {
+                                                "type": "integer",
+                                                "title": "Vendor Element Id",
+                                                "description": "Id that points the specific element to vendor's coding"
+                                            },
+                                            "ElementValues": {
+                                                "type": "array",
+                                                "title": "Element's values",
+                                                "description": "Set of values of the element, including its single value and variation over previous periods",
+                                                "additionalItems": false,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "Period": {
+                                                            "type": "string",
+                                                            "format": "date",
+                                                            "title": "Period identifier",
+                                                            "description": "Indicates a date to distinguish every periodical statement",
+                                                            "examples": [
+                                                                "2019-01-31"
+                                                            ]
+                                                        },
+                                                        "Value": {
+                                                            "oneOf": [
+                                                                {
+                                                                    "$ref": "DataTypes.schema.json#/properties/Amount"
+                                                                },
+                                                                {
+                                                                    "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure"
+                                                                }
+                                                            ],
+                                                            "title": "Value",
+                                                            "description": "Contains the single value filed by the entity for an element in the current period",
+                                                            "examples": []
+                                                        },
+                                                        "Variation": {
+                                                            "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                                                            "title": "Variation",
+                                                            "description": "Contains the variation between values, to track the performance of the element over different periods",
+                                                            "examples": [
+                                                                1.00,
+                                                                0.9854,
+                                                                -0.2412
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -131,7 +131,21 @@
         },
         "enumPublicRecordsSummaryType": {
             "enum": [
-                "JudicialClaimsByProceeding"
+                "Total",
+                "ByProceeding"
+            ]
+        },
+        "enumBankingInformationSummaryType": {
+            "enum": [
+                "Total",
+                "ByFinancialEntities"
+            ]
+        },
+        "enumBankingInformationType": {
+            "enum": [
+                "CreditReport",
+                "TotalDebt",
+                "BankGuarantee"
             ]
         }
     }
