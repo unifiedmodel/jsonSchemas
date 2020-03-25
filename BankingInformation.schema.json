@@ -358,7 +358,7 @@
                                 "FinancialElementsList": {
                                     "type": "array",
                                     "title": "List of details",
-                                    "description": "Full list of the financial elements breaked down for each entity",
+                                    "description": "Full list of the financial elements broken down for each entity",
                                     "additionalItems": false,
                                     "items": {
                                         "type": "object",
