@@ -6,121 +6,168 @@
     "description": "",
     "additionalProperties": false,
     "properties": {
-        "PublicRecordsSummaryList": {
+        "PublicRecordsSummariesList": {
             "type": "array",
-            "title": "",
+            "title": "List of summaries of Public Records",
             "description": "",
             "additionalItems": false,
             "items": {
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
-                    "SummaryMode": {
-                        "type": "string",
-                        "required": [
-                            "Single",
-                            "Multiple"
-                        ],
-                        "title": "Summary mode",
-                        "description": "Distinguish if the content includes evolution data (Multiple) or a single-shot photo (Single)"
-                    },
-                    "SummaryType": {
-                        "type": "string",
-                        "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsSummaryType",
-                        "title": "Summary Type (enum)",
-                        "description": "",
-                        "examples": []
-                    },
-                    "TrSummaryType": {
-                        "type": "string",
-                        "title": "Summary Type (translatable)",
-                        "description": "",
-                        "examples": []
-                    },
-                    "TypeGroup": {
+                    "PublicRecordsTypeGroup": {
                         "type": "string",
                         "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsGroupType",
                         "title": "Type Group (enum)",
-                        "description": "",
-                        "examples": []
+                        "description": "Indicates the parent type of a public record, according to an enum",
+                        "examples": [
+                            "BankruptcyInsolvencyRestructuring",
+                            "JudicialAdministrative",
+                            "DefaultedPayments",
+                            "Other"
+                        ]
                     },
-                    "TrTypeGroup": {
+                    "TrPublicRecordsTypeGroup": {
                         "type": "string",
                         "title": "Type Group (translatable)",
-                        "description": "",
-                        "examples": []
+                        "description": "Indicates the parent type of a public record",
+                        "examples": [
+                            "Concurso de Acreedores",
+                            "Impagos"
+                        ]
+                    },
+                    "PublicRecordsType": {
+                        "type": "string",
+                        "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsType",
+                        "title": "Type of Public Record (enum)",
+                        "description": "Indicates the type or source of a public record, according to an enum",
+                        "examples": [
+                            "RAI",
+                            "ASNEF",
+                            "InsolvencyProceeding"
+                        ]
+                    },
+                    "TrPublicRecordsType": {
+                        "type": "string",
+                        "title": "Type of Public Record",
+                        "description": "Indicates the type or source of a public record",
+                        "examples": [
+                            "Deudas en RAI",
+                            "Deudas en ASNEF",
+                            "Procedimiento de Concurso de Acreedores"
+                        ]
                     },
                     "HelpText": {
                         "type": "string",
                         "title": "Help Text",
                         "description": "Short generic explanation about the meaning of the summary"
                     },
-                    "RecordsList": {
+                    "SummariesList": {
                         "type": "array",
-                        "title": "List of Records",
-                        "description": "",
+                        "title": "List of summaries",
+                        "description": "List of summaries related to a specific type of Public Record",
                         "additionalItems": false,
                         "items": {
                             "type": "object",
                             "additionalProperties": false,
                             "properties": {
-                                "RecordType": {
+                                "SummaryMode": {
                                     "type": "string",
-                                    "title": "Record type",
+                                    "required": [
+                                        "Single",
+                                        "Multiple"
+                                    ],
+                                    "title": "Summary mode",
+                                    "description": "Distinguish if the content includes evolution data (Multiple) or a single-shot photo (Single)"
+                                },
+                                "SummaryType": {
+                                    "type": "string",
+                                    "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsSummaryType",
+                                    "title": "Summary Type (enum)",
                                     "description": "",
-                                    "examples": []
+                                    "examples": [
+                                        "Total",
+                                        "ByProceeding"
+                                    ]
                                 },
-                                "HelpText": {
+                                "TrSummaryType": {
                                     "type": "string",
-                                    "title": "Help Text",
-                                    "description": "Short generic explanation about the meaning of the record"
+                                    "title": "Summary Type (translatable)",
+                                    "description": "",
+                                    "examples": [
+                                        "Total",
+                                        "Por Procedimiento"
+                                    ]
                                 },
-                                "PeriodsList": {
+                                "RecordsList": {
                                     "type": "array",
-                                    "title": "List of periods",
+                                    "title": "List of Records",
                                     "description": "",
                                     "additionalItems": false,
                                     "items": {
                                         "type": "object",
                                         "additionalProperties": false,
                                         "properties": {
-                                            "RecordDate": {
+                                            "RecordType": {
                                                 "type": "string",
-                                                "format": "date",
-                                                "title": "Record date",
-                                                "description": "Date of the event described. Used specially in multiple-mode"
+                                                "title": "Record type",
+                                                "description": "",
+                                                "examples": []
                                             },
-                                            "ValuesList": {
+                                            "HelpText": {
+                                                "type": "string",
+                                                "title": "Help Text",
+                                                "description": "Short generic explanation about the meaning of the record"
+                                            },
+                                            "PeriodsList": {
                                                 "type": "array",
-                                                "title": "List of values",
+                                                "title": "List of periods",
                                                 "description": "",
                                                 "additionalItems": false,
                                                 "items": {
                                                     "type": "object",
                                                     "additionalProperties": false,
                                                     "properties": {
-                                                        "Datatype": {
-                                                            "$ref": "EnumTypes.schema.json#/properties/enumDataType",
+                                                        "RecordDate": {
                                                             "type": "string",
-                                                            "title": "Other data's datatype",
-                                                            "description": "Schema datatype for the data used",
-                                                            "examples": [
-                                                                "integer",
-                                                                "string",
-                                                                "address"
-                                                            ]
+                                                            "format": "date",
+                                                            "title": "Record date",
+                                                            "description": "Date of the event described. Used specially in multiple-mode"
                                                         },
-                                                        "Tag": {
-                                                            "type": "string",
-                                                            "title": "Other data's tag",
-                                                            "description": "Tag that describes the data used",
-                                                            "examples": []
-                                                        },
-                                                        "Value": {
-                                                            "type": "string",
-                                                            "title": "Other data's value",
-                                                            "description": "Value for the data used",
-                                                            "examples": []
+                                                        "ValuesList": {
+                                                            "type": "array",
+                                                            "title": "List of values",
+                                                            "description": "",
+                                                            "additionalItems": false,
+                                                            "items": {
+                                                                "type": "object",
+                                                                "additionalProperties": false,
+                                                                "properties": {
+                                                                    "Datatype": {
+                                                                        "$ref": "EnumTypes.schema.json#/properties/enumDataType",
+                                                                        "type": "string",
+                                                                        "title": "Other data's datatype",
+                                                                        "description": "Schema datatype for the data used",
+                                                                        "examples": [
+                                                                            "integer",
+                                                                            "string",
+                                                                            "address"
+                                                                        ]
+                                                                    },
+                                                                    "Tag": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's tag",
+                                                                        "description": "Tag that describes the data used",
+                                                                        "examples": []
+                                                                    },
+                                                                    "Value": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's value",
+                                                                        "description": "Value for the data used",
+                                                                        "examples": []
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
