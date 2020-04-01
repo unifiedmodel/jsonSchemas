@@ -400,6 +400,15 @@
                                                     "20000"
                                                 ]
                                             },
+                                            "ElementGroup": {
+                                                "type": "string",
+                                                "title": "Element group",
+                                                "description": "Used to indicate an agroupation or parent class for this element",
+                                                "examples": [
+                                                    "Es Deuda",
+                                                    "No es Deuda"
+                                                ]
+                                            },
                                             "ElementHelp": {
                                                 "type": "string",
                                                 "title": "Element help",
