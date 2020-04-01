@@ -248,6 +248,15 @@
                                                 "20000"
                                             ]
                                         },
+                                        "ElementGroup": {
+                                            "type": "string",
+                                            "title": "Element group",
+                                            "description": "Used to indicate an agroupation or parent class for this element",
+                                            "examples": [
+                                                "Es Deuda",
+                                                "No es Deuda"
+                                            ]
+                                        },
                                         "ElementHelp": {
                                             "type": "string",
                                             "title": "Element help",
@@ -313,6 +322,44 @@
                                                             0.9854,
                                                             -0.2412
                                                         ]
+                                                    },
+                                                    "OtherDataList": {
+                                                        "type": "array",
+                                                        "title": "List of Other Data",
+                                                        "description": "Any other data relative to this publication",
+                                                        "additionalItems": false,
+                                                        "items": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "Datatype": {
+                                                                    "type": "string",
+                                                                    "title": "Other data's datatype",
+                                                                    "description": "Schema datatype for the data",
+                                                                    "examples": [
+                                                                        "integer",
+                                                                        "string",
+                                                                        "address"
+                                                                    ]
+                                                                },
+                                                                "Tag": {
+                                                                    "type": "string",
+                                                                    "title": "Other data's tag",
+                                                                    "description": "Tag that describes the data",
+                                                                    "examples": [
+                                                                        "Tipo de Documento"
+                                                                    ]
+                                                                },
+                                                                "Value": {
+                                                                    "type": "string",
+                                                                    "title": "Other data's value",
+                                                                    "description": "Value for the data",
+                                                                    "examples": [
+                                                                        "Cheque"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
@@ -474,6 +521,44 @@
                                                                 0.9854,
                                                                 -0.2412
                                                             ]
+                                                        },
+                                                        "OtherDataList": {
+                                                            "type": "array",
+                                                            "title": "List of Other Data",
+                                                            "description": "Any other data relative to this publication",
+                                                            "additionalItems": false,
+                                                            "items": {
+                                                                "type": "object",
+                                                                "additionalProperties": false,
+                                                                "properties": {
+                                                                    "Datatype": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's datatype",
+                                                                        "description": "Schema datatype for the data",
+                                                                        "examples": [
+                                                                            "integer",
+                                                                            "string",
+                                                                            "address"
+                                                                        ]
+                                                                    },
+                                                                    "Tag": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's tag",
+                                                                        "description": "Tag that describes the data",
+                                                                        "examples": [
+                                                                            "Tipo de Documento"
+                                                                        ]
+                                                                    },
+                                                                    "Value": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's value",
+                                                                        "description": "Value for the data",
+                                                                        "examples": [
+                                                                            "Cheque"
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -552,6 +637,15 @@
                                                                 "20000"
                                                             ]
                                                         },
+                                                        "ElementGroup": {
+                                                            "type": "string",
+                                                            "title": "Element group",
+                                                            "description": "Used to indicate an agroupation or parent class for this element",
+                                                            "examples": [
+                                                                "Es Deuda",
+                                                                "No es Deuda"
+                                                            ]
+                                                        },
                                                         "ElementHelp": {
                                                             "type": "string",
                                                             "title": "Element help",
@@ -617,6 +711,44 @@
                                                                             0.9854,
                                                                             -0.2412
                                                                         ]
+                                                                    },
+                                                                    "OtherDataList": {
+                                                                        "type": "array",
+                                                                        "title": "List of Other Data",
+                                                                        "description": "Any other data relative to this publication",
+                                                                        "additionalItems": false,
+                                                                        "items": {
+                                                                            "type": "object",
+                                                                            "additionalProperties": false,
+                                                                            "properties": {
+                                                                                "Datatype": {
+                                                                                    "type": "string",
+                                                                                    "title": "Other data's datatype",
+                                                                                    "description": "Schema datatype for the data",
+                                                                                    "examples": [
+                                                                                        "integer",
+                                                                                        "string",
+                                                                                        "address"
+                                                                                    ]
+                                                                                },
+                                                                                "Tag": {
+                                                                                    "type": "string",
+                                                                                    "title": "Other data's tag",
+                                                                                    "description": "Tag that describes the data",
+                                                                                    "examples": [
+                                                                                        "Tipo de Documento"
+                                                                                    ]
+                                                                                },
+                                                                                "Value": {
+                                                                                    "type": "string",
+                                                                                    "title": "Other data's value",
+                                                                                    "description": "Value for the data",
+                                                                                    "examples": [
+                                                                                        "Cheque"
+                                                                                    ]
+                                                                                }
+                                                                            }
+                                                                        }
                                                                     }
                                                                 }
                                                             }
