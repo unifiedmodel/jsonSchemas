@@ -128,7 +128,7 @@
                                                                 "additionalProperties": false,
                                                                 "properties": {
                                                                     "Datatype": {
-                                                                        "$ref": "EnumTypes.schema.json#/properties/enumDataType",
+                                                                        "$ref": "EnumTypes.schema.json#/properties/enumDataTypes",
                                                                         "type": "string",
                                                                         "title": "Other data's datatype",
                                                                         "description": "Schema datatype for the data used",
