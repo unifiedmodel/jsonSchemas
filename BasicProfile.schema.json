@@ -242,6 +242,29 @@
           "description": "Nominal value for each share"
         }
       }
+    },
+    "ExecutivesList": {
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+        "title": "List of Executives",
+        "additionalProperties": false,
+        "properties": {
+          "IdentificationNumber": {
+            "type": "string",
+            "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+            "title": "Executive's Identification Number"
+          },
+          "Name": {
+            "type": "string",
+            "title": "Executive name"
+          },
+          "JobTitle": {
+            "type": "string",
+            "title": "Title position in the company"
+          }
+        }
+      }
     }
   }
 }
