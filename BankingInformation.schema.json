@@ -717,7 +717,6 @@
                                                 ]
                                             },
                                             "IdentificationNumber": {
-                                                "type": "string",
                                                 "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
                                                 "title": "Identification Number",
                                                 "description": "Id/VAT of the Financial Entity"
