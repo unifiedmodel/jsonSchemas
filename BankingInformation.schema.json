@@ -35,15 +35,6 @@
                             "Fuentes de Financiación"
                         ]
                     },
-                    "Source": {
-                        "type": "string",
-                        "title": "Data source",
-                        "description": "Indicates the source of collected banking information",
-                        "examples": [
-                            "SBS",
-                            "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
-                        ]
-                    },
                     "HelpText": {
                         "type": "string",
                         "title": "Help Text",
@@ -158,6 +149,82 @@
                                                                         "title": "Other data's value",
                                                                         "description": "Value for the data used",
                                                                         "examples": []
+                                                                    },
+                                                                    "OtherDataList": {
+                                                                        "type": "array",
+                                                                        "title": "List of Other Data",
+                                                                        "description": "Any other data relative to this publication",
+                                                                        "additionalItems": false,
+                                                                        "items": {
+                                                                            "type": "object",
+                                                                            "additionalProperties": false,
+                                                                            "properties": {
+                                                                                "Datatype": {
+                                                                                    "type": "string",
+                                                                                    "title": "Other data's datatype",
+                                                                                    "description": "Schema datatype for the data",
+                                                                                    "examples": [
+                                                                                        "integer",
+                                                                                        "string",
+                                                                                        "address"
+                                                                                    ]
+                                                                                },
+                                                                                "Tag": {
+                                                                                    "type": "string",
+                                                                                    "title": "Other data's tag",
+                                                                                    "description": "Tag that describes the data",
+                                                                                    "examples": [
+                                                                                        "Tipo de Documento"
+                                                                                    ]
+                                                                                },
+                                                                                "Value": {
+                                                                                    "type": "string",
+                                                                                    "title": "Other data's value",
+                                                                                    "description": "Value for the data",
+                                                                                    "examples": [
+                                                                                        "Cheque"
+                                                                                    ]
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "SourceInfo": {
+                                                                        "type": "object",
+                                                                        "title": "Source Info",
+                                                                        "description": "Set of values to locate the info in the original source",
+                                                                        "additionalProperties": false,
+                                                                        "properties": {
+                                                                            "Source": {
+                                                                                "type": "string",
+                                                                                "title": "Data source",
+                                                                                "description": "Indicates the source of collected banking information",
+                                                                                "examples": [
+                                                                                    "SBS",
+                                                                                    "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
+                                                                                ]
+                                                                            },
+                                                                            "ReferenceId": {
+                                                                                "type": "integer",
+                                                                                "title": "Source Reference Id",
+                                                                                "description": "External id used to reference an specific data in the document where it was published",
+                                                                                "examples": [
+                                                                                    1907744
+                                                                                ]
+                                                                            },
+                                                                            "PublicationId": {
+                                                                                "type": "integer",
+                                                                                "title": "Source Publication Id",
+                                                                                "description": "External id used to reference the document where the data where published",
+                                                                                "examples": [
+                                                                                    1907744
+                                                                                ]
+                                                                            },
+                                                                            "PageNumber": {
+                                                                                "type": "integer",
+                                                                                "title": "Source page",
+                                                                                "description": "Page number where the specific data was published"
+                                                                            }
+                                                                        }
                                                                     }
                                                                 }
                                                             }
@@ -201,15 +268,6 @@
                             "Deuda Total",
                             "Avales",
                             "Fuentes de Financiación"
-                        ]
-                    },
-                    "Source": {
-                        "type": "string",
-                        "title": "Data source",
-                        "description": "Indicates the source of collected banking information",
-                        "examples": [
-                            "SBS",
-                            "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
                         ]
                     },
                     "HelpText": {
@@ -358,6 +416,44 @@
                                                                         "Cheque"
                                                                     ]
                                                                 }
+                                                            }
+                                                        }
+                                                    },
+                                                    "SourceInfo": {
+                                                        "type": "object",
+                                                        "title": "Source Info",
+                                                        "description": "Set of values to locate the info in the original source",
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "Source": {
+                                                                "type": "string",
+                                                                "title": "Data source",
+                                                                "description": "Indicates the source of collected banking information",
+                                                                "examples": [
+                                                                    "SBS",
+                                                                    "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
+                                                                ]
+                                                            },
+                                                            "ReferenceId": {
+                                                                "type": "integer",
+                                                                "title": "Source Reference Id",
+                                                                "description": "External id used to reference an specific data in the document where it was published",
+                                                                "examples": [
+                                                                    1907744
+                                                                ]
+                                                            },
+                                                            "PublicationId": {
+                                                                "type": "integer",
+                                                                "title": "Source Publication Id",
+                                                                "description": "External id used to reference the document where the data where published",
+                                                                "examples": [
+                                                                    1907744
+                                                                ]
+                                                            },
+                                                            "PageNumber": {
+                                                                "type": "integer",
+                                                                "title": "Source page",
+                                                                "description": "Page number where the specific data was published"
                                                             }
                                                         }
                                                     }
@@ -559,6 +655,44 @@
                                                                     }
                                                                 }
                                                             }
+                                                        },
+                                                        "SourceInfo": {
+                                                            "type": "object",
+                                                            "title": "Source Info",
+                                                            "description": "Set of values to locate the info in the original source",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "Source": {
+                                                                    "type": "string",
+                                                                    "title": "Data source",
+                                                                    "description": "Indicates the source of collected banking information",
+                                                                    "examples": [
+                                                                        "SBS",
+                                                                        "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
+                                                                    ]
+                                                                },
+                                                                "ReferenceId": {
+                                                                    "type": "integer",
+                                                                    "title": "Source Reference Id",
+                                                                    "description": "External id used to reference an specific data in the document where it was published",
+                                                                    "examples": [
+                                                                        1907744
+                                                                    ]
+                                                                },
+                                                                "PublicationId": {
+                                                                    "type": "integer",
+                                                                    "title": "Source Publication Id",
+                                                                    "description": "External id used to reference the document where the data where published",
+                                                                    "examples": [
+                                                                        1907744
+                                                                    ]
+                                                                },
+                                                                "PageNumber": {
+                                                                    "type": "integer",
+                                                                    "title": "Source page",
+                                                                    "description": "Page number where the specific data was published"
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -588,19 +722,10 @@
                                                 "title": "Identification Number",
                                                 "description": "Id/VAT of the Financial Entity"
                                             },
-                                            "Source": {
+                                            "EntityId": {
                                                 "type": "string",
-                                                "title": "Data source",
-                                                "description": "Indicates the source of collected banking information with that entity",
-                                                "examples": [
-                                                    "SBS",
-                                                    "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
-                                                ]
-                                            },
-                                            "VendorId": {
-                                                "type": "string",
-                                                "title": "Vendor Id of the related entity",
-                                                "description": "External Id (from vendors) of the related entity"
+                                                "title": "Internal Id of the related entity.",
+                                                "description": "Internal Id of the related entity. Currently used to identify an entity in the A360 platform"
                                             },
                                             "RelationshipType": {
                                                 "type": "string",
@@ -747,6 +872,44 @@
                                                                                         "Cheque"
                                                                                     ]
                                                                                 }
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "SourceInfo": {
+                                                                        "type": "object",
+                                                                        "title": "Source Info",
+                                                                        "description": "Set of values to locate the info in the original source",
+                                                                        "additionalProperties": false,
+                                                                        "properties": {
+                                                                            "Source": {
+                                                                                "type": "string",
+                                                                                "title": "Data source",
+                                                                                "description": "Indicates the source of collected banking information",
+                                                                                "examples": [
+                                                                                    "SBS",
+                                                                                    "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
+                                                                                ]
+                                                                            },
+                                                                            "ReferenceId": {
+                                                                                "type": "integer",
+                                                                                "title": "Source Reference Id",
+                                                                                "description": "External id used to reference an specific data in the document where it was published",
+                                                                                "examples": [
+                                                                                    1907744
+                                                                                ]
+                                                                            },
+                                                                            "PublicationId": {
+                                                                                "type": "integer",
+                                                                                "title": "Source Publication Id",
+                                                                                "description": "External id used to reference the document where the data where published",
+                                                                                "examples": [
+                                                                                    1907744
+                                                                                ]
+                                                                            },
+                                                                            "PageNumber": {
+                                                                                "type": "integer",
+                                                                                "title": "Source page",
+                                                                                "description": "Page number where the specific data was published"
                                                                             }
                                                                         }
                                                                     }

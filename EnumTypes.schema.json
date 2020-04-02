@@ -152,7 +152,9 @@
             "enum": [
                 "CreditReport",
                 "TotalDebt",
-                "BankGuarantee"
+                "BankGuarantee",
+                "BankFinancialInstrument",
+                "NonBankFinancialInstrument"
             ]
         }
     }
