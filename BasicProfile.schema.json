@@ -280,7 +280,7 @@
         "GovernmentGrants": {
           "type": "integer",
           "title": "Goverments Grants",
-          "description": "Number of grants gave to the entity by the goverment or other institution"
+          "description": "Number of grants given to the entity by the goverment or other institution"
         }
       }
     }
