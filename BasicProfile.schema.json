@@ -265,6 +265,24 @@
           }
         }
       }
+    },
+    "OtherInfo": {
+      "type": "object",
+      "title": "The Contact info schema",
+      "description": "Dataset with contact information of the entity",
+      "additionalProperties": false,
+      "properties": {
+        "AwardedTenders": {
+          "type": "integer",
+          "title": "Awarded Tenders",
+          "description": "Number of awarded tenders by the entity"
+        },
+        "GovernmentGrants": {
+          "type": "integer",
+          "title": "Goverments Grants",
+          "description": "Number of grants gave to the entity by the goverment or other institution"
+        }
+      }
     }
   }
 }
