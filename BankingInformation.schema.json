@@ -723,7 +723,7 @@
                                                 "description": "Id/VAT of the Financial Entity"
                                             },
                                             "EntityId": {
-                                                "type": "string",
+                                                "type": "integer",
                                                 "title": "Internal Id of the related entity.",
                                                 "description": "Internal Id of the related entity. Currently used to identify an entity in the A360 platform"
                                             },
