@@ -71,7 +71,11 @@
                 "CashFlowStatement",
                 "StatementOfChangesInEquity",
                 "Ratios",
-                "SectoralComparative"
+                "SectoralComparative",
+                "CPFinancialSummary",
+                "CPBalanceSheet",
+                "CPIncomeStatement",
+                "CPRatios"
             ]
         },
         "enumFrequencyDataType": {
