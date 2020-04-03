@@ -1,288 +1,313 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://unifiedmodel.github.io/jsonSchemas/BasicProfile.schema.json",
-  "type": "object",
-  "title": "The Basic Profile Domain Schema",
-  "description": "Contains the main information about an entity",
-  "additionalProperties": false,
-  "properties": {
-    "EntityId": {
-      "type": "integer",
-      "title": "Internal Id for entities",
-      "description": "Contains Axesor360 unique ID for the entity",
-      "examples": [
-        2684748
-      ]
-    },
-    "VendorEntityId": {
-      "type": "string",
-      "title": "Vendor Id for Entities",
-      "description": "External Id (from vendors) for the entity",
-      "examples": [
-        "987857"
-      ]
-    },
-    "LastUpdate": {
-      "type": "string",
-      "format": "date-time",
-      "title": "Info about last update",
-      "description": "Date of last update of the date contained",
-      "examples": [
-        "2019-10-29T18:25:43.511Z"
-      ]
-    },
-    "IdentificationNumbersList": {
-      "type": "array",
-      "items": {
-        "additionalProperties": false,
-        "$ref": "DataTypes.schema.json#/properties/IdentificationNumber"
-      }
-    },
-    "Name": {
-      "type": "string",
-      "title": "Entity name",
-      "description": "Full name or business name of the entity",
-      "examples": [
-        "AXESOR CONOCER PARA DECIDIR SA"
-      ]
-    },
-    "Alias": {
-      "type": "string",
-      "title": "Entity alias",
-      "description": "Alternative name, alias or search name of the entity",
-      "examples": [
-        "AXESOR"
-      ]
-    },
-    "EntityType": {
-      "type": "string",
-      "title": "Entity type",
-      "description": "Contains the specific nature of an entity",
-      "examples": [
-        "Mercantil"
-      ]
-    },
-    "Status": {
-      "type": "string",
-      "title": "Current status of the entity",
-      "description": "Contains the specific situation of the entity (for example, active)",
-      "examples": [
-        "Activa con Escisión Parcial"
-      ]
-    },
-    "StartDate": {
-      "type": "string",
-      "title": "Starting date of the entity",
-      "description": "The entity started its activity in this day",
-      "examples": [
-        "2016-03-08T00:00:00.000Z"
-      ]
-    },
-    "LegalType": {
-      "type": "string",
-      "title": "Legal form of the entity",
-      "description": "Related to legal entities, shows the specific type",
-      "examples": [
-        "Sociedad Anónima"
-      ]
-    },
-    "BusinessType": {
-      "type": "string",
-      "anyOf": [
-        {
-          "$ref": "EnumTypes.schema.json#/properties/enumBusinessType"
-        }
-      ],
-      "title": "Entity type within a group of entities (enum)",
-      "description": "In holding or business groups, shows the role of the company within them",
-      "examples": [
-        "Parent company",
-        "Self employed"
-      ]
-    },
-    "TrBusinessType": {
-      "type": "string",
-      "title": "Entity type within a group of entities (translatable)",
-      "description": "In holding or business groups, shows the role of the company within them",
-      "examples": [
-        "Filial de grupo"
-      ]
-    },
-    "LastDepositEnrollmentYear": {
-      "type": "integer",
-      "title": "Last year filled for balance accounts or enrollments",
-      "description": "Depending on the country, this field shows the last year filled by the company concerning their annual accounts or similar (E.g. enrollments)",
-      "examples": [
-        2017
-      ]
-    },
-    "LastAccountsUploadedByVendor": {
-      "type": "integer",
-      "title": "Last Accounts uploaded by Vendor",
-      "description": "Indicates the last annual accounts supplied by the vendor and available to use",
-      "examples": [
-        2017
-      ]
-    },
-    "CountryISO": {
-      "type": "string",
-      "title": "Country of the entity (ISO)",
-      "description": "Three digits ISO code for the entity's country",
-      "examples": [
-        "ESP"
-      ]
-    },
-    "Size": {
-      "type": "string",
-      "title": "Size of the entity (enum)",
-      "description": "Size of the entity, according to local criteria",
-      "anyOf": [
-        {
-          "$ref": "EnumTypes.schema.json#/properties/enumSize"
-        }
-      ],
-      "examples": [
-        "Medium"
-      ]
-    },
-    "TrSize": {
-      "type": "string",
-      "title": "Size of the entity (translatable)",
-      "description": "Contains the 'Size' value translated to the language requested",
-      "examples": [
-        "Mediano",
-        "Medium",
-        "Moyenne"
-      ]
-    },
-    "Address": {
-      "$ref": "DataTypes.schema.json#/properties/Address"
-    },
-    "ContactInfo": {
-      "type": "object",
-      "title": "The Contact info schema",
-      "description": "Dataset with contact information of the entity",
-      "additionalProperties": false,
-      "properties": {
-        "PhoneNumbers": {
-          "type": "array",
-          "title": "Telephone number",
-          "description": "Phone contact numbers of the entity",
-          "items": {
-            "type": "string"
-          },
-          "examples": [
-            "958120129"
-          ]
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/BasicProfile.schema.json",
+    "type": "object",
+    "title": "The Basic Profile Domain Schema",
+    "description": "Contains the main information about an entity",
+    "additionalProperties": false,
+    "properties": {
+        "EntityId": {
+            "type": "integer",
+            "title": "Internal Id for entities",
+            "description": "Contains Axesor360 unique ID for the entity",
+            "examples": [
+                2684748
+            ]
         },
-        "Fax": {
-          "type": "string",
-          "title": "Fax number",
-          "description": "Fax number of the entity",
-          "examples": [
-            "902101062"
-          ]
-        },
-        "Email": {
-          "type": "string",
-          "title": "Email address",
-          "description": "Email address to contact with the entity",
-          "examples": [
-            "buzoncliente@axesor.es"
-          ]
-        },
-        "Site": {
-          "type": "string",
-          "title": "Website of the entity",
-          "description": "URL of the main website of the entity",
-          "examples": [
-            "www.axesor.es"
-          ]
-        }
-      }
-    },
-    "ActivitiesList": {
-      "type": "array",
-      "items": {
-        "$ref": "DataTypes.schema.json#/properties/Activity",
-        "additionalProperties": false
-      }
-    },
-    "Sales": {
-      "$ref": "DataTypes.schema.json#/properties/Amount",
-      "additionalProperties": false
-    },
-    "Employees": {
-      "$ref": "DataTypes.schema.json#/properties/Employees",
-      "additionalProperties": false
-    },
-    "SharedCapital": {
-      "type": "object",
-      "title": "Shared capital",
-      "description": "Dataset with contact information of the entity",
-      "additionalProperties": false,
-      "properties": {
-        "TotalAmount": {
-          "$ref": "DataTypes.schema.json#/properties/Amount",
-          "additionalProperties": false,
-          "title": "Shared Capital value",
-          "description": "Current shared capital of the entity"
-        },
-        "NumberOfShares": {
-          "type": "number",
-          "title": "Number of Shares",
-          "description": "Breakdown of capital by number of shares ",
-          "examples": [
-            1983691
-          ]
-        },
-        "NominalValue": {
-          "$ref": "DataTypes.schema.json#/properties/Amount",
-          "title": "Nominal value",
-          "description": "Nominal value for each share"
-        }
-      }
-    },
-    "ExecutivesList": {
-      "type": "array",
-      "additionalItems": false,
-      "items": {
-        "title": "List of Executives",
-        "additionalProperties": false,
-        "properties": {
-          "IdentificationNumber": {
+        "VendorEntityId": {
             "type": "string",
-            "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
-            "title": "Executive's Identification Number"
-          },
-          "Name": {
-            "type": "string",
-            "title": "Executive name"
-          },
-          "JobTitle": {
-            "type": "string",
-            "title": "Title position in the company"
-          }
-        }
-      }
-    },
-    "OtherInfo": {
-      "type": "object",
-      "title": "The Contact info schema",
-      "description": "Dataset with contact information of the entity",
-      "additionalProperties": false,
-      "properties": {
-        "AwardedTenders": {
-          "type": "integer",
-          "title": "Awarded Tenders",
-          "description": "Number of awarded tenders by the entity"
+            "title": "Vendor Id for Entities",
+            "description": "External Id (from vendors) for the entity",
+            "examples": [
+                "987857"
+            ]
         },
-        "GovernmentGrants": {
-          "type": "integer",
-          "title": "Goverments Grants",
-          "description": "Number of grants given to the entity by the goverment or other institution"
+        "LastUpdate": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Info about last update",
+            "description": "Date of last update of the date contained",
+            "examples": [
+                "2019-10-29T18:25:43.511Z"
+            ]
+        },
+        "IdentificationNumbersList": {
+            "type": "array",
+            "items": {
+                "additionalProperties": false,
+                "$ref": "DataTypes.schema.json#/properties/IdentificationNumber"
+            }
+        },
+        "Name": {
+            "type": "string",
+            "title": "Entity name",
+            "description": "Full name or business name of the entity",
+            "examples": [
+                "AXESOR CONOCER PARA DECIDIR SA"
+            ]
+        },
+        "Alias": {
+            "type": "string",
+            "title": "Entity alias",
+            "description": "Alternative name, alias or search name of the entity",
+            "examples": [
+                "AXESOR"
+            ]
+        },
+        "EntityType": {
+            "type": "string",
+            "title": "Entity type",
+            "description": "Contains the specific nature of an entity",
+            "examples": [
+                "Mercantil"
+            ]
+        },
+        "Status": {
+            "type": "string",
+            "title": "Current status of the entity",
+            "description": "Contains the specific situation of the entity (for example, active)",
+            "examples": [
+                "Activa con Escisión Parcial"
+            ]
+        },
+        "StartDate": {
+            "type": "string",
+            "title": "Starting date of the entity",
+            "description": "The entity started its activity in this day",
+            "examples": [
+                "2016-03-08T00:00:00.000Z"
+            ]
+        },
+        "LegalType": {
+            "type": "string",
+            "title": "Legal form of the entity",
+            "description": "Related to legal entities, shows the specific type",
+            "examples": [
+                "Sociedad Anónima"
+            ]
+        },
+        "BusinessType": {
+            "type": "string",
+            "anyOf": [
+                {
+                    "$ref": "EnumTypes.schema.json#/properties/enumBusinessType"
+                }
+            ],
+            "title": "Entity type within a group of entities (enum)",
+            "description": "In holding or business groups, shows the role of the company within them",
+            "examples": [
+                "Parent company",
+                "Self employed"
+            ]
+        },
+        "TrBusinessType": {
+            "type": "string",
+            "title": "Entity type within a group of entities (translatable)",
+            "description": "In holding or business groups, shows the role of the company within them",
+            "examples": [
+                "Filial de grupo"
+            ]
+        },
+        "LastDepositEnrollmentYear": {
+            "type": "integer",
+            "title": "Last year filled for balance accounts or enrollments",
+            "description": "Depending on the country, this field shows the last year filled by the company concerning their annual accounts or similar (E.g. enrollments)",
+            "examples": [
+                2017
+            ]
+        },
+        "LastAccountsUploadedByVendor": {
+            "type": "integer",
+            "title": "Last Accounts uploaded by Vendor",
+            "description": "Indicates the last annual accounts supplied by the vendor and available to use",
+            "examples": [
+                2017
+            ]
+        },
+        "CountryISO": {
+            "type": "string",
+            "title": "Country of the entity (ISO)",
+            "description": "Three digits ISO code for the entity's country",
+            "examples": [
+                "ESP"
+            ]
+        },
+        "Size": {
+            "type": "string",
+            "title": "Size of the entity (enum)",
+            "description": "Size of the entity, according to local criteria",
+            "anyOf": [
+                {
+                    "$ref": "EnumTypes.schema.json#/properties/enumSize"
+                }
+            ],
+            "examples": [
+                "Medium"
+            ]
+        },
+        "TrSize": {
+            "type": "string",
+            "title": "Size of the entity (translatable)",
+            "description": "Contains the 'Size' value translated to the language requested",
+            "examples": [
+                "Mediano",
+                "Medium",
+                "Moyenne"
+            ]
+        },
+        "Address": {
+            "$ref": "DataTypes.schema.json#/properties/Address"
+        },
+        "ContactInfo": {
+            "type": "object",
+            "title": "The Contact info schema",
+            "description": "Dataset with contact information of the entity",
+            "additionalProperties": false,
+            "properties": {
+                "PhoneNumbers": {
+                    "type": "array",
+                    "title": "Telephone number",
+                    "description": "Phone contact numbers of the entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "examples": [
+                        "958120129"
+                    ]
+                },
+                "Fax": {
+                    "type": "string",
+                    "title": "Fax number",
+                    "description": "Fax number of the entity",
+                    "examples": [
+                        "902101062"
+                    ]
+                },
+                "Email": {
+                    "type": "string",
+                    "title": "Email address",
+                    "description": "Email address to contact with the entity",
+                    "examples": [
+                        "buzoncliente@axesor.es"
+                    ]
+                },
+                "Site": {
+                    "type": "string",
+                    "title": "Website of the entity",
+                    "description": "URL of the main website of the entity",
+                    "examples": [
+                        "www.axesor.es"
+                    ]
+                }
+            }
+        },
+        "ActivitiesList": {
+            "type": "array",
+            "items": {
+                "$ref": "DataTypes.schema.json#/properties/Activity",
+                "additionalProperties": false
+            }
+        },
+        "Sales": {
+            "$ref": "DataTypes.schema.json#/properties/Amount",
+            "additionalProperties": false
+        },
+        "Employees": {
+            "$ref": "DataTypes.schema.json#/properties/Employees",
+            "additionalProperties": false
+        },
+        "SharedCapital": {
+            "type": "object",
+            "title": "Shared capital",
+            "description": "Dataset with contact information of the entity",
+            "additionalProperties": false,
+            "properties": {
+                "TotalAmount": {
+                    "$ref": "DataTypes.schema.json#/properties/Amount",
+                    "additionalProperties": false,
+                    "title": "Shared Capital value",
+                    "description": "Current shared capital of the entity"
+                },
+                "NumberOfShares": {
+                    "type": "number",
+                    "title": "Number of Shares",
+                    "description": "Breakdown of capital by number of shares ",
+                    "examples": [
+                        1983691
+                    ]
+                },
+                "NominalValue": {
+                    "$ref": "DataTypes.schema.json#/properties/Amount",
+                    "title": "Nominal value",
+                    "description": "Nominal value for each share"
+                }
+            }
+        },
+        "ParentCompany": {
+            "type": "object",
+            "Title": "Parent Company",
+            "description": "Indicates the parent company of the entity, in case of taking part in an Economic Group",
+            "additionalProperties": false,
+            "properties": {
+                "IdentificationNumber": {
+                    "type": "string",
+                    "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                    "title": "Company's Identification Number"
+                },
+                "Name": {
+                    "type": "string",
+                    "title": "Company name"
+                },
+                "CountryISO": {
+                    "type": "string",
+                    "title": "Country of the parent company (ISO)",
+                    "description": "Three digits ISO code for the entity's country",
+                    "examples": [
+                        "ESP"
+                    ]
+                }
+            }
+        },
+        "ExecutivesList": {
+            "type": "array",
+            "additionalItems": false,
+            "items": {
+                "title": "List of Executives",
+                "additionalProperties": false,
+                "properties": {
+                    "IdentificationNumber": {
+                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                        "title": "Executive's Identification Number"
+                    },
+                    "Name": {
+                        "type": "string",
+                        "title": "Executive name"
+                    },
+                    "JobTitle": {
+                        "type": "string",
+                        "title": "Title position in the company"
+                    }
+                }
+            }
+        },
+        "OtherInfo": {
+            "type": "object",
+            "title": "Other information",
+            "description": "Dataset with other secondary data about the entity",
+            "additionalProperties": false,
+            "properties": {
+                "AwardedTenders": {
+                    "type": "integer",
+                    "title": "Awarded Tenders",
+                    "description": "Number of awarded tenders by the entity"
+                },
+                "GovernmentGrants": {
+                    "type": "integer",
+                    "title": "Goverments Grants",
+                    "description": "Number of grants given to the entity by the goverment or other institution"
+                }
+            }
         }
-      }
     }
-  }
 }
