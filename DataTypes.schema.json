@@ -200,7 +200,7 @@
           ]
         },
         "Percentage": {
-          "type": "number",
+          "$ref": "#/properties/FrequencyMeasure",
           "title": "Percentage of amount",
           "description": "Shows the value in percentage",
           "examples": [
