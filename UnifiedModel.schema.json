@@ -36,6 +36,9 @@
         },
         "FinancialStatements": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/FinancialStatements.schema.json"
+        },
+        "BankingInformation": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/BankingInformation.schema.json"
         }
     }
 }
