@@ -249,10 +249,17 @@
                                     ]
                                 },
                                 "ElementEnum": {
-                                    "type": "string",
                                     "$ref": "EnumTypes.schema.json#/properties/enumFinancialElement",
                                     "title": "Element enum values",
                                     "description": "Used on those elements (like ratios) which are enumerated in the enumFinancialElement EnumType"
+                                },
+                                "TrElementEnum": {
+                                    "type": "string",
+                                    "title": "Element enum (translateable)",
+                                    "description": "Used on those elements (like ratios) which are enumerated in the enumFinancialElement EnumType",
+                                    "examples":
+                                        ["Liquidez", "Solvencia", "Flujo de caja"]
+
                                 },
                                 "ElementHelp": {
                                     "type": "string",
@@ -346,7 +353,6 @@
                                             },
                                             "Connotation": {
                                                 "$ref": "EnumTypes.schema.json#/properties/enumConnotation",
-                                                "type": "string",
                                                 "title": "Value's connotation (enum)",
                                                 "description": "Shows the tendency or connotation of the value",
                                                 "examples": [
