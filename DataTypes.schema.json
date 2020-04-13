@@ -168,7 +168,7 @@
       "properties": {
         "CurrencyISO": {
           "type": "string",
-          "title": "Sales currency",
+          "title": "Currency",
           "description": "ISO code describing the currency used for the sales data",
           "examples": [
             "EUR"
@@ -185,7 +185,7 @@
         },
         "Value": {
           "type": "number",
-          "title": "Sales amount",
+          "title": "Amount",
           "description": "Total amount or minimum value in case of range",
           "examples": [
             15963705.36

@@ -1,0 +1,297 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/LinkedEntities.schema.json",
+    "type": "object",
+    "title": "The Linked Entities Data Domain Schema",
+    "description": "Contains any relation between the requested entity and other entities linked to it",
+    "additionalProperties": false,
+    "properties": {
+        "LinkedEntitiesSummary": {
+            "type": "object",
+            "title": "Public Records Summary",
+            "description": "",
+            "additionalProperties": false,
+            "properties": {
+                "LinkedEntitiesSummariesList": {
+                    "type": "array",
+                    "title": "List of summaries of Linked Entities",
+                    "description": "",
+                    "additionalItems": false,
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "SummaryType": {
+                                "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesSummaryType",
+                                "title": "Summary Type (enum)"
+                            },
+                            "TrSummaryType": {
+                                "type": "string",
+                                "title": "Summary Type (translatable)"
+                            },
+                            "EntitiesList": {
+                                "type": "array",
+                                "title": "List of summaries of Linked Entities",
+                                "description": "",
+                                "additionalItems": false,
+                                "items": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "EntityIdentificationNumber": {
+                                            "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                            "title": "Entity Identification Number"
+                                        },
+                                        "EntityName": {
+                                            "type": "string",
+                                            "title": "Entity Name"
+                                        },
+                                        "EntityId": {
+                                            "type": "integer",
+                                            "title": "Internal Id for the entity"
+                                        },
+                                        "LinkedEntitiesList": {
+                                            "type": "array",
+                                            "title": "List of summaries of Linked Entities",
+                                            "description": "",
+                                            "additionalItems": false,
+                                            "items": {
+                                                "type": "object",
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "LinkedIdentificationNumber": {
+                                                        "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                                        "title": "Linked Entity Identification Number"
+                                                    },
+                                                    "LinkedEntityName": {
+                                                        "type": "string",
+                                                        "title": "Linked Entity Name"
+                                                    },
+                                                    "LinkedEntityId": {
+                                                        "type": "integer",
+                                                        "title": "Internal Id for the linked entity"
+                                                    },
+                                                    "RelationshipGroupType": {
+                                                        "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesRelationshipGroupType",
+                                                        "title": "Relationship Group Type (enum)"
+                                                    },
+                                                    "TrRelationshipGroupType": {
+                                                        "type": "string",
+                                                        "title": "Relationship Group Type (translateable)"
+                                                    },
+                                                    "RelationshipType": {
+                                                        "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesRelationshipType",
+                                                        "title": "Relationship Type (enum)"
+                                                    },
+                                                    "TrRelationshipType": {
+                                                        "type": "string",
+                                                        "title": "Group Type (translateable)"
+                                                    },
+                                                    "Participation": {
+                                                        "type": "object",
+                                                        "title": "Participation",
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "Type": {
+                                                                "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesParticipationType",
+                                                                "title": "Participation Type (enum)"
+                                                            },
+                                                            "TrType": {
+                                                                "type": "string",
+                                                                "title": "Participation Type (translateable)"
+                                                            },
+                                                            "Percentage": {
+                                                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                                                                "title": "Percentage of Participation"
+                                                            },
+                                                            "Amount": {
+                                                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                                                                "title": "Participacion Amount"
+                                                            }
+                                                        }
+                                                    },
+                                                    "SourceInfo": {
+                                                        "type": "object",
+                                                        "title": "Source Info",
+                                                        "description": "Set of values to locate the info in the original source",
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "Source": {
+                                                                "type": "string",
+                                                                "title": "Data source",
+                                                                "description": "Indicates the source of collected information about relationships",
+                                                                "examples": [
+                                                                    "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
+                                                                ]
+                                                            },
+                                                            "PublicationId": {
+                                                                "type": "string",
+                                                                "title": "Source Publication Id",
+                                                                "description": "External id used to reference the document where the data where published",
+                                                                "examples": [
+                                                                    "1907744",
+                                                                    "156498484.txt"
+                                                                ]
+                                                            },
+                                                            "SecondaryPublicationId": {
+                                                                "type": "string",
+                                                                "title": "Secondary Publication Id",
+                                                                "description": "Any other external id used to reference the info (like worker or social body code)"
+                                                            },
+                                                            "PageNumber": {
+                                                                "type": "integer",
+                                                                "title": "Source page",
+                                                                "description": "Page number where the specific data was published"
+                                                            },
+                                                            "Date": {
+                                                                "type": "string",
+                                                                "format": "date",
+                                                                "title": "Source info date"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "LinkedEntitiesDetail": {
+            "type": "object",
+            "title": "Public Records Summary",
+            "description": "",
+            "additionalProperties": false,
+            "properties": {
+                "EntitiesExtendedInfoList": {
+                    "type": "array",
+                    "title": "List of entities (main or linked) with extended information",
+                    "description": "",
+                    "additionalItems": false,
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "EntityIdentificationNumber": {
+                                "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                "title": "Entity Identification Number"
+                            },
+                            "EntityName": {
+                                "type": "string",
+                                "title": "Entity Name"
+                            },
+                            "EntityId": {
+                                "type": "integer",
+                                "title": "Internal Id for the entity"
+                            },
+                            "PublicInfo": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "Activity": {
+                                        "$ref": "DataTypes.schema.json#/properties/Activity",
+                                        "title": "Activity info"
+                                    },
+                                    "Address": {
+                                        "$ref": "DataTypes.schema.json#/properties/Address",
+                                        "title": "Address info"
+                                    },
+                                    "Status": {
+                                        "type": "string",
+                                        "title": "Entity status"
+                                    },
+                                    "Employees": {
+                                        "$ref": "DataTypes.schema.json#/properties/Employees",
+                                        "title": "Employees info"
+                                    },
+                                    "EntityType": {
+                                        "type": "integer",
+                                        "title": "Entity type id"
+                                    },
+                                    "TotalBalance": {
+                                        "$ref": "DataTypes.schema.json#/properties/Amount",
+                                        "title": "Total Balance"
+                                    },
+                                    "Sales": {
+                                        "$ref": "DataTypes.schema.json#/properties/Amount",
+                                        "title": "Total sales"
+                                    },
+                                    "StatementsVendorReferenceId": {
+                                        "type": "integer",
+                                        "title": "Statements Vendor Reference Id",
+                                        "description": "External Id used to point to the source reference of the statements data"
+                                    },
+                                    "LastAccountsFiled": {
+                                        "type": "integer",
+                                        "title": "Last Accounts Filed",
+                                        "description": "Year of the last accounts filed by the company"
+                                    },
+                                    "LastAccountsAvailable": {
+                                        "type": "integer",
+                                        "title": "Last Accounts Available",
+                                        "description": "Year of the last accounts available by vendor"
+                                    },
+                                    "IsUpdateable": {
+                                        "type": "boolean",
+                                        "title": "Is updateable",
+                                        "description": "True if the statements are not currently available for the end consumer but they may be ordered and processed under request (in some scenarios)"
+                                    },
+                                    "UpdateRequestCode": {
+                                        "type": "string",
+                                        "title": "Accounts update request code"
+                                    },
+                                    "UpdateRequestError": {
+                                        "type": "string",
+                                        "title": "Accounts update request error code"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "EconomicGroup": {
+            "type": "object",
+            "title": "Economic Group",
+            "additionalProperties": false,
+            "properties": {
+                "EUIndicators": {
+                    "type": "object",
+                    "title": "Economic Group indicators under the European Union definition",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Size": {
+                            "type": "string",
+                            "title": "Group size"
+                        },
+                        "Sector": {
+                            "$ref": "DataTypes.schema.json#/properties/Activity",
+                            "title": "Sector info"
+                        },
+                        "Reliability": {
+                            "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                            "title": "EU Classification Reliability"
+                        },
+                        "NumberOfEmployees": {
+                            "$ref": "DataTypes.schema.json#/properties/Employees",
+                            "title": "Group employees"
+                        },
+                        "TotalBalance": {
+                            "$ref": "DataTypes.schema.json#/properties/Amount",
+                            "title": "Group total balance"
+                        },
+                        "Sales": {
+                            "$ref": "DataTypes.schema.json#/properties/Amount",
+                            "title": "Group total sales"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

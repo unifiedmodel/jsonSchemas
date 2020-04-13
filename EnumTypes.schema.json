@@ -160,6 +160,43 @@
                 "BankFinancialInstrument",
                 "NonBankFinancialInstrument"
             ]
+        },
+        "enumLinkedEntitiesSummaryType": {
+            "enum": [
+                "EconomicGroup",
+                "OwnershipRelations",
+                "FinancialRelations"
+            ]
+        },
+        "enumLinkedEntitiesRelationshipGroupType": {
+            "enum": [
+                "Officers",
+                "Shareholders",
+                "Subsidiaries",
+                "FinancialRelations",
+                "SharedOfficersWithOtherCompanies"
+            ]
+        },
+        "enumLinkedEntitiesRelationshipType": {
+            "enum": [
+                "UltimateParent",
+                "Parent",
+                "Shareholder",
+                "Subidiary",
+                "Associated",
+                "HasFinantialRelations",
+                "President",
+                "Vicepresident",
+                "CEO"
+            ]
+        },
+        "enumLinkedEntitiesParticipationType": {
+            "enum": [
+                "Total",
+                "Direct",
+                "Indirect",
+                "Undetermined"
+            ]
         }
     }
 }
