@@ -134,7 +134,17 @@
                 "NonCurrentLiability",
                 "GrossOperatingProfit",
                 "CompanyAddedValue",
-                "OperatingRevenues"
+                "OperatingRevenues",
+                "TangibleFixedAssets",
+                "IntangibleFixedAssets",
+                "Stock",
+                "Debtors",
+                "CashFlow",
+                "TradeCreditors",
+                "ShortTermDebts",
+                "Reserves",
+                "LongTermDebtsIncurredWithGroupCompaniesAndAffiliates",
+                "CapitalAndSharePremiums"
             ]
         },
         "enumDataTypes": {
@@ -155,7 +165,12 @@
         "enumPublicRecordsSummaryType": {
             "enum": [
                 "Total",
-                "ByProceeding"
+                "ByProceeding",
+                "BySituation",
+                "ByProduct",
+                "ByDefaultTypology",
+                "ByAgeing",
+                "ByDebtor"
             ]
         },
         "enumBankingInformationSummaryType": {
