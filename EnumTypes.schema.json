@@ -67,6 +67,8 @@
             "enum": [
                 "FinancialSummary",
                 "BalanceSheet",
+                "TotalAssets",
+                "TotalLiabilitiesAndEquity",
                 "IncomeStatement",
                 "CashFlowStatement",
                 "StatementOfChangesInEquity",
@@ -122,7 +124,17 @@
                 "Ebitda",
                 "EBT",
                 "FinancialYearResult",
-                "FinancialAutonomy"
+                "FinancialAutonomy",
+                "TotalAssets",
+                "CurrentAssets",
+                "NonCurrentAssets",
+                "NetEquityAndLiability",
+                "NetEquity",
+                "CurrentLiability",
+                "NonCurrentLiability",
+                "GrossOperatingProfit",
+                "CompanyAddedValue",
+                "OperatingRevenues"
             ]
         },
         "enumDataTypes": {
