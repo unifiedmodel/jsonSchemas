@@ -77,7 +77,10 @@
                 "CPFinancialSummary",
                 "CPBalanceSheet",
                 "CPIncomeStatement",
-                "CPRatios"
+                "CPRatios",
+                "TotalAssetsShortened",
+                "TotalLiabilitiesAndEquityShortened",
+                "IncomeStatementShortened"
             ]
         },
         "enumFrequencyDataType": {
