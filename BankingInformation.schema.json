@@ -517,6 +517,11 @@
                                     "title": "Vendor Id of the related entity",
                                     "description": "External Id (from vendors) of the related entity"
                                 },
+                                "EntityId": {
+                                    "type": "integer",
+                                    "title": "Internal Id of the related entity.",
+                                    "description": "Internal Id of the related entity. Currently used to identify an entity in the A360 platform"
+                                },
                                 "FinancialElementsList": {
                                     "type": "array",
                                     "title": "List of details",
