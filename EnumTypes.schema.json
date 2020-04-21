@@ -179,7 +179,8 @@
         "enumBankingInformationSummaryType": {
             "enum": [
                 "Total",
-                "ByFinancialEntities"
+                "ByFinancialEntities",
+                "ByFinancialScoring"
             ]
         },
         "enumBankingInformationType": {
