@@ -50,6 +50,10 @@
                                             "type": "integer",
                                             "title": "Internal Id for the entity"
                                         },
+                                        "VendorLinkId": {
+                                            "type": "integer",
+                                            "title": "Vendor id for linking"
+                                        },
                                         "LinkedEntitiesList": {
                                             "type": "array",
                                             "title": "List of summaries of Linked Entities",
@@ -70,6 +74,10 @@
                                                     "LinkedEntityId": {
                                                         "type": "integer",
                                                         "title": "Internal Id for the linked entity"
+                                                    },
+                                                    "LinkedVendorLinkId": {
+                                                        "type": "integer",
+                                                        "title": "Vendor id for linking"
                                                     },
                                                     "RelationshipGroupType": {
                                                         "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesRelationshipGroupType",
@@ -188,6 +196,10 @@
                                 "type": "integer",
                                 "title": "Internal Id for the entity"
                             },
+                            "VendorLinkId": {
+                                "type": "integer",
+                                "title": "Vendor id for linking"
+                            },
                             "PublicInfo": {
                                 "type": "object",
                                 "additionalProperties": false,
@@ -249,45 +261,61 @@
                                         "title": "Accounts update request error code"
                                     }
                                 }
+                            },
+                            "RiskIndicators": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "Scoring": {
+                                        "type": "integer",
+                                        "title": "Entity' Scoring",
+                                        "description": "Entity' scoring from a vendor used as intermediate variable to calculate some Economic Group indicators"
+                                    },
+                                    "CreditRecommendation": {
+                                        "$ref": "DataTypes.schema.json#/properties/Amount",
+                                        "title": "Entity's credit recommendation",
+                                        "description": "Entity' credit recommendation from a vendor used as intermediate variable to calculate some Economic Group indicators"
+                                    }
+                                }
                             }
                         }
                     }
                 }
-            }
-        },
-        "EconomicGroup": {
-            "type": "object",
-            "title": "Economic Group",
-            "additionalProperties": false,
-            "properties": {
-                "EUIndicators": {
-                    "type": "object",
-                    "title": "Economic Group indicators under the European Union definition",
-                    "additionalProperties": false,
-                    "properties": {
-                        "Size": {
-                            "type": "string",
-                            "title": "Group size"
-                        },
-                        "Sector": {
-                            "$ref": "DataTypes.schema.json#/properties/Activity",
-                            "title": "Sector info"
-                        },
-                        "Reliability": {
-                            "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
-                            "title": "EU Classification Reliability"
-                        },
-                        "NumberOfEmployees": {
-                            "$ref": "DataTypes.schema.json#/properties/Employees",
-                            "title": "Group employees"
-                        },
-                        "TotalBalance": {
-                            "$ref": "DataTypes.schema.json#/properties/Amount",
-                            "title": "Group total balance"
-                        },
-                        "Sales": {
-                            "$ref": "DataTypes.schema.json#/properties/Amount",
-                            "title": "Group total sales"
+            },
+            "EconomicGroup": {
+                "type": "object",
+                "title": "Economic Group",
+                "additionalProperties": false,
+                "properties": {
+                    "EUIndicators": {
+                        "type": "object",
+                        "title": "Economic Group indicators under the European Union definition",
+                        "additionalProperties": false,
+                        "properties": {
+                            "Size": {
+                                "type": "string",
+                                "title": "Group size"
+                            },
+                            "Sector": {
+                                "$ref": "DataTypes.schema.json#/properties/Activity",
+                                "title": "Sector info"
+                            },
+                            "Reliability": {
+                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                                "title": "EU Classification Reliability"
+                            },
+                            "NumberOfEmployees": {
+                                "$ref": "DataTypes.schema.json#/properties/Employees",
+                                "title": "Group employees"
+                            },
+                            "TotalBalance": {
+                                "$ref": "DataTypes.schema.json#/properties/Amount",
+                                "title": "Group total balance"
+                            },
+                            "Sales": {
+                                "$ref": "DataTypes.schema.json#/properties/Amount",
+                                "title": "Group total sales"
+                            }
                         }
                     }
                 }
