@@ -16,7 +16,6 @@
                 "additionalProperties": false,
                 "properties": {
                     "BankingInformationType": {
-                        "type": "string",
                         "$ref": "EnumTypes.schema.json#/properties/enumBankingInformationType",
                         "title": "Type (enum)",
                         "description": "Specifies the type of banking info according to an enum",
@@ -59,7 +58,6 @@
                                     "description": "Distinguish if the content includes evolution data (Multiple) or a single-shot photo (Single)"
                                 },
                                 "SummaryType": {
-                                    "type": "string",
                                     "$ref": "EnumTypes.schema.json#/properties/enumBankingInformationSummaryType",
                                     "title": "Summary Type (enum)",
                                     "description": "Type of aggregation used in the current summary, under an enum",
@@ -129,7 +127,6 @@
                                                                 "properties": {
                                                                     "Datatype": {
                                                                         "$ref": "EnumTypes.schema.json#/properties/enumDataTypes",
-                                                                        "type": "string",
                                                                         "title": "Other data's datatype",
                                                                         "description": "Schema datatype for the data used",
                                                                         "examples": [
@@ -251,7 +248,6 @@
                 "additionalProperties": false,
                 "properties": {
                     "BankingInformationType": {
-                        "type": "string",
                         "$ref": "EnumTypes.schema.json#/properties/enumBankingInformationType",
                         "title": "Type (enum)",
                         "description": "Specifies the type of banking info according to an enum",
@@ -482,13 +478,11 @@
                                     ]
                                 },
                                 "IdentificationNumber": {
-                                    "type": "string",
                                     "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
                                     "title": "Identification Number",
                                     "description": "Id/VAT of the Financial Entity"
                                 },
                                 "Address": {
-                                    "type": "string",
                                     "$ref": "DataTypes.schema.json#/properties/Address",
                                     "title": "Address",
                                     "description": "Financial entity's address"
