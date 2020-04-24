@@ -228,6 +228,11 @@
                 "Indirect",
                 "Undetermined"
             ]
+        },
+        "enumRiskIndicatorType": {
+            "enum": [
+                "PaymentBehaviourWithPublicAdministrations"
+            ]
         }
     }
 }
