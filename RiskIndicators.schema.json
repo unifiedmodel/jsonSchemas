@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/RiskIndicators.schema.json",
+    "type": "object",
+    "title": "The Risk Indicators Domain Schema",
+    "description": "Contains a list of risk indicators of an entity",
+    "additionalProperties": false,
+    "properties": {
+        "RiskIndicatorsList": {
+            "type": "array",
+            "title": "List of Risk Indicators",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Type": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumRiskIndicatorType",
+                        "title": "Risk indicator type (enum)",
+                        "description": "Description of a risk indicator calculated by a vendor, according to an enum list",
+                        "examples": [
+                            "PaymentBehaviourWithPublicAdministrations"
+                        ]
+                    },
+                    "TrType": {
+                        "type": "string",
+                        "title": "Risk indicator type (translateable)",
+                        "description": "Description of a risk indicator calculated by a vendor, according to an enum list",
+                        "examples": [
+                            "Comportamiento en Pagos con Administraciones Públicas"
+                        ]
+                    },
+                    "Name": {
+                        "type": "string",
+                        "title": "Alternative name",
+                        "description": "Alternative name used to describe the indicator",
+                        "examples": [
+                            "ICP AA.PP."
+                        ]
+                    },
+                    "Value": {
+                        "oneOf": [
+                            {
+                                "$ref": "DataTypes.schema.json#/properties/Amount"
+                            },
+                            {
+                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure"
+                            }
+                        ],
+                        "title": "Value",
+                        "description": "Contains the value of the indicator, either an amount or a frequency measure"
+                    },
+                    "CategoryId": {
+                        "type": "integer",
+                        "title": "Category Id",
+                        "description": "For some indicators, used for a category associated to the value of the indicator"
+                    },
+                    "CategoryName": {
+                        "type": "string",
+                        "title": "Category Name",
+                        "description": "For some indicators, used for a category associated to the value of the indicator",
+                        "examples": [
+                            "Bueno",
+                            "Aceptable",
+                            "Deficiente",
+                            "Crítico",
+                            "Impago"
+                        ]
+                    },
+                    "Evolution": {
+                        "type": "string",
+                        "title": "Indicator's evolution",
+                        "description": "Shows the evolution or trend of an entity's indicator",
+                        "examples": [
+                            "Positiva",
+                            "Neutra",
+                            "Deficiente"
+                        ]
+                    },
+                    "Explanation": {
+                        "type": "string",
+                        "title": "Indicator explanation",
+                        "description": "Details some aspects related to the value of the indicator"
+                    }
+                }
+            }
+        }
+    }
+}
