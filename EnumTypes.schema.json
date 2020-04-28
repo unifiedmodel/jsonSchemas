@@ -147,7 +147,8 @@
                 "ShortTermDebts",
                 "Reserves",
                 "LongTermDebtsIncurredWithGroupCompaniesAndAffiliates",
-                "CapitalAndSharePremiums"
+                "CapitalAndSharePremiums",
+                "EBIT"
             ]
         },
         "enumDataTypes": {
@@ -233,6 +234,13 @@
             "enum": [
                 "PaymentBehaviourWithPublicAdministrations"
             ]
+        },
+        "enumBusinessRationaleType": {
+            "enum": [
+                "Financial",
+                "Qualitative"
+            ]
         }
+
     }
 }
