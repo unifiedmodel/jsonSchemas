@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/BusinessRationales.schema.json",
+    "type": "object",
+    "title": "The Business Rationales Domain Schema",
+    "description": "Contains a list of rationales and comments about different aspects concerning the entity's current situation",
+    "additionalProperties": false,
+    "properties": {
+        "BusinessRationalesList": {
+            "type": "array",
+            "title": "List of Business Rationales",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Type": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumBusinessRationaleType",
+                        "title": "Business rationale type (enum)",
+                        "description": "Description of a business rationale sent by a vendor, according to an enum list",
+                        "examples": [
+                            "Financial",
+                            "Qualitative"
+                        ]
+                    },
+                    "TrType": {
+                        "type": "string",
+                        "title": "Business rationale type (translateable)",
+                        "description": "Description of a business rationale sent by a vendor, according to an enum list",
+                        "examples": [
+                            "Financiero",
+                            "Cualitativo"
+                        ]
+                    },
+                    "VendorId": {
+                        "type": "integer",
+                        "title": "Vendor id",
+                        "description": "Vendor id to identify the text"
+                    },
+                    "Order": {
+                        "type": "integer",
+                        "title": "Order",
+                        "description": "Order used to shot the list of rationales"
+                    },
+                    "Connotation": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumConnotation",
+                        "title": "Rationale's connotation (enum)",
+                        "description": "Shows the tendency or connotation of the value",
+                        "examples": [
+                            "Positive",
+                            "Negative",
+                            "Neutral"
+                        ]
+                    },
+                    "Text": {
+                        "type": "string",
+                        "title": "Full text",
+                        "description": "Business rationale text. May include some HTML tags, like <b> or <q>",
+                        "examples": [
+                            "<b>Se reflejan incidencias judiciales para PETROGAL, S.A consideradas de gravedad baja y/o media /b> , lo que sería indicativo que constan obligaciones administrativas y/o tributarias registradas en los organismos públicos de Portugal."
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
