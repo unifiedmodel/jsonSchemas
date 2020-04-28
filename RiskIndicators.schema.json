@@ -39,14 +39,7 @@
                         ]
                     },
                     "Value": {
-                        "oneOf": [
-                            {
-                                "$ref": "DataTypes.schema.json#/properties/Amount"
-                            },
-                            {
-                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure"
-                            }
-                        ],
+                        "type": "number",
                         "title": "Value",
                         "description": "Contains the value of the indicator, either an amount or a frequency measure"
                     },
