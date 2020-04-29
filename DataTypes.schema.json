@@ -305,6 +305,28 @@
           ]
         }
       }
+    },
+    "Translation": {
+      "type": "object",
+      "title": "The Translation data type",
+      "description": "Used to translate enum fields",
+      "additionalProperties": false,
+      "properties": {
+        "LanguageISO2": {
+          "type": "string",
+          "title": "Language ISO (two-letter code)",
+          "description": "Language code under ISO 639-1 standardized nomenclature",
+          "examples": [
+            "es",
+            "pt"
+          ]
+        },
+        "Text": {
+          "type": "string",
+          "title": "Translated text",
+          "description": "Contains the text with the translation for the enum value in the required language"
+        }
+      }
     }
   }
 }
