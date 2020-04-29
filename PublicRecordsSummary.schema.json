@@ -28,7 +28,7 @@
                         ]
                     },
                     "TrTypeGroup": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Type Group (translatable)",
                         "description": "Indicates the parent type of a public record",
                         "examples": [
@@ -48,7 +48,7 @@
                         ]
                     },
                     "TrType": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Type of Public Record",
                         "description": "Indicates the type or source of a public record",
                         "examples": [
@@ -91,7 +91,7 @@
                                     ]
                                 },
                                 "TrSummaryType": {
-                                    "type": "string",
+                                    "$ref": "DataTypes.schema.json#/properties/Translation",
                                     "title": "Summary Type (translatable)",
                                     "description": "",
                                     "examples": [

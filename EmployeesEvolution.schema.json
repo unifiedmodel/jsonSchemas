@@ -75,7 +75,7 @@
                                     ]
                                 },
                                 "TrTypeGroup": {
-                                    "type": "string",
+                                    "$ref": "DataTypes.schema.json#/properties/Translation",
                                     "title": "Breakdown type (translatable)",
                                     "description": "Description of the subject of the concrete breakdown",
                                     "examples": [

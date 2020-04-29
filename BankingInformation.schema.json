@@ -24,7 +24,7 @@
                         ]
                     },
                     "TrBankingInformationType": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Type (translatable)",
                         "description": "Specifies the type of banking info",
                         "examples": [
@@ -67,7 +67,7 @@
                                     ]
                                 },
                                 "TrSummaryType": {
-                                    "type": "string",
+                                    "$ref": "DataTypes.schema.json#/properties/Translation",
                                     "title": "Summary Type (translatable)",
                                     "description": "Type of aggregation used in the current summary, under an enum",
                                     "examples": [
@@ -256,7 +256,7 @@
                         ]
                     },
                     "TrBankingInformationType": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Type (translatable)",
                         "description": "Specifies the type of banking info",
                         "examples": [

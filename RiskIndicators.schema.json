@@ -23,7 +23,7 @@
                         ]
                     },
                     "TrType": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Risk indicator type (translateable)",
                         "description": "Description of a risk indicator calculated by a vendor, according to an enum list",
                         "examples": [

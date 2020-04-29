@@ -31,7 +31,7 @@
                         ]
                     },
                     "TrTypeGroup": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Breakdown type (translatable)",
                         "description": "Description of the subject of the concrete breakdown",
                         "examples": [
@@ -51,7 +51,7 @@
                         ]
                     },
                     "TrType": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Type of Public Record",
                         "description": "Indicates the type or source of a public record",
                         "examples": [

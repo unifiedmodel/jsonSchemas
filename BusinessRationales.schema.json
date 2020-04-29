@@ -24,7 +24,7 @@
                         ]
                     },
                     "TrType": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Business rationale type (translateable)",
                         "description": "Description of a business rationale sent by a vendor, according to an enum list",
                         "examples": [

@@ -59,7 +59,7 @@
                         ]
                     },
                     "TrPeriodType": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Period type (translatable)",
                         "description": "Timespan covered by a set of financial statements",
                         "examples": [
@@ -174,7 +174,7 @@
                         ]
                     },
                     "TrSection": {
-                        "type": "string",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Section name (translatable)",
                         "description": "Name of the section, describing the content included",
                         "examples": [
@@ -254,7 +254,7 @@
                                     "description": "Used on those elements (like ratios) which are enumerated in the enumFinancialElement EnumType"
                                 },
                                 "TrElementEnum": {
-                                    "type": "string",
+                                    "$ref": "DataTypes.schema.json#/properties/Translation",
                                     "title": "Element enum (translateable)",
                                     "description": "Used on those elements (like ratios) which are enumerated in the enumFinancialElement EnumType",
                                     "examples":
