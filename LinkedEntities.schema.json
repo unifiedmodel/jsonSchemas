@@ -281,41 +281,41 @@
                         }
                     }
                 }
-            },
-            "EconomicGroup": {
-                "type": "object",
-                "title": "Economic Group",
-                "additionalProperties": false,
-                "properties": {
-                    "EUIndicators": {
-                        "type": "object",
-                        "title": "Economic Group indicators under the European Union definition",
-                        "additionalProperties": false,
-                        "properties": {
-                            "Size": {
-                                "type": "string",
-                                "title": "Group size"
-                            },
-                            "Sector": {
-                                "$ref": "DataTypes.schema.json#/properties/Activity",
-                                "title": "Sector info"
-                            },
-                            "Reliability": {
-                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
-                                "title": "EU Classification Reliability"
-                            },
-                            "NumberOfEmployees": {
-                                "$ref": "DataTypes.schema.json#/properties/Employees",
-                                "title": "Group employees"
-                            },
-                            "TotalBalance": {
-                                "$ref": "DataTypes.schema.json#/properties/Amount",
-                                "title": "Group total balance"
-                            },
-                            "Sales": {
-                                "$ref": "DataTypes.schema.json#/properties/Amount",
-                                "title": "Group total sales"
-                            }
+            }
+        },
+        "EconomicGroup": {
+            "type": "object",
+            "title": "Economic Group",
+            "additionalProperties": false,
+            "properties": {
+                "EUIndicators": {
+                    "type": "object",
+                    "title": "Economic Group indicators under the European Union definition",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Size": {
+                            "type": "string",
+                            "title": "Group size"
+                        },
+                        "Sector": {
+                            "$ref": "DataTypes.schema.json#/properties/Activity",
+                            "title": "Sector info"
+                        },
+                        "Reliability": {
+                            "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                            "title": "EU Classification Reliability"
+                        },
+                        "NumberOfEmployees": {
+                            "$ref": "DataTypes.schema.json#/properties/Employees",
+                            "title": "Group employees"
+                        },
+                        "TotalBalance": {
+                            "$ref": "DataTypes.schema.json#/properties/Amount",
+                            "title": "Group total balance"
+                        },
+                        "Sales": {
+                            "$ref": "DataTypes.schema.json#/properties/Amount",
+                            "title": "Group total sales"
                         }
                     }
                 }
