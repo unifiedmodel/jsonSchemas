@@ -39,6 +39,15 @@
         },
         "BankingInformation": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/BankingInformation.schema.json"
+        },
+        "LinkedEntities": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/LinkedEntities.schema.json"
+        },
+        "RiskIndicators": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/RiskIndicators.schema.json"
+        },
+        "BusinessRationales": {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/BusinessRationales.schema.json"
         }
     }
 }
