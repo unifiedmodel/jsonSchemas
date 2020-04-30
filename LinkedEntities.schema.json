@@ -84,10 +84,6 @@
                                                         "type": "integer",
                                                         "title": "Vendor id for linking"
                                                     },
-                                                    "LinkedVendorNodeCode": {
-                                                        "type": "integer",
-                                                        "title": "Vendor node code for linking"
-                                                    },
                                                     "RelationshipGroupType": {
                                                         "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesRelationshipGroupType",
                                                         "title": "Relationship Group Type (enum)"
@@ -208,6 +204,10 @@
                             "VendorLinkId": {
                                 "type": "integer",
                                 "title": "Vendor id for linking"
+                            },
+                            "VendorNodeCode": {
+                                "type": "integer",
+                                "title": "Vendor node code for economic group"
                             },
                             "PublicInfo": {
                                 "type": "object",
