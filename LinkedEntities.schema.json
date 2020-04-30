@@ -84,6 +84,10 @@
                                                         "type": "integer",
                                                         "title": "Vendor id for linking"
                                                     },
+                                                    "LinkedVendorNodeCode": {
+                                                        "type": "integer",
+                                                        "title": "Vendor node code for linking"
+                                                    },
                                                     "RelationshipGroupType": {
                                                         "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesRelationshipGroupType",
                                                         "title": "Relationship Group Type (enum)"
