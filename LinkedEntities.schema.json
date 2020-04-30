@@ -52,7 +52,11 @@
                                         },
                                         "VendorLinkId": {
                                             "type": "integer",
-                                            "title": "Vendor id for linking"
+                                            "title": "Vendor id for linking purposes"
+                                        },
+                                        "VendorNodeCode": {
+                                            "type": "integer",
+                                            "title": "Vendor node code for linking purposes"
                                         },
                                         "IsUltimateParent": {
                                             "type": "boolean",
@@ -201,13 +205,9 @@
                                 "type": "integer",
                                 "title": "Internal Id for the entity"
                             },
-                            "VendorLinkId": {
-                                "type": "integer",
-                                "title": "Vendor id for linking"
-                            },
                             "VendorNodeCode": {
                                 "type": "integer",
-                                "title": "Vendor node code for economic group"
+                                "title": "Vendor node code for linking purposes"
                             },
                             "PublicInfo": {
                                 "type": "object",
