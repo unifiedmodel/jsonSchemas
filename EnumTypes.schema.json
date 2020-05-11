@@ -80,7 +80,10 @@
                 "CPRatios",
                 "TotalAssetsShortened",
                 "TotalLiabilitiesAndEquityShortened",
-                "IncomeStatementShortened"
+                "IncomeStatementShortened",
+                "TotalAssetsSectoral",
+                "TotalLiabilitiesAndEquitySectoral",
+                "IncomeStatementsSectoral"
             ]
         },
         "enumFrequencyDataType": {
