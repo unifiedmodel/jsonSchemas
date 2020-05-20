@@ -88,6 +88,10 @@
                                                         "type": "integer",
                                                         "title": "Vendor id for linking"
                                                     },
+                                                    "LinkedVendorNodeCode": {
+                                                        "type": "integer",
+                                                        "title": "Linked vendor node code"
+                                                    },
                                                     "RelationshipGroupType": {
                                                         "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesRelationshipGroupType",
                                                         "title": "Relationship Group Type (enum)"
@@ -104,26 +108,30 @@
                                                         "$ref": "DataTypes.schema.json#/properties/Translation",
                                                         "title": "Group Type (translateable)"
                                                     },
-                                                    "Participation": {
-                                                        "type": "object",
-                                                        "title": "Participation",
-                                                        "additionalProperties": false,
-                                                        "properties": {
-                                                            "Type": {
-                                                                "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesParticipationType",
-                                                                "title": "Participation Type (enum)"
-                                                            },
-                                                            "TrType": {
-                                                                "$ref": "DataTypes.schema.json#/properties/Translation",
-                                                                "title": "Participation Type (translateable)"
-                                                            },
-                                                            "Percentage": {
-                                                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
-                                                                "title": "Percentage of Participation"
-                                                            },
-                                                            "Amount": {
-                                                                "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
-                                                                "title": "Participacion Amount"
+                                                    "ParticipationsList": {
+                                                        "type": "array",
+                                                        "title": "Participations list",
+                                                        "additionalItems": false,
+                                                        "items": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "Type": {
+                                                                    "$ref": "EnumTypes.schema.json#/properties/enumLinkedEntitiesParticipationType",
+                                                                    "title": "Participation Type (enum)"
+                                                                },
+                                                                "TrType": {
+                                                                    "$ref": "DataTypes.schema.json#/properties/Translation",
+                                                                    "title": "Participation Type (translateable)"
+                                                                },
+                                                                "Percentage": {
+                                                                    "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                                                                    "title": "Percentage of Participation"
+                                                                },
+                                                                "Amount": {
+                                                                    "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                                                                    "title": "Participacion Amount"
+                                                                }
                                                             }
                                                         }
                                                     },
