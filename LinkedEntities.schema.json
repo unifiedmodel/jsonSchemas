@@ -278,22 +278,6 @@
                                         "title": "Accounts update request error code"
                                     }
                                 }
-                            },
-                            "RiskIndicators": {
-                                "type": "object",
-                                "additionalProperties": false,
-                                "properties": {
-                                    "Scoring": {
-                                        "type": "integer",
-                                        "title": "Entity' Scoring",
-                                        "description": "Entity' scoring from a vendor used as intermediate variable to calculate some Economic Group indicators"
-                                    },
-                                    "CreditRecommendation": {
-                                        "$ref": "DataTypes.schema.json#/properties/Amount",
-                                        "title": "Entity's credit recommendation",
-                                        "description": "Entity' credit recommendation from a vendor used as intermediate variable to calculate some Economic Group indicators"
-                                    }
-                                }
                             }
                         }
                     }
