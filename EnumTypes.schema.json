@@ -209,7 +209,8 @@
                 "Shareholders",
                 "Subsidiaries",
                 "FinancialRelations",
-                "SharedOfficersWithOtherCompanies"
+                "SharedOfficersWithOtherCompanies",
+                "BoardOfDirectors"
             ]
         },
         "enumLinkedEntitiesRelationshipType": {
@@ -220,9 +221,7 @@
                 "Subsidiary",
                 "Associated",
                 "HasFinantialRelations",
-                "President",
-                "Vicepresident",
-                "CEO"
+                "BoardOfDirectors"
             ]
         },
         "enumLinkedEntitiesParticipationType": {

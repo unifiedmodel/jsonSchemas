@@ -264,7 +264,8 @@
                     "examples": [
                         "ESP"
                     ]
-                },"EntityId": {
+                },
+                "EntityId": {
                     "type": "integer",
                     "title": "Internal Id for entities",
                     "description": "Contains Axesor360 unique ID for the parent company",
