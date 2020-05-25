@@ -250,7 +250,6 @@
             "additionalProperties": false,
             "properties": {
                 "IdentificationNumber": {
-                    "type": "string",
                     "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
                     "title": "Company's Identification Number"
                 },
@@ -264,6 +263,13 @@
                     "description": "Three digits ISO code for the entity's country",
                     "examples": [
                         "ESP"
+                    ]
+                },"EntityId": {
+                    "type": "integer",
+                    "title": "Internal Id for entities",
+                    "description": "Contains Axesor360 unique ID for the parent company",
+                    "examples": [
+                        2684748
                     ]
                 }
             }
