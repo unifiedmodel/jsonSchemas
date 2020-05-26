@@ -246,6 +246,12 @@
                 "Financial",
                 "Qualitative"
             ]
+        },
+        "enumCompanyBoardTypeGroup": {
+            "enum": [
+                "BoardOfDirectors", 
+                "CorporateOfficers" 
+            ]
         }
 
     }

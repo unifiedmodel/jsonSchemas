@@ -40,7 +40,6 @@
                         ]
                     },
                     "Type": {
-                        "type": "string",
                         "$ref": "EnumTypes.schema.json#/properties/enumPublicRecordsType",
                         "title": "Type of Public Record (enum)",
                         "description": "Indicates the type or source of a public record, according to an enum",
@@ -263,6 +262,11 @@
                                                 "type": "integer",
                                                 "title": "Page number",
                                                 "description": "Page number of the record in the original publication (sometimes used to get the PDF from vendors)"
+                                            },
+                                            "VendorSourceId": {
+                                                "type": "integer",
+                                                "title": "Vendor's source id",
+                                                "description": "Source Id of the publication (sometimes used to get the PDF from vendors)"
                                             },
                                             "IsMainDate": {
                                                 "type": "boolean",
