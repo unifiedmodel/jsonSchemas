@@ -224,7 +224,7 @@
                 "Shareholder",
                 "Subsidiary",
                 "Associated",
-                "HasFinantialRelations",
+                "HasFinancialRelations",
                 "BoardOfDirectors"
             ]
         },
