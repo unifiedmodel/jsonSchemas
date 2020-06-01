@@ -7,157 +7,165 @@
     "additionalProperties": false,
     "properties": {
         "CompanyBoardsList": {
-            "TypeGroup": {
-                "$ref": "EnumTypes.schema.json#/properties/enumCompanyBoardTypeGroup",
-                "title": "Type Group (enum)",
-                "description": "Mainly used to distinguish between the type of board: directors (directs the corporation's affairs ) or corporate officers (oversees the business's daily operations)",
-                "examples": [
-                    "BoardOfDirectors",
-                    "CorporateOfficers"
-                ]
-            },
-            "TrTypeGroup": {
-                "$ref": "DataTypes.schema.json#/properties/Translation",
-                "title": "Type Group (translation)",
-                "description": "Mainly used to distinguish between the type of board: directors (directs the corporation's affairs ) or corporate officers (oversees the business's daily operations)",
-                "examples": [
-                    "Órganos Sociales",
-                    "Directivos"
-                ]
-            },
-            "MembersList": {
-                "type": "array",
-                "title": "List of Members",
-                "description": "List of members of the board, including their roles and active periods",
-                "additionalItems": false,
-                "items": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "Name": {
-                            "type": "string",
-                            "title": "Member name",
-                            "description": "First and last name, or company name, of the member of the board",
-                            "examples": [
-                                "Alan Sparhawk",
-                                "Low The Band Co"
-                            ]
-                        },
-                        "IdentificationNumber": {
-                            "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
-                            "title": "Member's Identification Number"
-                        },
-                        "VendorNameId": {
-                            "type": "integer",
-                            "title": "Vendor Name Id",
-                            "description": "Id used by the vendor to identify the member"
-                        },
-                        "VendorUniqueNameId": {
-                            "type": "integer",
-                            "title": "Vendor Unique Name Id",
-                            "description": "Unique Id used by the vendor to identify the member in a singular way, in case of being the same person/entity with different versions of his name published"
-                        },
-                        "RolesList": {
-                            "type": "array",
-                            "title": "List of Roles",
-                            "description": "List of roles developed by a member in the same company",
-                            "additionalItems": false,
-                            "items": {
-                                "type": "object",
-                                "additionalProperties": false,
-                                "properties": {
-                                    "RoleGroup": {
-                                        "type": "string",
-                                        "title": "Role Group",
-                                        "description": "In some cases, indicates a group of roles according to their functions",
-                                        "examples": [
-                                            "Secretarios",
-                                            "Apoderados",
-                                            "Consejo de Dirección"
-                                        ]
-                                    },
-                                    "Role": {
-                                        "type": "string",
-                                        "title": "Role ",
-                                        "description": "Indicates the role of the member in the board or in the company",
-                                        "examples": [
-                                            "Presidente",
-                                            "CEO",
-                                            "Apoderado",
-                                            "CFO"
-                                        ]
-                                    },
-                                    "PeriodsList": {
-                                        "type": "array",
-                                        "title": "List of Periods",
-                                        "description": "List of periods whereas the member is/was active in the company for the assigned role",
-                                        "additionalItems": false,
-                                        "items": {
-                                            "type": "object",
-                                            "additionalProperties": false,
-                                            "properties": {
-                                                "StartDate": {
-                                                    "type": "string",
-                                                    "format": "date",
-                                                    "title": "Start date",
-                                                    "description": "The day the member started doing that role in the company"
-                                                },
-                                                "EndDate": {
-                                                    "type": "string",
-                                                    "format": "date",
-                                                    "title": "End date",
-                                                    "description": "The day the member ended doing that role in the company. If is null, it means it's currently doing that job"
-                                                },
-                                                "FilingDate": {
-                                                    "type": "string",
-                                                    "format": "date",
-                                                    "title": "Filing date",
-                                                    "description": "The day that was published the appointment"
-                                                },
-                                                "VendorReferenceId": {
-                                                    "type": "integer",
-                                                    "title": "Vendor's Reference Id",
-                                                    "description": "Id used by the vendor to indicate the source where the appointment was published"
-                                                },
-                                                "IsNotCurrentMember": {
-                                                    "type": "boolean",
-                                                    "title": "Is not a Current Member",
-                                                    "description": "True if the member is not currently active in the company"
-                                                },
-                                                "OtherDataList": {
-                                                    "type": "array",
-                                                    "title": "List of Other Data",
-                                                    "description": "Any other data relative to this publication",
-                                                    "additionalItems": false,
-                                                    "items": {
-                                                        "type": "object",
-                                                        "additionalProperties": false,
-                                                        "properties": {
-                                                            "Datatype": {
-                                                                "type": "string",
-                                                                "title": "Other data's datatype",
-                                                                "description": "Schema datatype for the data",
-                                                                "examples": [
-                                                                    "integer",
-                                                                    "string",
-                                                                    "address"
-                                                                ]
-                                                            },
-                                                            "Tag": {
-                                                                "type": "string",
-                                                                "title": "Other data's tag",
-                                                                "description": "Tag that describes the data",
-                                                                "examples": [
-                                                                    "Tipo de Documento"
-                                                                ]
-                                                            },
-                                                            "Value": {
-                                                                "type": "string",
-                                                                "title": "Other data's value",
-                                                                "description": "Value for the data",
-                                                                "examples": [
-                                                                    "Cheque"
-                                                                ]
+            "type": "array",
+            "additionalItems": false,
+            "items":{
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "TypeGroup": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumCompanyBoardTypeGroup",
+                        "title": "Type Group (enum)",
+                        "description": "Mainly used to distinguish between the type of board: directors (directs the corporation's affairs ) or corporate officers (oversees the business's daily operations)",
+                        "examples": [
+                            "BoardOfDirectors",
+                            "CorporateOfficers"
+                        ]
+                    },
+                    "TrTypeGroup": {
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
+                        "title": "Type Group (translation)",
+                        "description": "Mainly used to distinguish between the type of board: directors (directs the corporation's affairs ) or corporate officers (oversees the business's daily operations)",
+                        "examples": [
+                            "Órganos Sociales",
+                            "Directivos"
+                        ]
+                    },
+                    "MembersList": {
+                        "type": "array",
+                        "title": "List of Members",
+                        "description": "List of members of the board, including their roles and active periods",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Name": {
+                                    "type": "string",
+                                    "title": "Member name",
+                                    "description": "First and last name, or company name, of the member of the board",
+                                    "examples": [
+                                        "Alan Sparhawk",
+                                        "Low The Band Co"
+                                    ]
+                                },
+                                "IdentificationNumber": {
+                                    "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                    "title": "Member's Identification Number"
+                                },
+                                "VendorNameId": {
+                                    "type": "integer",
+                                    "title": "Vendor Name Id",
+                                    "description": "Id used by the vendor to identify the member"
+                                },
+                                "VendorUniqueNameId": {
+                                    "type": "integer",
+                                    "title": "Vendor Unique Name Id",
+                                    "description": "Unique Id used by the vendor to identify the member in a singular way, in case of being the same person/entity with different versions of his name published"
+                                },
+                                "RolesList": {
+                                    "type": "array",
+                                    "title": "List of Roles",
+                                    "description": "List of roles developed by a member in the same company",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "RoleGroup": {
+                                                "type": "string",
+                                                "title": "Role Group",
+                                                "description": "In some cases, indicates a group of roles according to their functions",
+                                                "examples": [
+                                                    "Secretarios",
+                                                    "Apoderados",
+                                                    "Consejo de Dirección"
+                                                ]
+                                            },
+                                            "Role": {
+                                                "type": "string",
+                                                "title": "Role ",
+                                                "description": "Indicates the role of the member in the board or in the company",
+                                                "examples": [
+                                                    "Presidente",
+                                                    "CEO",
+                                                    "Apoderado",
+                                                    "CFO"
+                                                ]
+                                            },
+                                            "PeriodsList": {
+                                                "type": "array",
+                                                "title": "List of Periods",
+                                                "description": "List of periods whereas the member is/was active in the company for the assigned role",
+                                                "additionalItems": false,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "StartDate": {
+                                                            "type": "string",
+                                                            "format": "date",
+                                                            "title": "Start date",
+                                                            "description": "The day the member started doing that role in the company"
+                                                        },
+                                                        "EndDate": {
+                                                            "type": "string",
+                                                            "format": "date",
+                                                            "title": "End date",
+                                                            "description": "The day the member ended doing that role in the company. If is null, it means it's currently doing that job"
+                                                        },
+                                                        "FilingDate": {
+                                                            "type": "string",
+                                                            "format": "date",
+                                                            "title": "Filing date",
+                                                            "description": "The day that was published the appointment"
+                                                        },
+                                                        "VendorReferenceId": {
+                                                            "type": "integer",
+                                                            "title": "Vendor's Reference Id",
+                                                            "description": "Id used by the vendor to indicate the source where the appointment was published"
+                                                        },
+                                                        "IsNotCurrentMember": {
+                                                            "type": "boolean",
+                                                            "title": "Is not a Current Member",
+                                                            "description": "True if the member is not currently active in the company"
+                                                        },
+                                                        "OtherDataList": {
+                                                            "type": "array",
+                                                            "title": "List of Other Data",
+                                                            "description": "Any other data relative to this publication",
+                                                            "additionalItems": false,
+                                                            "items": {
+                                                                "type": "object",
+                                                                "additionalProperties": false,
+                                                                "properties": {
+                                                                    "Datatype": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's datatype",
+                                                                        "description": "Schema datatype for the data",
+                                                                        "examples": [
+                                                                            "integer",
+                                                                            "string",
+                                                                            "address"
+                                                                        ]
+                                                                    },
+                                                                    "Tag": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's tag",
+                                                                        "description": "Tag that describes the data",
+                                                                        "examples": [
+                                                                            "Tipo de Documento"
+                                                                        ]
+                                                                    },
+                                                                    "Value": {
+                                                                        "type": "string",
+                                                                        "title": "Other data's value",
+                                                                        "description": "Value for the data",
+                                                                        "examples": [
+                                                                            "Cheque"
+                                                                        ]
+                                                                    }
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -165,43 +173,43 @@
                                             }
                                         }
                                     }
-                                }
-                            }
-                        },
-                        "OtherDataList": {
-                            "type": "array",
-                            "title": "List of Other Data",
-                            "description": "Any other data relative to this member",
-                            "additionalItems": false,
-                            "items": {
-                                "type": "object",
-                                "additionalProperties": false,
-                                "properties": {
-                                    "Datatype": {
-                                        "type": "string",
-                                        "title": "Other data's datatype",
-                                        "description": "Schema datatype for the data",
-                                        "examples": [
-                                            "integer",
-                                            "string",
-                                            "address"
-                                        ]
-                                    },
-                                    "Tag": {
-                                        "type": "string",
-                                        "title": "Other data's tag",
-                                        "description": "Tag that describes the data",
-                                        "examples": [
-                                            "Tipo de Documento"
-                                        ]
-                                    },
-                                    "Value": {
-                                        "type": "string",
-                                        "title": "Other data's value",
-                                        "description": "Value for the data",
-                                        "examples": [
-                                            "Cheque"
-                                        ]
+                                },
+                                "OtherDataList": {
+                                    "type": "array",
+                                    "title": "List of Other Data",
+                                    "description": "Any other data relative to this member",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Datatype": {
+                                                "type": "string",
+                                                "title": "Other data's datatype",
+                                                "description": "Schema datatype for the data",
+                                                "examples": [
+                                                    "integer",
+                                                    "string",
+                                                    "address"
+                                                ]
+                                            },
+                                            "Tag": {
+                                                "type": "string",
+                                                "title": "Other data's tag",
+                                                "description": "Tag that describes the data",
+                                                "examples": [
+                                                    "Tipo de Documento"
+                                                ]
+                                            },
+                                            "Value": {
+                                                "type": "string",
+                                                "title": "Other data's value",
+                                                "description": "Value for the data",
+                                                "examples": [
+                                                    "Cheque"
+                                                ]
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -209,6 +217,7 @@
                     }
                 }
             }
+
         }
     }
 }
