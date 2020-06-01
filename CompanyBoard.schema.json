@@ -167,6 +167,44 @@
                                     }
                                 }
                             }
+                        },
+                        "OtherDataList": {
+                            "type": "array",
+                            "title": "List of Other Data",
+                            "description": "Any other data relative to this member",
+                            "additionalItems": false,
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "Datatype": {
+                                        "type": "string",
+                                        "title": "Other data's datatype",
+                                        "description": "Schema datatype for the data",
+                                        "examples": [
+                                            "integer",
+                                            "string",
+                                            "address"
+                                        ]
+                                    },
+                                    "Tag": {
+                                        "type": "string",
+                                        "title": "Other data's tag",
+                                        "description": "Tag that describes the data",
+                                        "examples": [
+                                            "Tipo de Documento"
+                                        ]
+                                    },
+                                    "Value": {
+                                        "type": "string",
+                                        "title": "Other data's value",
+                                        "description": "Value for the data",
+                                        "examples": [
+                                            "Cheque"
+                                        ]
+                                    }
+                                }
+                            }
                         }
                     }
                 }
