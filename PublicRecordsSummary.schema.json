@@ -144,7 +144,13 @@
                                                                 "additionalProperties": false,
                                                                 "properties": {
                                                                     "Datatype": {
-                                                                        "$ref": "EnumTypes.schema.json#/properties/enumDataTypes",
+                                                                        "oneOf": [
+                                                                            {"$ref": "EnumTypes.schema.json#/properties/enumDataTypes"},
+                                                                            {"type": "string"},
+                                                                            {"type": "boolean"},
+                                                                            {"type": "integer"},
+                                                                            {"type": "number"}
+                                                                        ],
                                                                         "title": "Other data's datatype",
                                                                         "description": "Schema datatype for the data used",
                                                                         "examples": [

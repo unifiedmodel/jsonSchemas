@@ -93,6 +93,11 @@
                                                     "CFO"
                                                 ]
                                             },
+                                            "Priority": {
+                                                "type": "integer",
+                                                "title": "Type priority",
+                                                "description": "Marks the priority of the role amongst others. Higher the value, higher the prioriry"
+                                            },
                                             "PeriodsList": {
                                                 "type": "array",
                                                 "title": "List of Periods",
