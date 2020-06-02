@@ -75,6 +75,11 @@
                         "title": "Auditor's Comments",
                         "description": "Any detailed comments about the opinion expressed by the audit, both positive or negative"
                     },
+                    "EmphasisOfMatter": {
+                        "type": "boolean",
+                        "title": "Emphasis of Matter",
+                        "description": "True if the report includes a paragraph with an emphasis of matter besides the opinion"
+                    },
                     "AuditCost": {
                         "$ref": "DataTypes.schema.json#/properties/Amount",
                         "title": "Audit Cost",

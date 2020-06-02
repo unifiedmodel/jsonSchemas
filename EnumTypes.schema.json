@@ -252,6 +252,14 @@
                 "BoardOfDirectors", 
                 "CorporateOfficers" 
             ]
+        },
+        "enumAuditorsReportOpinion": {
+            "enum": [
+                "Clean",
+                "Qualified",
+                "Adverse",
+                "DisclaimerOf"
+            ]
         }
 
     }
