@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/AuditorsReport.schema.json",
+    "type": "object",
+    "title": "The Auditor's Report Domain Schema",
+    "description": "Contains information about the different audits made to the company",
+    "additionalProperties": false,
+    "properties": {
+        "AuditsList": {
+            "type": "array",
+            "title": "List of Auditor's Reports or Audits",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Period": {
+                        "type": "string",
+                        "title": "Period for the audit",
+                        "description": "Period of time (yearly in most cases) of the accounts audited",
+                        "examples": [
+                            "2019"
+                        ]
+                    },
+                    "MandatoryAudit": {
+                        "type": "boolean",
+                        "title": "Mandatory Audit",
+                        "description": "True if the company is required to have its financial statements audited"
+                    },
+                    "AuditorCompany": {
+                        "type": "string",
+                        "title": "Auditor's Company",
+                        "description": "Name of the company which undertook the audit",
+                        "examples": [
+                            "GARRIGUES Y ASOCIADOS SA"
+                        ]
+                    },
+                    "AuditorEntityId": {
+                        "type": "integer",
+                        "title": "Auditor's Entity Id",
+                        "description": "Internal Entity Id of the company which undertook the audit"
+                    },
+                    "Auditor": {
+                        "type": "string",
+                        "title": "Auditor's name",
+                        "description": "Name of the person who lead the audit process"
+                    },
+                    "Date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "The day that the auditor's report was signed"
+                    },
+                    "Opinion": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumAuditorsReportOpinion",
+                        "title": "Auditor's Opinion (enum)",
+                        "description": "Result of the audit according to auditor's opinion",
+                        "examples": [
+                            "Clean",
+                            "Qualified",
+                            "Adverse",
+                            "DisclaimerOf"
+                        ]
+                    },
+                    "TrOpinion": {
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
+                        "title": "Auditor's Opinion (translateable)",
+                        "description": "Result of the audit according to auditor's opinion",
+                        "examples": [
+                            "Favorable",
+                            "Con salvedades"
+                        ]
+                    },
+                    "Comments": {
+                        "type": "string",
+                        "title": "Auditor's Comments",
+                        "description": "Any detailed comments about the opinion expressed by the audit, both positive or negative"
+                    },
+                    "AuditCost": {
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
+                        "title": "Audit Cost",
+                        "description": "Cost of the services hired concernig the audit"
+                    },
+                    "AuditVendorReferenceId": {
+                        "type": "integer",
+                        "title": "Audit Vendor Reference Id",
+                        "description": "External Id used to point to the source reference of the Auditor's Report"
+                    },
+                    "AuditPageNumber": {
+                        "type": "integer",
+                        "title": "Source page",
+                        "description": "Page number where the specific info about the Report was published"
+                    }
+                }
+            }
+        }
+    }
+}
