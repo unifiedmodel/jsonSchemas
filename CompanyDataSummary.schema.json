@@ -6,6 +6,110 @@
     "description": "Contains a summary of public registered information about an entity",
     "additionalProperties": false,
     "properties": {
+        "CompanyInfo": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "StartDate": {
+                    "type": "string",
+                    "title": "Starting date of the entity",
+                    "description": "The entity started its activity in this day",
+                    "examples": [
+                        "2016-03-08T00:00:00.000Z"
+                    ]
+                },
+                "FiledIn": {
+                    "type": "string",
+                    "title": "Filed in",
+                    "description": "Place or administration where the events where filed",
+                    "examples": [
+                        "Granada",
+                        "Cámara de Comercio de Bogotá"
+                    ]
+                },
+                "LastFilingDate": {
+                    "type": "string",
+                    "format": "date",
+                    "title": "Date of Last Filing",
+                    "description": "The last time when the company filed their accounts, enrollments or any other documentation in the Companies Register or similar"
+                },
+                "FilingStatus": {
+                    "type": "string",
+                    "title": "Filing Status",
+                    "description": "Status of the accounts, enrollments or any other mandatory documentation requestes by the Companies Register or similar",
+                    "examples": [
+                        "Activa",
+                        "Cancelada"
+                    ]
+                },
+                "LastDepositEnrollmentYear": {
+                    "type": "integer",
+                    "title": "Last year filled for balance accounts or enrollments",
+                    "description": "Depending on the country, this field shows the last year filed by the company concerning their annual accounts or similar (E.g. enrollments)",
+                    "examples": [
+                        2017
+                    ]
+                },
+                "CurrentAddress": {
+                    "$ref": "DataTypes.schema.json#/properties/Address",
+                    "title": "Current Address",
+                    "description": "Current legal address of the entity"
+                },
+                "CurrentAddressLastUpdate": {
+                    "type": "string",
+                    "format": "date",
+                    "title": "Current Address' last update",
+                    "description": "The last time when the company set or changed its legal address"
+                },
+                "CurrentActivity": {
+                    "$ref": "DataTypes.schema.json#/properties/Activity",
+                    "title": "Current Activity",
+                    "description": "Current main activity of the entity"
+                },
+                "CurrentActivityLastUpdate": {
+                    "type": "string",
+                    "format": "date",
+                    "title": "Current Activity's last update",
+                    "description": "The last time when the company set or changed its main activity"
+                },
+                "OtherDataList": {
+                    "type": "array",
+                    "title": "List of Other Data",
+                    "description": "Any other data relative to this publication",
+                    "additionalItems": false,
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "Datatype": {
+                                "type": "string",
+                                "title": "Other data's datatype",
+                                "description": "Schema datatype for the data",
+                                "examples": [
+                                    "integer",
+                                    "string",
+                                    "address"
+                                ]
+                            },
+                            "Tag": {
+                                "type": "string",
+                                "title": "Other data's tag",
+                                "description": "Tag that describes the data",
+                                "examples": [
+                                    "Otros servicios",
+                                    "Importe Otros Servicios"
+                                ]
+                            },
+                            "Value": {
+                                "type": "string",
+                                "title": "Other data's value",
+                                "description": "Value for the data"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "AnnualPublicationsList": {
             "type": "array",
             "title": "List of Publications sorted by year",
