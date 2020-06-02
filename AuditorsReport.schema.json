@@ -73,7 +73,10 @@
                     "Comments": {
                         "type": "string",
                         "title": "Auditor's Comments",
-                        "description": "Any detailed comments about the opinion expressed by the audit, both positive or negative"
+                        "description": "Any detailed comments about the opinion expressed by the audit, both positive or negative",
+                        "examples": [
+                            "Tal y como se indica en la nota 4.1 de la memoria consolidada adjunta, el grupo en el ejercicio 2016 ha registrado la amortización de la totalidad del fondo de comercio por un importe de 22.791 miles de euros. Del citado importe se ha registrado con cargo a reservas en el ejercicio 2016 un importe de 4.558 miles de euros, que no es conforme con el marco normativo de información financiera aplicable al grupo, en particular con lo dispuesto en la disposición transitoria única del Real Decreto 602/2016, en el que se permite un criterio lineal de recuperación con una vida útil de diez años a contar desde el inicio del ejercicio en que se aplico por primera vez el vigente Plan General de Contabilidad.[...]"
+                        ]
                     },
                     "EmphasisOfMatter": {
                         "type": "boolean",
@@ -94,6 +97,42 @@
                         "type": "integer",
                         "title": "Source page",
                         "description": "Page number where the specific info about the Report was published"
+                    },
+                    "OtherDataList": {
+                        "type": "array",
+                        "title": "List of Other Data",
+                        "description": "Any other data relative to this publication",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Datatype": {
+                                    "type": "string",
+                                    "title": "Other data's datatype",
+                                    "description": "Schema datatype for the data",
+                                    "examples": [
+                                        "integer",
+                                        "string",
+                                        "address"
+                                    ]
+                                },
+                                "Tag": {
+                                    "type": "string",
+                                    "title": "Other data's tag",
+                                    "description": "Tag that describes the data",
+                                    "examples": [
+                                        "Otros servicios",
+                                        "Importe Otros Servicios"
+                                    ]
+                                },
+                                "Value": {
+                                    "type": "string",
+                                    "title": "Other data's value",
+                                    "description": "Value for the data"
+                                }
+                            }
+                        }
                     }
                 }
             }
