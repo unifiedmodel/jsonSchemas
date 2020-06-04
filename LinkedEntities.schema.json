@@ -108,6 +108,18 @@
                                                         "$ref": "DataTypes.schema.json#/properties/Translation",
                                                         "title": "Group Type (translateable)"
                                                     },
+                                                    "StartDate": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "title": "Start date",
+                                                        "description": "According to the source, the relationship was active from this date onwards"
+                                                    },
+                                                    "EndDate": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "title": "End date",
+                                                        "description": "According to the source, at least the relationship was active until this date "
+                                                    },
                                                     "ParticipationsList": {
                                                         "type": "array",
                                                         "title": "Participations list",
