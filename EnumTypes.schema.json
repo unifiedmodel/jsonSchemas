@@ -258,7 +258,8 @@
                 "Clean",
                 "Qualified",
                 "Adverse",
-                "DisclaimerOf"
+                "DisclaimerOf",
+                "Other"
             ]
         }
 

@@ -327,6 +327,17 @@
           "description": "Contains the text with the translation for the enum value in the required language"
         }
       }
+    },
+    "String": {
+      "type": "object",
+      "title": "The String data type",
+      "description": "Used for strings in cases which more than one datatype is accepted for a field",
+      "additionalProperties": false,
+      "properties": {
+        "Text": {
+          "type": "string"
+        }
+      }
     }
   }
 }
