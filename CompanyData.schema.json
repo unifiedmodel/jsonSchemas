@@ -197,128 +197,86 @@
                                         "Constitución: Inscripción de la creación formal de la Sociedad para dar comienzo a sus operaciones, adquiriendo, a su vez, personalidad jurídica"
                                     ]
                                 },
-                                "OtherData": {
+                                "OtherDataList": {
                                     "type": "array",
-                                    "title": "Other data",
-                                    "description": "Custom data related to the event, depending on the type",
-                                    "properties": {
-                                        "Datatype": {
-                                            "type": "string",
-                                            "title": "Other data's datatype",
-                                            "description": "Schema datatype for the event data used",
-                                            "examples": [
-                                                "integer",
-                                                "string",
-                                                "address"
-                                            ]
-                                        },
-                                        "Tag": {
-                                            "type": "string",
-                                            "title": "Other data's tag",
-                                            "description": "Tag that describes the event data used",
-                                            "examples": [
-                                                "Forma Social"
-                                            ]
-                                        },
-                                        "Value": {
-                                            "type": "string",
-                                            "title": "Other data's value",
-                                            "description": "Value for the event data used",
-                                            "examples": [
-                                                "Sociedad Anónima"
-                                            ]
-                                        }
+                                    "title": "List of Other Data",
+                                    "description": "Any other data relative to this publication",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                                        "additionalProperties": false
                                     }
                                 },
-                                "RelatedEntities": {
+                                "RelatedEntitiesList": {
                                     "type": "array",
-                                    "title": "Related entities",
+                                    "title": "Related entities list",
                                     "description": "Related entities taking part in the event",
-                                    "properties": {
-                                        "VendorId": {
-                                            "type": "string",
-                                            "title": "Vendor Id of the related entity",
-                                            "description": "External Id (from vendors) of the related entity",
-                                            "examples": [
-                                                "9187801"
-                                            ]
-                                        },
-                                        "Name": {
-                                            "type": "string",
-                                            "title": "Related Entity name",
-                                            "description": "Full name or business name of the related entity",
-                                            "examples": [
-                                                "AXERMARIS SPAIN HOLDING SL"
-                                            ]
-                                        },
-                                        "IdentificationNumber": {
-                                            "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
-                                            "additionalProperties": false
-                                        },
-                                        "Type": {
-                                            "type": "string",
-                                            "title": "Relationship type",
-                                            "description": "Type that describes the relationship between the related entity and its parent",
-                                            "examples": [
-                                                "Sociedad beneficiaria"
-                                            ]
-                                        },
-                                        "TypeGroup": {
-                                            "type": "string",
-                                            "title": "Relationship group type",
-                                            "description": "Classification that sorts the relationship between the related entity and its parent",
-                                            "examples": [
-                                                "Escisión"
-                                            ]
-                                        },
-                                        "Detail": {
-                                            "type": "string",
-                                            "title": "Detailed text",
-                                            "description": "Text with additional information about the relationship between both entities"
-                                        },
-                                        "StartingDate": {
-                                            "type": "string",
-                                            "format": "date-time",
-                                            "title": "Relationship' starting date",
-                                            "description": "Starting date in case of, for example, a time-limited designation"
-                                        },
-                                        "FinishingDate": {
-                                            "type": "string",
-                                            "format": "date-time",
-                                            "title": "Relationship' finishing date",
-                                            "description": "Finishing date in case of, for example, a time-limited designation"
-                                        },
-                                        "OtherData": {
-                                            "type": "array",
-                                            "title": "Other data",
-                                            "description": "Custom data of the related entity, like extra codes or alternative names",
-                                            "properties": {
-                                                "Datatype": {
-                                                    "$ref": "EnumTypes.schema.json#/properties/enumDataType",
-                                                    "type": "string",
-                                                    "title": "Other data's datatype",
-                                                    "description": "Schema datatype for the data used",
-                                                    "examples": [
-                                                        "integer",
-                                                        "string",
-                                                        "address"
-                                                    ]
-                                                },
-                                                "Tag": {
-                                                    "type": "string",
-                                                    "title": "Other data's tag",
-                                                    "description": "Tag that describes the data used",
-                                                    "examples": [
-                                                        "Alternativa name"
-                                                    ]
-                                                },
-                                                "Value": {
-                                                    "type": "string",
-                                                    "title": "Other data's value",
-                                                    "description": "Value for the data used",
-                                                    "examples": [
-                                                        "Infotel Información y Telecomunicaciones SA"
-                                                    ]
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "VendorId": {
+                                                "type": "string",
+                                                "title": "Vendor Id of the related entity",
+                                                "description": "External Id (from vendors) of the related entity",
+                                                "examples": [
+                                                    "9187801"
+                                                ]
+                                            },
+                                            "Name": {
+                                                "type": "string",
+                                                "title": "Related Entity name",
+                                                "description": "Full name or business name of the related entity",
+                                                "examples": [
+                                                    "AXERMARIS SPAIN HOLDING SL"
+                                                ]
+                                            },
+                                            "IdentificationNumber": {
+                                                "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                                "additionalProperties": false
+                                            },
+                                            "Type": {
+                                                "type": "string",
+                                                "title": "Relationship type",
+                                                "description": "Type that describes the relationship between the related entity and its parent",
+                                                "examples": [
+                                                    "Sociedad beneficiaria"
+                                                ]
+                                            },
+                                            "TypeGroup": {
+                                                "type": "string",
+                                                "title": "Relationship group type",
+                                                "description": "Classification that sorts the relationship between the related entity and its parent",
+                                                "examples": [
+                                                    "Escisión"
+                                                ]
+                                            },
+                                            "Detail": {
+                                                "type": "string",
+                                                "title": "Detailed text",
+                                                "description": "Text with additional information about the relationship between both entities"
+                                            },
+                                            "StartingDate": {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "title": "Relationship' starting date",
+                                                "description": "Starting date in case of, for example, a time-limited designation"
+                                            },
+                                            "FinishingDate": {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "title": "Relationship' finishing date",
+                                                "description": "Finishing date in case of, for example, a time-limited designation"
+                                            },
+                                            "OtherDataList": {
+                                                "type": "array",
+                                                "title": "List of Other Data",
+                                                "description": "Any other data relative to this publication",
+                                                "additionalItems": false,
+                                                "items": {
+                                                    "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                                                    "additionalProperties": false
                                                 }
                                             }
                                         }

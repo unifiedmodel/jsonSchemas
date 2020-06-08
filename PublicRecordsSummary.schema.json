@@ -137,41 +137,10 @@
                                                         "ValuesList": {
                                                             "type": "array",
                                                             "title": "List of values",
-                                                            "description": "",
                                                             "additionalItems": false,
                                                             "items": {
-                                                                "type": "object",
-                                                                "additionalProperties": false,
-                                                                "properties": {
-                                                                    "Datatype": {
-                                                                        "oneOf": [
-                                                                            {"$ref": "EnumTypes.schema.json#/properties/enumDataTypes"},
-                                                                            {"type": "string"},
-                                                                            {"type": "boolean"},
-                                                                            {"type": "integer"},
-                                                                            {"type": "number"}
-                                                                        ],
-                                                                        "title": "Other data's datatype",
-                                                                        "description": "Schema datatype for the data used",
-                                                                        "examples": [
-                                                                            "integer",
-                                                                            "string",
-                                                                            "address"
-                                                                        ]
-                                                                    },
-                                                                    "Tag": {
-                                                                        "type": "string",
-                                                                        "title": "Other data's tag",
-                                                                        "description": "Tag that describes the data used",
-                                                                        "examples": []
-                                                                    },
-                                                                    "Value": {
-                                                                        "type": "string",
-                                                                        "title": "Other data's value",
-                                                                        "description": "Value for the data used",
-                                                                        "examples": []
-                                                                    }
-                                                                }
+                                                                "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                                                                "additionalProperties": false
                                                             }
                                                         }
                                                     }

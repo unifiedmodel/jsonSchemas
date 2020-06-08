@@ -78,34 +78,8 @@
                     "description": "Any other data relative to this publication",
                     "additionalItems": false,
                     "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                            "Datatype": {
-                                "type": "string",
-                                "title": "Other data's datatype",
-                                "description": "Schema datatype for the data",
-                                "examples": [
-                                    "integer",
-                                    "string",
-                                    "address"
-                                ]
-                            },
-                            "Tag": {
-                                "type": "string",
-                                "title": "Other data's tag",
-                                "description": "Tag that describes the data",
-                                "examples": [
-                                    "Otros servicios",
-                                    "Importe Otros Servicios"
-                                ]
-                            },
-                            "Value": {
-                                "type": "string",
-                                "title": "Other data's value",
-                                "description": "Value for the data"
-                            }
-                        }
+                        "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                        "additionalProperties": false
                     }
                 }
             }

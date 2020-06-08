@@ -122,107 +122,45 @@
                                                             "description": "",
                                                             "additionalItems": false,
                                                             "items": {
-                                                                "type": "object",
-                                                                "additionalProperties": false,
-                                                                "properties": {
-                                                                    "Datatype": {
-                                                                        "$ref": "EnumTypes.schema.json#/properties/enumDataTypes",
-                                                                        "title": "Other data's datatype",
-                                                                        "description": "Schema datatype for the data used",
-                                                                        "examples": [
-                                                                            "integer",
-                                                                            "string",
-                                                                            "address"
-                                                                        ]
-                                                                    },
-                                                                    "Tag": {
-                                                                        "type": "string",
-                                                                        "title": "Other data's tag",
-                                                                        "description": "Tag that describes the data used",
-                                                                        "examples": []
-                                                                    },
-                                                                    "Value": {
-                                                                        "type": "string",
-                                                                        "title": "Other data's value",
-                                                                        "description": "Value for the data used",
-                                                                        "examples": []
-                                                                    },
-                                                                    "OtherDataList": {
-                                                                        "type": "array",
-                                                                        "title": "List of Other Data",
-                                                                        "description": "Any other data relative to this publication",
-                                                                        "additionalItems": false,
-                                                                        "items": {
-                                                                            "type": "object",
-                                                                            "additionalProperties": false,
-                                                                            "properties": {
-                                                                                "Datatype": {
-                                                                                    "type": "string",
-                                                                                    "title": "Other data's datatype",
-                                                                                    "description": "Schema datatype for the data",
-                                                                                    "examples": [
-                                                                                        "integer",
-                                                                                        "string",
-                                                                                        "address"
-                                                                                    ]
-                                                                                },
-                                                                                "Tag": {
-                                                                                    "type": "string",
-                                                                                    "title": "Other data's tag",
-                                                                                    "description": "Tag that describes the data",
-                                                                                    "examples": [
-                                                                                        "Tipo de Documento"
-                                                                                    ]
-                                                                                },
-                                                                                "Value": {
-                                                                                    "type": "string",
-                                                                                    "title": "Other data's value",
-                                                                                    "description": "Value for the data",
-                                                                                    "examples": [
-                                                                                        "Cheque"
-                                                                                    ]
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    },
-                                                                    "SourceInfo": {
-                                                                        "type": "object",
-                                                                        "title": "Source Info",
-                                                                        "description": "Set of values to locate the info in the original source",
-                                                                        "additionalProperties": false,
-                                                                        "properties": {
-                                                                            "Source": {
-                                                                                "type": "string",
-                                                                                "title": "Data source",
-                                                                                "description": "Indicates the source of collected banking information",
-                                                                                "examples": [
-                                                                                    "SBS",
-                                                                                    "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
-                                                                                ]
-                                                                            },
-                                                                            "ReferenceId": {
-                                                                                "type": "integer",
-                                                                                "title": "Source Reference Id",
-                                                                                "description": "External id used to reference an specific data in the document where it was published",
-                                                                                "examples": [
-                                                                                    1907744
-                                                                                ]
-                                                                            },
-                                                                            "PublicationId": {
-                                                                                "type": "integer",
-                                                                                "title": "Source Publication Id",
-                                                                                "description": "External id used to reference the document where the data where published",
-                                                                                "examples": [
-                                                                                    1907744
-                                                                                ]
-                                                                            },
-                                                                            "PageNumber": {
-                                                                                "type": "integer",
-                                                                                "title": "Source page",
-                                                                                "description": "Page number where the specific data was published"
-                                                                            }
-                                                                        }
-                                                                    }
+                                                                "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                                                                "additionalProperties": false
+                                                            }
+                                                        },
+                                                        "SourceInfo": {
+                                                            "type": "object",
+                                                            "title": "Source Info",
+                                                            "description": "Set of values to locate the info in the original source",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "Source": {
+                                                                    "type": "string",
+                                                                    "title": "Data source",
+                                                                    "description": "Indicates the source of collected banking information",
+                                                                    "examples": [
+                                                                        "SBS",
+                                                                        "Memoria 2017 de AXESOR CONOCER PARA DECIDIR"
+                                                                    ]
+                                                                },
+                                                                "ReferenceId": {
+                                                                    "type": "integer",
+                                                                    "title": "Source Reference Id",
+                                                                    "description": "External id used to reference an specific data in the document where it was published",
+                                                                    "examples": [
+                                                                        1907744
+                                                                    ]
+                                                                },
+                                                                "PublicationId": {
+                                                                    "type": "integer",
+                                                                    "title": "Source Publication Id",
+                                                                    "description": "External id used to reference the document where the data where published",
+                                                                    "examples": [
+                                                                        1907744
+                                                                    ]
+                                                                },
+                                                                "PageNumber": {
+                                                                    "type": "integer",
+                                                                    "title": "Source page",
+                                                                    "description": "Page number where the specific data was published"
                                                                 }
                                                             }
                                                         }

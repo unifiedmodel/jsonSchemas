@@ -1,343 +1,663 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://unifiedmodel.github.io/jsonSchemas/DataTypes.schema.json",
-  "type": "object",
-  "title": "List of custom definitions (DataTypes)",
-  "properties": {
-    "IdentificationNumber": {
-      "type": "object",
-      "title": "The Identification Number data type",
-      "properties": {
-        "Type": {
-          "type": "string",
-          "title": "Identification type",
-          "description": "Fiscal or register id of an entity, depends on the type or the country (VAT or others)",
-          "examples": [
-            "NIF",
-            "Easy Number"
-          ]
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/DataTypes.schema.json",
+    "type": "object",
+    "title": "List of custom definitions (DataTypes)",
+    "definitions": {
+        "OtherData": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Datatype": {
+                    "title": "Other data's datatype",
+                    "description": "Schema's datatype chosen for this value"
+                },
+                "Tag": {
+                    "type": "string",
+                    "title": "Other data's tag",
+                    "description": "Tag that describes this value",
+                    "examples": []
+                },
+                "Value": {
+                    "title": "Other data's value",
+                    "description": "Value for the data used"
+                }
+            },
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "IdentificationNumber"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/IdentificationNumber"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Address"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Address"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Activity"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Activity"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Address"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Address"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Amount"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Amount"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Employees"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Employees"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "FrequencyMeasure"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/FrequencyMeasure"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Translation"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Translation"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Boolean"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Boolean"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Date"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Date"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Datetime"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Datetime"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Integer"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Integer"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "Number"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/Number"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "String"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/String"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "properties": {
+        "IdentificationNumber": {
+            "type": "object",
+            "title": "The Identification Number data type",
+            "properties": {
+                "Type": {
+                    "type": "string",
+                    "title": "Identification type",
+                    "description": "Fiscal or register id of an entity, depends on the type or the country (VAT or others)",
+                    "examples": [
+                        "NIF",
+                        "Easy Number"
+                    ]
+                },
+                "Value": {
+                    "type": "string",
+                    "title": "Identification number or code",
+                    "description": "The specific number or code that represents an identifier of the company",
+                    "examples": [
+                        "A18413302",
+                        "00000462465921"
+                    ]
+                },
+                "CheckCode": {
+                    "type": "string",
+                    "title": "Check code",
+                    "description": "Additional code for identification number verification, such as Digito Verificador in Colombia"
+                }
+            }
+        },
+        "Address": {
+            "type": "object",
+            "title": "The Address data type",
+            "description": "Data typed used for any address.The GeoLevel1 must be used for the most generic location, using the rest in order for more specific locations",
+            "properties": {
+                "Value": {
+                    "type": "string",
+                    "title": "Full Address",
+                    "description": "Full address in an unique field",
+                    "examples": [
+                        "C/ GRAHAM BELL, Nº 1, POL. IND. SAN ISIDRO, EDIF. AXESOR"
+                    ]
+                },
+                "ZIPCode": {
+                    "type": "string",
+                    "title": "ZIP code of the address",
+                    "description": "ZIP code of the addres, using local classification",
+                    "examples": [
+                        "18100"
+                    ]
+                },
+                "GeoLevel1": {
+                    "type": "string",
+                    "title": "Level 1 of administrative division",
+                    "description": "Depending on the country, the largest unit region for the address",
+                    "examples": [
+                        "Andalucía"
+                    ]
+                },
+                "GeoLevel2": {
+                    "type": "string",
+                    "title": "Level 2 of administrative division",
+                    "description": "Depending on the country, the second unit region for the address",
+                    "examples": [
+                        "Granada"
+                    ]
+                },
+                "GeoLevel3": {
+                    "type": "string",
+                    "title": "Level 3 of administrative division",
+                    "description": "Depending on the country, the third unit region for the address",
+                    "examples": [
+                        "Armilla"
+                    ]
+                },
+                "GeoLevel4": {
+                    "type": "string",
+                    "title": "Level 4 of administrative division",
+                    "description": "Depending on the country, the smallest unit region for the address"
+                },
+                "CountryISO": {
+                    "type": "string",
+                    "title": "Country (ISO)",
+                    "description": "The three-digit ISO code for the country of the addresss",
+                    "examples": [
+                        "ESP"
+                    ]
+                },
+                "Status": {
+                    "type": "string",
+                    "title": "Official status of the address",
+                    "description": "Local details concerning the current status of the address",
+                    "examples": [
+                        "Habido"
+                    ]
+                },
+                "OtherDetail": {
+                    "type": "string",
+                    "title": "Additional info for the address",
+                    "description": "Any other detail concerning the address"
+                }
+            }
+        },
+        "Activity": {
+            "type": "object",
+            "title": "The Activity data type",
+            "properties": {
+                "Type": {
+                    "type": "string",
+                    "title": "Type of activity",
+                    "description": "Activity specific type or codification",
+                    "examples": [
+                        "CNAE"
+                    ]
+                },
+                "Classification": {
+                    "type": "string",
+                    "title": "Activity classification system",
+                    "description": "Classification system used for the current activity (NACE or others) ",
+                    "examples": [
+                        "NACE"
+                    ]
+                },
+                "Version": {
+                    "type": "string",
+                    "title": "Activity classification system version",
+                    "description": "Classification system version used for the current activity",
+                    "examples": [
+                        "4.0"
+                    ]
+                },
+                "Code": {
+                    "type": "string",
+                    "title": "Activity code",
+                    "description": "Activity code according to the classification system",
+                    "examples": [
+                        "6311"
+                    ]
+                },
+                "Value": {
+                    "type": "string",
+                    "title": "Activity description",
+                    "description": "Detailed text describing the activity of the entity",
+                    "examples": [
+                        "Proceso de datos, hosting y actividades relacionadas"
+                    ]
+                },
+                "CoreBusiness": {
+                    "type": "boolean",
+                    "title": "Main Activity indicador",
+                    "description": "Indicates if this activity is the main activity of the company or not",
+                    "examples": [
+                        true
+                    ]
+                }
+            }
+        },
+        "Amount": {
+            "type": "object",
+            "title": "The Amount data type",
+            "description": "Contains specific information about any amount used in the JSON",
+            "additionalProperties": false,
+            "properties": {
+                "CurrencyISO": {
+                    "type": "string",
+                    "title": "Currency",
+                    "description": "ISO code describing the currency used for the sales data",
+                    "examples": [
+                        "EUR"
+                    ]
+                },
+                "Scale": {
+                    "$ref": "EnumTypes.schema.json#/properties/enumScale",
+                    "title": "Amount scale",
+                    "description": "Indicates if the amount differs from units, like thousands or millions",
+                    "examples": [
+                        "Thousands",
+                        "Millions"
+                    ]
+                },
+                "Value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "title": "Amount",
+                    "description": "Total amount or minimum value in case of range",
+                    "examples": [
+                        15963705.36
+                    ]
+                },
+                "RangeMax": {
+                    "type": "number",
+                    "title": "Range: Maximum Amount",
+                    "description": "Maximum value  in case of range",
+                    "examples": [
+                        500000000.00
+                    ]
+                },
+                "Percentage": {
+                    "$ref": "#/properties/FrequencyMeasure",
+                    "title": "Percentage of amount",
+                    "description": "Shows the value in percentage",
+                    "examples": [
+                        50.0
+                    ]
+                },
+                "Estimated": {
+                    "type": "boolean",
+                    "title": "Estimated amount",
+                    "description": "True if the amount is estimated (not the actual amount)",
+                    "examples": [
+                        false
+                    ]
+                },
+                "HelpText": {
+                    "type": "string",
+                    "title": "Help text",
+                    "description": "Short generic explanation about the content of the amount data"
+                }
+            }
+        },
+        "Employees": {
+            "type": "object",
+            "title": "The Employees data type",
+            "description": "Contains specific information about the number od employees of the entity",
+            "properties": {
+                "Value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "title": "Number of employees",
+                    "description": "Number of employees for the selected period or minimum value in case of range",
+                    "examples": [
+                        129.0
+                    ]
+                },
+                "RangeMaxEmployees": {
+                    "type": "number",
+                    "title": "Range: Maximum Employees",
+                    "description": "Maximum value of the number of employees in case of range",
+                    "examples": [
+                        150
+                    ]
+                },
+                "Percentage": {
+                    "type": "number",
+                    "title": "Percentage of employees",
+                    "description": "Shows the child value in percentage",
+                    "examples": [
+                        74.5
+                    ]
+                },
+                "Estimated": {
+                    "type": "boolean",
+                    "title": "Estimated Employees",
+                    "description": "True if the number of employees is estimated (not the actual)",
+                    "examples": [
+                        false
+                    ]
+                },
+                "MeasureType": {
+                    "type": "string",
+                    "title": "Employees' type of measure",
+                    "description": "Shows if the Employees number is the total number or the average number",
+                    "enum": [
+                        "total",
+                        "avg"
+                    ],
+                    "default": "total"
+                },
+                "HelpText": {
+                    "type": "string",
+                    "title": "Help text",
+                    "description": "Short generic explanation about the content of the amount data"
+                }
+            }
+        },
+        "FrequencyMeasure": {
+            "type": "object",
+            "title": "The Frequency Measure data type",
+            "description": "Used for frequencies or measures, as days, percents or ratios",
+            "additionalProperties": false,
+            "properties": {
+                "FreqType": {
+                    "$ref": "EnumTypes.schema.json#/properties/enumFrequencyDataType",
+                    "type": "string",
+                    "title": "Data type (enum)",
+                    "description": "Type of measure, according to an enum",
+                    "examples": [
+                        "Days",
+                        "Ratio",
+                        "Percent"
+                    ]
+                },
+                "Value": {
+                    "type": "string",
+                    "title": "Data value",
+                    "description": "Value of the frequency or measure, linked to the type above",
+                    "examples": [
+                        "0.34",
+                        "15%",
+                        "3.24",
+                        "25"
+                    ]
+                }
+            }
+        },
+        "Translation": {
+            "type": "object",
+            "title": "The Translation data type",
+            "description": "Used to translate enum fields",
+            "additionalProperties": false,
+            "properties": {
+                "LanguageISO2": {
+                    "type": "string",
+                    "title": "Language ISO (two-letter code)",
+                    "description": "Language code under ISO 639-1 standardized nomenclature",
+                    "examples": [
+                        "es",
+                        "pt"
+                    ]
+                },
+                "Text": {
+                    "type": "string",
+                    "title": "Translated text",
+                    "description": "Contains the text with the translation for the enum value in the required language"
+                }
+            }
+        },
+        "Boolean": {
+            "type": "object",
+            "title": "The String data type",
+            "description": "Used for booleans in case of more than one datatype is accepted for a field",
+            "additionalProperties": false,
+            "properties": {
+                "Value": {
+                    "type": [
+                        "boolean",
+                        "string"
+                    ]
+                }
+            }
+        },
+        "Date": {
+            "type": "object",
+            "title": "The String data type",
+            "description": "Used for dates in case of more than one datatype is accepted for a field",
+            "additionalProperties": false,
+            "properties": {
+                "Value": {
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "Datetime": {
+            "type": "object",
+            "title": "The String data type",
+            "description": "Used for datetimes in case of more than one datatype is accepted for a field",
+            "additionalProperties": false,
+            "properties": {
+                "Value": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "Integer": {
+            "type": "object",
+            "title": "The String data type",
+            "description": "Used for integer in case of more than one datatype is accepted for a field",
+            "additionalProperties": false,
+            "properties": {
+                "Value": {
+                    "type": [
+                        "integer",
+                        "string"
+                    ]
+                }
+            }
         },
         "Number": {
-          "type": "string",
-          "title": "Identification number or code",
-          "description": "The specific number or code that represents an identifier of the company",
-          "examples": [
-            "A18413302",
-            "00000462465921"
-          ]
+            "type": "object",
+            "title": "The String data type",
+            "description": "Used for numbers in case of more than one datatype is accepted for a field",
+            "additionalProperties": false,
+            "properties": {
+                "Value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                }
+            }
         },
-        "CheckCode": {
-          "type": "string",
-          "title": "Check code",
-          "description": "Additional code for identification number verification, such as Digito Verificador in Colombia"
+        "String": {
+            "type": "object",
+            "title": "The String data type",
+            "description": "Used for strings in case of more than one datatype is accepted for a field",
+            "additionalProperties": false,
+            "properties": {
+                "Value": {
+                    "type": "string"
+                }
+            }
         }
-      }
-    },
-    "Address": {
-      "type": "object",
-      "title": "The Address data type",
-      "description": "Data typed used for any address.The GeoLevel1 must be used for the most generic location, using the rest in order for more specific locations",
-      "properties": {
-        "FullAddress": {
-          "type": "string",
-          "title": "Full Address",
-          "description": "Full address in an unique field",
-          "examples": [
-            "C/ GRAHAM BELL, Nº 1, POL. IND. SAN ISIDRO, EDIF. AXESOR"
-          ]
-        },
-        "ZIPCode": {
-          "type": "string",
-          "title": "ZIP code of the address",
-          "description": "ZIP code of the addres, using local classification",
-          "examples": [
-            "18100"
-          ]
-        },
-        "GeoLevel1": {
-          "type": "string",
-          "title": "Level 1 of administrative division",
-          "description": "Depending on the country, the largest unit region for the address",
-          "examples": [
-            "Andalucía"
-          ]
-        },
-        "GeoLevel2": {
-          "type": "string",
-          "title": "Level 2 of administrative division",
-          "description": "Depending on the country, the second unit region for the address",
-          "examples": [
-            "Granada"
-          ]
-        },
-        "GeoLevel3": {
-          "type": "string",
-          "title": "Level 3 of administrative division",
-          "description": "Depending on the country, the third unit region for the address",
-          "examples": [
-            "Armilla"
-          ]
-        },
-        "GeoLevel4": {
-          "type": "string",
-          "title": "Level 4 of administrative division",
-          "description": "Depending on the country, the smallest unit region for the address"
-        },
-        "CountryISO": {
-          "type": "string",
-          "title": "Country (ISO)",
-          "description": "The three-digit ISO code for the country of the addresss",
-          "examples": [
-            "ESP"
-          ]
-        },
-        "Status": {
-          "type": "string",
-          "title": "Official status of the address",
-          "description": "Local details concerning the current status of the address",
-          "examples": [
-            "Habido"
-          ]
-        },
-        "OtherDetail": {
-          "type": "string",
-          "title": "Additional info for the address",
-          "description": "Any other detail concerning the address"
-        }
-      }
-    },
-    "Activity": {
-      "type": "object",
-      "title": "The Activity data type",
-      "properties": {
-        "Type": {
-          "type": "string",
-          "title": "Type of activity",
-          "description": "Activity specific type or codification",
-          "examples": [
-            "CNAE"
-          ]
-        },
-        "Classification": {
-          "type": "string",
-          "title": "Activity classification system",
-          "description": "Classification system used for the current activity (NACE or others) ",
-          "examples": [
-            "NACE"
-          ]
-        },
-        "Version": {
-          "type": "string",
-          "title": "Activity classification system version",
-          "description": "Classification system version used for the current activity",
-          "examples": [
-            "4.0"
-          ]
-        },
-        "Code": {
-          "type": "string",
-          "title": "Activity code",
-          "description": "Activity code according to the classification system",
-          "examples": [
-            "6311"
-          ]
-        },
-        "Description": {
-          "type": "string",
-          "title": "Activity description",
-          "description": "Detailed text describing the activity of the entity",
-          "examples": [
-            "Proceso de datos, hosting y actividades relacionadas"
-          ]
-        },
-        "CoreBusiness": {
-          "type": "boolean",
-          "title": "Main Activity indicador",
-          "description": "Indicates if this activity is the main activity of the company or not",
-          "examples": [
-            true
-          ]
-        }
-      }
-    },
-    "Amount": {
-      "type": "object",
-      "title": "The Amount data type",
-      "description": "Contains specific information about any amount used in the JSON",
-      "additionalProperties": false,
-      "properties": {
-        "CurrencyISO": {
-          "type": "string",
-          "title": "Currency",
-          "description": "ISO code describing the currency used for the sales data",
-          "examples": [
-            "EUR"
-          ]
-        },
-        "Scale": {
-          "$ref": "EnumTypes.schema.json#/properties/enumScale",
-          "title": "Amount scale",
-          "description": "Indicates if the amount differs from units, like thousands or millions",
-          "examples": [
-            "Thousands",
-            "Millions"
-          ]
-        },
-        "Value": {
-          "type": "number",
-          "title": "Amount",
-          "description": "Total amount or minimum value in case of range",
-          "examples": [
-            15963705.36
-          ]
-        },
-        "RangeMax": {
-          "type": "number",
-          "title": "Range: Maximum Amount",
-          "description": "Maximum value  in case of range",
-          "examples": [
-            500000000.00
-          ]
-        },
-        "Percentage": {
-          "$ref": "#/properties/FrequencyMeasure",
-          "title": "Percentage of amount",
-          "description": "Shows the value in percentage",
-          "examples": [
-            50.0
-          ]
-        },
-        "Estimated": {
-          "type": "boolean",
-          "title": "Estimated amount",
-          "description": "True if the amount is estimated (not the actual amount)",
-          "examples": [
-            false
-          ]
-        },
-        "HelpText": {
-          "type": "string",
-          "title": "Help text",
-          "description": "Short generic explanation about the content of the amount data"
-        }
-      }
-    },
-    "Employees": {
-      "type": "object",
-      "title": "The Employees data type",
-      "description": "Contains specific information about the number od employees of the entity",
-      "properties": {
-        "EmployeesNumber": {
-          "type": "number",
-          "title": "Number of employees",
-          "description": "Number of employees for the selected period or minimum value in case of range",
-          "examples": [
-            129.0
-          ]
-        },
-        "RangeMaxEmployees": {
-          "type": "number",
-          "title": "Range: Maximum Employees",
-          "description": "Maximum value of the number of employees in case of range",
-          "examples": [
-            150
-          ]
-        },
-        "Percentage": {
-          "type": "number",
-          "title": "Percentage of employees",
-          "description": "Shows the child value in percentage",
-          "examples": [
-            74.5
-          ]
-        },
-        "Estimated": {
-          "type": "boolean",
-          "title": "Estimated Employees",
-          "description": "True if the number of employees is estimated (not the actual)",
-          "examples": [
-            false
-          ]
-        },
-        "MeasureType": {
-          "type": "string",
-          "title": "Employees' type of measure",
-          "description": "Shows if the Employees number is the total number or the average number",
-          "enum": [
-            "total",
-            "avg"
-          ],
-          "default": "total"
-        },
-        "HelpText": {
-          "type": "string",
-          "title": "Help text",
-          "description": "Short generic explanation about the content of the amount data"
-        }
-      }
-    },
-    "FrequencyMeasure": {
-      "type": "object",
-      "title": "The Frequency Measure data type",
-      "description": "Used for frequency measures, as days, percents or ratios",
-      "additionalProperties": false,
-      "properties": {
-        "FreqType": {
-          "$ref": "EnumTypes.schema.json#/properties/enumFrequencyDataType",
-          "type": "string",
-          "title": "Data type (enum)",
-          "description": "Type of measure, according to an enum",
-          "examples": [
-            "Days",
-            "Ratio",
-            "Percent"
-          ]
-        },
-        "Value": {
-          "type": "string",
-          "title": "Data value",
-          "description": "Value of the frequency measure, linked to the type above",
-          "examples": [
-            "0.34",
-            "15%",
-            "3.24",
-            "25"
-          ]
-        }
-      }
-    },
-    "Translation": {
-      "type": "object",
-      "title": "The Translation data type",
-      "description": "Used to translate enum fields",
-      "additionalProperties": false,
-      "properties": {
-        "LanguageISO2": {
-          "type": "string",
-          "title": "Language ISO (two-letter code)",
-          "description": "Language code under ISO 639-1 standardized nomenclature",
-          "examples": [
-            "es",
-            "pt"
-          ]
-        },
-        "Text": {
-          "type": "string",
-          "title": "Translated text",
-          "description": "Contains the text with the translation for the enum value in the required language"
-        }
-      }
-    },
-    "String": {
-      "type": "object",
-      "title": "The String data type",
-      "description": "Used for strings in cases which more than one datatype is accepted for a field",
-      "additionalProperties": false,
-      "properties": {
-        "Text": {
-          "type": "string"
-        }
-      }
     }
-  }
 }
