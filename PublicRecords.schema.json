@@ -413,54 +413,54 @@
                             "$ref": "DataTypes.schema.json#/definitions/OtherData",
                             "additionalProperties": false
                         }
-                    }
-                },
-                "RelatedEntitiesList": {
-                    "type": "array",
-                    "title": "Related entities",
-                    "description": "Related entities taking part in the record",
-                    "properties": {
-                        "VendorId": {
-                            "type": "string",
-                            "title": "Vendor Id of the related entity",
-                            "description": "External Id (from vendors) of the related entity"
-                        },
-                        "Name": {
-                            "type": "string",
-                            "title": "Related Entity name",
-                            "description": "Full name or business name of the related entity",
-                            "examples": [
-                                "COMUNIDAD CASTILLA LA MANCHA",
-                                "MERCADONA sa"
-                            ]
-                        },
-                        "IdentificationNumber": {
-                            "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
-                            "additionalProperties": false
-                        },
-                        "Type": {
-                            "type": "string",
-                            "title": "Relationship type",
-                            "description": "Type that describes the relationship between the related entity and its parent",
-                            "examples": [
-                                "Demandante",
-                                "Demandado",
-                                "Insolvente",
-                                "Deudor"
-                            ]
-                        },
-                        "TypeGroup": {
-                            "type": "string",
-                            "title": "Relationship group type",
-                            "description": "Classification that sorts the relationship between the related entity and its parent",
-                            "examples": [
-                                "Deudores"
-                            ]
-                        },
-                        "Detail": {
-                            "type": "string",
-                            "title": "Detailed text",
-                            "description": "Text with additional information about the relationship between both entities"
+                    },
+                    "RelatedEntitiesList": {
+                        "type": "array",
+                        "title": "Related entities",
+                        "description": "Related entities taking part in the record",
+                        "properties": {
+                            "VendorId": {
+                                "type": "string",
+                                "title": "Vendor Id of the related entity",
+                                "description": "External Id (from vendors) of the related entity"
+                            },
+                            "Name": {
+                                "type": "string",
+                                "title": "Related Entity name",
+                                "description": "Full name or business name of the related entity",
+                                "examples": [
+                                    "COMUNIDAD CASTILLA LA MANCHA",
+                                    "MERCADONA sa"
+                                ]
+                            },
+                            "IdentificationNumber": {
+                                "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                "additionalProperties": false
+                            },
+                            "Type": {
+                                "type": "string",
+                                "title": "Relationship type",
+                                "description": "Type that describes the relationship between the related entity and its parent",
+                                "examples": [
+                                    "Demandante",
+                                    "Demandado",
+                                    "Insolvente",
+                                    "Deudor"
+                                ]
+                            },
+                            "TypeGroup": {
+                                "type": "string",
+                                "title": "Relationship group type",
+                                "description": "Classification that sorts the relationship between the related entity and its parent",
+                                "examples": [
+                                    "Deudores"
+                                ]
+                            },
+                            "Detail": {
+                                "type": "string",
+                                "title": "Detailed text",
+                                "description": "Text with additional information about the relationship between both entities"
+                            }
                         }
                     }
                 }
