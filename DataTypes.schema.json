@@ -548,7 +548,10 @@
                     ]
                 },
                 "Value": {
-                    "type": "string",
+                    "type": [
+                        "number",
+                        "string"
+                    ],
                     "title": "Data value",
                     "description": "Value of the frequency or measure, linked to the type above",
                     "examples": [
