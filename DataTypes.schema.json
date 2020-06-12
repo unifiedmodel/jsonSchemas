@@ -593,7 +593,6 @@
             "properties": {
                 "Value": {
                     "type": [
-                        "boolean",
                         "string"
                     ]
                 }
@@ -631,7 +630,6 @@
             "properties": {
                 "Value": {
                     "type": [
-                        "integer",
                         "string"
                     ]
                 }
@@ -645,7 +643,6 @@
             "properties": {
                 "Value": {
                     "type": [
-                        "number",
                         "string"
                     ]
                 }
