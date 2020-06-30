@@ -48,6 +48,9 @@
         },
         "BusinessRationales": {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/BusinessRationales.schema.json"
+        },
+        "AuditorsReport" : {
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/AuditorsReport.schema.json"
         }
     }
 }
