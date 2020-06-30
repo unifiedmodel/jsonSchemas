@@ -209,6 +209,7 @@
                 "EconomicGroup",
                 "OwnershipRelations",
                 "FinancialRelations",
+                "ConsolidatedGroup",
                 "Other"
             ]
         },
@@ -220,6 +221,7 @@
                 "FinancialRelations",
                 "SharedOfficersWithOtherCompanies",
                 "BoardOfDirectors",
+                "ConsolidatedGroupCompanies",
                 "Other"
             ]
         },
@@ -232,6 +234,7 @@
                 "Associated",
                 "HasFinancialRelations",
                 "BoardOfDirectors",
+                "ConsolidatedGroupMember",
                 "Other"
             ]
         },
