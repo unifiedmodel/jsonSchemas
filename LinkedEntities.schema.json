@@ -290,6 +290,16 @@
                                         "title": "Accounts update request error code"
                                     }
                                 }
+                            },
+                            "DetailsDataList": {
+                                "type": "array",
+                                "title": "List of Other Data",
+                                "description": "Any other data relative to this publication",
+                                "additionalItems": false,
+                                "items": {
+                                    "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                                    "additionalProperties": false
+                                }
                             }
                         }
                     }
