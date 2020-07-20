@@ -56,6 +56,14 @@
                 "Thousands",
                 "Millions"
             ]
+        },
+        "CountryISO": {
+            "type": "string",
+            "title": "Entity Country",
+            "description": "Country of the Entity's report (ISO2 code)",
+            "examples": [
+                "ES","PT","CO"
+            ]
         }
     }
 }
