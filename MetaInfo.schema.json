@@ -64,6 +64,12 @@
             "examples": [
                 "ES","PT","CO"
             ]
+        },
+        "VendorId":
+        {
+            "type": "integer",
+            "title": "Vendor Id",
+            "description": "Internal code to locate the vendor of the data"
         }
     }
 }
