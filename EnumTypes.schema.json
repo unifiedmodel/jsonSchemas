@@ -272,6 +272,14 @@
                 "DisclaimerOf",
                 "Other"
             ]
+        },
+        "enumEntityType" : {
+            "enum": [
+                "Business",
+                "NonBusiness",
+                "SolePropietor",
+                "NaturalPerson"
+            ]
         }
 
     }
