@@ -143,6 +143,17 @@
                                                                 "Amount": {
                                                                     "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
                                                                     "title": "Participacion Amount"
+                                                                },
+                                                                "Concept": {
+                                                                    "type": "string",
+                                                                    "title": "Participation Concept",
+                                                                    "description": "Used for Financial Relations, points to the concrete product/relation/debt between the two related entities ",
+                                                                    "examples": [
+                                                                        "Saldos",
+                                                                        "Prestamos",
+                                                                        "Pólizas de Crédito",
+                                                                        "Otras Deudas"
+                                                                    ]
                                                                 }
                                                             }
                                                         }
