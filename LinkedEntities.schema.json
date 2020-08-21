@@ -141,7 +141,7 @@
                                                                     "title": "Percentage of Participation"
                                                                 },
                                                                 "Amount": {
-                                                                    "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                                                                    "$ref": "DataTypes.schema.json#/properties/Amount",
                                                                     "title": "Participacion Amount"
                                                                 },
                                                                 "Concept": {
