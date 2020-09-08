@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/OtherSections.schema.json",
+    "type": "object",
+    "title": "The Other Sections Domain Schema",
+    "description": "Used for any other section to include in the report",
+    "additionalProperties": false,
+    "properties": {
+        "SectionsList": {
+            "type": "array",
+            "title": "List of sections",
+            "additionalItems": false,
+            "items": {
+                "SectionName": {
+                    "type": "string",
+                    "title": "Section Name",
+                    "description": "Name of the section"
+                },
+                "RecordsList": {
+                    "type": "array",
+                    "title": "List of records",
+                    "additionalItems": false,
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "DataList": {
+                                "type": "array",
+                                "title": "List of data",
+                                "description": "Any data relative to this section",
+                                "additionalItems": false,
+                                "items": {
+                                    "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                                    "additionalProperties": false
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
