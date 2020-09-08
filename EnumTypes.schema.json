@@ -222,6 +222,7 @@
                 "SharedOfficersWithOtherCompanies",
                 "BoardOfDirectors",
                 "ConsolidatedGroupCompanies",
+                "MergersAndAcquisitions",
                 "Other"
             ]
         },
