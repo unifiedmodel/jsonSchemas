@@ -12,9 +12,31 @@
             "additionalItems": false,
             "items": {
                 "SectionName": {
+                    "$ref": "EnumTypes.schema.json#/properties/enumOtherSectionsSectionName",
+                    "title": "Section Name (enum)",
+                    "description": "Name of the section",
+                    "examples": [
+                        "OtherData",
+                        "Duration",
+                        "PostBalanceSheetEvents",
+                        "InfoRequestsBySector",
+                        "Branches",
+                        "RetributionOfMembersOfTheBoardOfDirectors",
+                        "EnviromentalInfo"
+                    ]
+                },
+                "TrSection": {
                     "type": "string",
-                    "title": "Section Name",
-                    "description": "Name of the section"
+                    "title": "Section Name (translateable)",
+                    "description": "Name of the section",
+                    "examples": [
+                        "Otros Datos",
+                        "Antigüedad",
+                        "Sectores que han consultado la entidad",
+                        "Delegaciones, Instalaciones, Locales y Establecimientos",
+                        "Retribuciones al Consejo de Administración",
+                        "Información Medioambiental"
+                    ]
                 },
                 "RecordsList": {
                     "type": "array",
