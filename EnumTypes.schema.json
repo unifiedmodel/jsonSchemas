@@ -235,6 +235,15 @@
                 "HasFinancialRelations",
                 "BoardOfDirectors",
                 "ConsolidatedGroupMember",
+                "Acquires",
+                "AcquiredBy",
+                "SplitOff",
+                "SplitUp",
+                "ResultOfSplitOff",
+                "ResultOfSplitUp",
+                "LinkedByBoardMemberAndAddress",
+                "HasInItsBoardOfDirectors",
+                "BelongsToTheBoardOfDirectorsOf",
                 "Other"
             ]
         },
