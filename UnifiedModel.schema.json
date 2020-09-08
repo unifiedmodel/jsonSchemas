@@ -51,6 +51,12 @@
         },
         "AuditorsReport" : {
             "$ref": "https://unifiedmodel.github.io/jsonSchemas/AuditorsReport.schema.json"
+        },
+        "CompanyBoard":{
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyBoard.schema.json"
+        },
+        "OtherSections":{
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/OtherSections.schema.json"
         }
     }
 }
