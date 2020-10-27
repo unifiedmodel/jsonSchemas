@@ -90,6 +90,7 @@
                 "TotalAssetsSectoral",
                 "TotalLiabilitiesAndEquitySectoral",
                 "IncomeStatementsSectoral",
+                "OtherResults",
                 "Other"
             ]
         },
