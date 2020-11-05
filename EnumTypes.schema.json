@@ -49,6 +49,8 @@
                 "Commercial", 
                 "Criminal",
                 "Banned",
+                "Taxes",
+                "SocialSecurity",
                 "Other"
             ]
         },
