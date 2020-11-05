@@ -58,7 +58,8 @@
                 "ByJobTitle",
                 "ByGender",
                 "PaidVsUnpaidStaff",
-                "ByTypeOfWorkingDay"
+                "ByTypeOfWorkingDay",
+                "ByYear"
             ]
         },
         "enumSalesEvolutionTypeGroup": {
@@ -66,7 +67,8 @@
                 "ByLocation",
                 "ByActivity",
                 "ByProduct",
-                "ByCustomers"
+                "ByCustomers",
+                "ByYear"
             ]
         },
         "enumFinancialStatementsSection": {
