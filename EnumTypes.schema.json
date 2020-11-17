@@ -306,7 +306,9 @@
                 "InfoRequestsBySector",
                 "Branches",
                 "RetributionOfMembersOfTheBoardOfDirectors",
-                "EnviromentalInfo"
+                "EnviromentalInfo",
+                "Clients",
+                "Providers"
             ]
         }
     }
