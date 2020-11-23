@@ -1,0 +1,114 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/PressClipping.schema.json",
+    "type": "object",
+    "title": "The Press Clipping Domain Schema",
+    "description": "Contains a list of news articles published in different media, especially newspapers",
+    "additionalProperties": false,
+    "properties": {
+        "NewsArticlesList": {
+            "type": "array",
+            "title": "List of News Articles",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "VendorArticleId": {
+                        "type": "string",
+                        "title": "Vendor Article Id ",
+                        "description": "Vendor Id for the news article (internal use only)"
+                    },
+                    "VendorEntityId": {
+                        "type": "string",
+                        "title": "Vendor Id for Entities",
+                        "description": "External Id from vendors for the entity (internal use only)",
+                        "examples": [
+                            "987857"
+                        ]
+                    },
+                    "PublicationType": {
+                        "type": "string",
+                        "title": "Publication Type",
+                        "description": "Type of media where the article was published",
+                        "examples": [
+                            "Newspapers",
+                            "Magazines",
+                            "Corporate Website"
+                        ]
+                    },
+                    "Url": {
+                        "type": "string",
+                        "title": "URL of the article",
+                        "description": "URL link to the original article",
+                        "examples": [
+                            "https://www.eleconomista.es/empresas-finanzas/noticias/10086042/09/19/Dia-amplia-sus-numeros-rojos-hasta-4187-millones-en-el-primer-semestre.html"
+                        ]
+                    },
+                    "PublicationDate": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Date of Publication",
+                        "description": "Date of publication of the article in the original source",
+                        "examples": [
+                            "1996-05-20T00:00:00.000Z"
+                        ]
+                    },
+                    "Title": {
+                        "type": "string",
+                        "title": "Title of the Article",
+                        "description": "Title or headline of the article",
+                        "examples": [
+                            "Dia multiplica por 14 sus 'números rojos' en el primer semestre, hasta 418,7 millones, y cierra 663 tiendas"
+                        ]
+                    },
+                    "Source": {
+                        "type": "string",
+                        "title": "Publication source",
+                        "description": "Media where the article was published",
+                        "examples": [
+                            "EL ECONOMISTA.ES",
+                            "El Mundo"
+                        ]
+                    },
+                    "Text": {
+                        "type": "string",
+                        "title": "Article text",
+                        "description": "Full or partial text with the content of the article",
+                        "examples": [
+                            "El Grupo Dia disparó sus pérdidas hasta los 418,7 millones de euros durante el primer semestre de su ejercicio 2019, lo que supone catorce veces más respecto a los 29,6 millones perdidos en el mismo periodo del 2018"
+                        ]
+                    },
+                    "RelatedEntitiesList": {
+                        "type": "array",
+                        "title": "List of summaries of Related Entities",
+                        "description": "",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "EntityIdentificationNumber": {
+                                    "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                    "title": "Entity Identification Number"
+                                },
+                                "EntityName": {
+                                    "type": "string",
+                                    "title": "Entity Name"
+                                },
+                                "EntityId": {
+                                    "type": "integer",
+                                    "title": "Internal Id for the entity (internal use only)"
+                                },
+                                "VendorEntityId": {
+                                    "type": "integer",
+                                    "title": "Internal Id from vendors for the entity (internal use only)"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
