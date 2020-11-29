@@ -6,7 +6,7 @@
     "description": "Contains the list of members of the different boards of a company",
     "additionalProperties": false,
     "properties": {
-        "CompanyBoardsList": {
+        "CompanyBoardList": {
             "type": "array",
             "additionalItems": false,
             "items": {
@@ -31,7 +31,7 @@
                             "Directivos"
                         ]
                     },
-                    "MembersList": {
+                    "MemberList": {
                         "type": "array",
                         "title": "List of Members",
                         "description": "List of members of the board, including their roles and active periods",

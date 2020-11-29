@@ -390,9 +390,17 @@
                         "6311"
                     ]
                 },
-                "Value": {
+                "Description": {
                     "type": "string",
                     "title": "Activity description",
+                    "description": "Detailed text describing the activity of the entity",
+                    "examples": [
+                        "Proceso de datos, hosting y actividades relacionadas"
+                    ]
+                },
+                "TrDescription": {
+                    "$ref": "DataTypes.schema.json#/properties/Translation",
+                    "title": "Activity description (translatable)",
                     "description": "Detailed text describing the activity of the entity",
                     "examples": [
                         "Proceso de datos, hosting y actividades relacionadas"
@@ -470,6 +478,14 @@
                     "type": "string",
                     "title": "Help text",
                     "description": "Short generic explanation about the content of the amount data"
+                },
+                "__type": {
+                    "type": "string",
+                    "title": "Native SIPE Type",
+                    "description": "Native type used by SIPE to establish the format of a value. For internal use only",
+                    "required": [
+                        "AmountField:#SIPE.Core.CommunicationsEntities.Entities.Information.UnifiedModel"
+                    ]
                 }
             }
         },
@@ -478,7 +494,7 @@
             "title": "The Employees data type",
             "description": "Contains specific information about the number od employees of the entity",
             "properties": {
-                "Value": {
+                "EmployeesNumber": {
                     "type": [
                         "number",
                         "string"
@@ -559,6 +575,14 @@
                         "15%",
                         "3.24",
                         "25"
+                    ]
+                },
+                "__type": {
+                    "type": "string",
+                    "title": "Native SIPE Type",
+                    "description": "Native type used by SIPE to establish the format of a value. For internal use only",
+                    "required": [
+                        "FrequencyMeasure:#SIPE.Core.CommunicationsEntities.Entities.Information.UnifiedModel"
                     ]
                 }
             }
