@@ -8,7 +8,7 @@
     "definitions": {
         "Amounts": {
             "$comment": "Used to shorten the refs to the Amount datatype",
-            "$ref": "DataTypes.schema.json#/properties/Amount",
+            "$ref": "https://unifiedmodel.github.io/jsonSchemas/DataTypes.schema.json#/properties/Amount",
             "additionalProperties": false
         }
     },
