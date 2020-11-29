@@ -5,13 +5,6 @@
     "title": "The Sales and Purchases Evolution Data Domain Schema",
     "description": "Contains the sales evolution and/or purchases evolution of an entity",
     "additionalProperties": false,
-    "definitions": {
-        "Amounts": {
-            "$comment": "Used to shorten the refs to the Amount datatype",
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/DataTypes.schema.json#/properties/Amount",
-            "additionalProperties": false
-        }
-    },
     "properties": {
         "SalesEvolutionList": {
             "type": "array",
@@ -28,7 +21,7 @@
                         "description": "Year related to the sales figures"
                     },
                     "TotalSales": {
-                        "$ref": "#/definitions/Amounts",
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
                         "additionalProperties": false,
                         "title": "Total Sales",
                         "description": "Sales amount of the entity in the specific year",
@@ -150,7 +143,7 @@
                                                 "description": "Page number where the amount is located in the original source"
                                             },
                                             "TotalSales": {
-                                                "$ref": "#/definitions/Amounts",
+                                                "$ref": "DataTypes.schema.json#/properties/Amount",
                                                 "additionalProperties": false,
                                                 "title": "Total Purchases",
                                                 "description": "Sales detail of the entity in the specific year",
@@ -186,7 +179,7 @@
                         "description": "Year related to the purchases figures"
                     },
                     "TotalPurchases": {
-                        "$ref": "#/definitions/Amounts",
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
                         "additionalProperties": false,
                         "title": "Total Purchases",
                         "description": "Total cost of the purchases made by the entity in the specific year",
@@ -308,7 +301,7 @@
                                                 "description": "Page number where the amount is located in the original source"
                                             },
                                             "TotalPurchases": {
-                                                "$ref": "#/definitions/Amount",
+                                                "$ref": "DataTypes.schema.json#/properties/Amount",
                                                 "additionalProperties": false,
                                                 "title": "Total Purchases",
                                                 "description": "Purchases detail of the entity in the specific year",
