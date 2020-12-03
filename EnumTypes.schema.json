@@ -265,7 +265,8 @@
         },
         "enumRiskIndicatorType": {
             "enum": [
-                "PaymentBehaviourWithPublicAdministrations"
+                "PaymentBehaviourWithPublicAdministrations",
+                "PublicBehaviourWithPublicAdministrations"
             ]
         },
         "enumBusinessRationaleType": {

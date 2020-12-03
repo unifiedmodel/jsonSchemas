@@ -135,7 +135,7 @@
             ]
         },
         "LastDepositEnrollmentYear": {
-            "type": "integer",
+            "type": ["integer","string"],
             "title": "Last year filled for balance accounts or enrollments",
             "description": "Depending on the country, this field shows the last year filled by the company concerning their annual accounts or similar (E.g. enrollments)",
             "examples": [
@@ -143,7 +143,7 @@
             ]
         },
         "LastAccountsUploadedByVendor": {
-            "type": "integer",
+            "type": ["integer","string"],
             "title": "Last Accounts uploaded by Vendor",
             "description": "Indicates the last annual accounts supplied by the vendor and available to use",
             "examples": [
