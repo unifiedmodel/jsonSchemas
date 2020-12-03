@@ -266,6 +266,11 @@
                                     "title": "Element help",
                                     "description": "Short generic explanation about the content of the element"
                                 },
+                                "TrElementHelp": {
+                                    "$ref": "DataTypes.schema.json#/properties/Translation",
+                                    "title": "Element help (translatable)",
+                                    "description": "Short generic explanation about the content of the element"
+                                },
                                 "Indentation": {
                                     "type": "integer",
                                     "title": "Indentation level",
