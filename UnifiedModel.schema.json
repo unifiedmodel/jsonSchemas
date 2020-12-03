@@ -1,65 +1,64 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://unifiedmodel.github.io/jsonSchemas/UnifiedModel.schema.json",
+    "$comment": "https://unifiedmodel.github.io/jsonSchemas/UnifiedModel.schema.json",
     "type": "object",
     "title": "The Unified Model Schema",
     "required": [
         "BasicProfile"
     ],
+    "allOf": [{ "$ref": "./MetaInfo.schema.json" }],
     "properties": {
-        "MetaInfo": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/MetaInfo.schema.json"
-        },
         "BasicProfile": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/BasicProfile.schema.json"
+            "$ref": "BasicProfile.schema.json"
         },
         "CompanyDataSummary": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyDataSummary.schema.json"
+            "$ref": "CompanyDataSummary.schema.json"
         },
         "CompanyData": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyData.schema.json"
+            "$ref": "CompanyData.schema.json"
         },
         "CapitalEvolution": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CapitalEvolution.schema.json"
+            "$ref": "CapitalEvolution.schema.json"
         },
         "EmployeesEvolution": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/EmployeesEvolution.schema.json"
+            "$ref": "EmployeesEvolution.schema.json"
         },
         "SalesAndPurchasesEvolution": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/SalesAndPurchasesEvolution.schema.json"
+            "$ref": "SalesAndPurchasesEvolution.schema.json"
         },
         "PublicRecordsSummary": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/PublicRecordsSummary.schema.json"
+            "$ref": "PublicRecordsSummary.schema.json"
         },
         "PublicRecords": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/PublicRecords.schema.json"
+            "$ref": "PublicRecords.schema.json"
         },
         "FinancialStatements": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/FinancialStatements.schema.json"
+            "$ref": "FinancialStatements.schema.json"
         },
         "BankingInformation": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/BankingInformation.schema.json"
+            "$ref": "BankingInformation.schema.json"
         },
         "LinkedEntities": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/LinkedEntities.schema.json"
+            "$ref": "LinkedEntities.schema.json"
         },
         "RiskIndicators": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/RiskIndicators.schema.json"
+            "$ref": "RiskIndicators.schema.json"
         },
         "BusinessRationales": {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/BusinessRationales.schema.json"
+            "$ref": "BusinessRationales.schema.json"
         },
         "AuditorsReport" : {
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/AuditorsReport.schema.json"
+            "$ref": "AuditorsReport.schema.json"
         },
         "CompanyBoard":{
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/CompanyBoard.schema.json"
+            "$ref": "CompanyBoard.schema.json"
         },
         "PressClipping":{
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/PressClipping.schema.json"
+            "$ref": "PressClipping.schema.json"
         },
         "OtherSections":{
-            "$ref": "https://unifiedmodel.github.io/jsonSchemas/OtherSections.schema.json"
+            "$ref": "OtherSections.schema.json"
         }
     }
 }

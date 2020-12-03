@@ -62,12 +62,30 @@
                 "Mercantil"
             ]
         },
+        "TrEntityType": {
+            "$ref": "DataTypes.schema.json#/properties/Translation",
+            "title": "Current status of the entity (translatable)",
+            "description": "Contains the specific situation of the entity (for example, active)",
+            "examples": [
+                "Activa",
+                "Disolución"
+            ]
+        },
         "Status": {
             "type": "string",
             "title": "Current status of the entity",
             "description": "Contains the specific situation of the entity (for example, active)",
             "examples": [
                 "Activa con Escisión Parcial"
+            ]
+        },
+        "TrStatus": {
+            "$ref": "DataTypes.schema.json#/properties/Translation",
+            "title": "Current status of the entity (translatable)",
+            "description": "Contains the specific situation of the entity (for example, active)",
+            "examples": [
+                "Activa",
+                "Disolución"
             ]
         },
         "StartDate": {
@@ -82,6 +100,14 @@
             "type": "string",
             "title": "Legal form of the entity",
             "description": "Related to legal entities, shows the specific type",
+            "examples": [
+                "Sociedad Anónima"
+            ]
+        },
+        "TrLegalType": {
+            "$ref": "DataTypes.schema.json#/properties/Translation",
+            "title": "Legal form of the entity (translatable)",
+            "description": "CRelated to legal entities, shows the specific type",
             "examples": [
                 "Sociedad Anónima"
             ]
