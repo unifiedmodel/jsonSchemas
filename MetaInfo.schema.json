@@ -40,7 +40,7 @@
                 "EN"
             ]
         },
-        "DefaultCurrencyISO": {
+        "CurrencyISO": {
             "type": "string",
             "title": "Default currency",
             "description": "ISO code describing fallback currency used for each Amount datatype",
@@ -48,11 +48,12 @@
                 "EUR"
             ]
         },
-        "DefaultScale": {
+        "ScaleFactor": {
             "$ref": "EnumTypes.schema.json#/properties/enumScale",
             "title": "Default amount scale",
-            "description": "Indicates the fallback scale value used for eacht Amount datatype",
+            "description": "Indicates the fallback scale value used for eacht Amount datatype. Auto = Units",
             "examples": [
+                "Auto",
                 "Thousands",
                 "Millions"
             ]
@@ -72,14 +73,13 @@
             "title": "Vendor Id",
             "description": "Internal code to locate the vendor of the data"
         },
-        "EntityType": {
-            "$ref": "EnumTypes.schema.json#/properties/enumEntityType",
+        "BusinessType": {
+            "type": "string",
             "title": "Entity Type",
             "description": "Indicates the generic type of the entity, in case of distinguish between them to process and show the data",
             "examples": [
-                "Business",
-                "SolePropietor",
-                "NaturalPerson"
+                "Mercantile",
+                "NonMercantile"
             ]
         }
     }

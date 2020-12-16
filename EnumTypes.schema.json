@@ -17,7 +17,8 @@
             "enum": [
                 "Units",
                 "Thousands",
-                "Millions"
+                "Millions",
+                "Auto"
             ]
         },
         "enumPeriod": {
