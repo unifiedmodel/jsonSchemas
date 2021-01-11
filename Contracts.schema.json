@@ -407,9 +407,6 @@
                                             ]
                                         }
                                     }
-                                },
-                                "FinesAndPenaltiesList": {
-
                                 }
                             }
                         }
@@ -417,6 +414,5 @@
                 }
             }
         }
-    },
-    "FinesAndPenalties": false
+    }
 }
