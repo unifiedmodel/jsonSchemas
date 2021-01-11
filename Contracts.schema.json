@@ -1,0 +1,422 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/Contracts.schema.json",
+    "type": "object",
+    "title": "The Contracts Domain Schema",
+    "description": "Contains all the information about public or private contracts and call for tenders",
+    "additionalProperties": false,
+    "properties": {
+        "ContractsSummary": {
+            "type": "object",
+            "title": "Contracts Summary",
+            "description": "Contains an overview with the number of contracts awarded by year and type",
+            "additionalProperties": false,
+            "properties": {
+                "TotalContracts": {
+                    "type": "integer",
+                    "title": "Total Contracts",
+                    "description": "Number of awarded contracts showed in the report"
+                },
+                "AnnualContractsList": {
+                    "type": "array",
+                    "title": "List of Contracts sorted by year",
+                    "description": "List of years with publications related to the contracts earned by the company",
+                    "additionalItems": false,
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "Year": {
+                                "type": "integer",
+                                "title": "Contracts year",
+                                "description": "Year of the contracts",
+                                "examples": [
+                                    "2020",
+                                    "2019"
+                                ]
+                            },
+                            "StartDate": {
+                                "type": "string",
+                                "format": "date",
+                                "title": "Start Date",
+                                "description": "Date ot the first contract in the report",
+                                "examples": [
+                                    "2013-05-18"
+                                ]
+                            },
+                            "EndDate": {
+                                "type": "string",
+                                "format": "date",
+                                "title": "End Date",
+                                "description": "Date ot the las contract in the report",
+                                "examples": [
+                                    "2020-06-28"
+                                ]
+                            },
+                            "ContractTypesList": {
+                                "type": "array",
+                                "title": "List of Contract differents types",
+                                "description": "List of different contract types awarded in that year",
+                                "additionalItems": false,
+                                "items": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "ContractType": {
+                                            "$ref": "EnumTypes.schema.json#/properties/enumContractTypes",
+                                            "title": "Type of Contract (enum)",
+                                            "description": "Describes the main type of the contract",
+                                            "examples": [
+                                                "Supplies",
+                                                "Works",
+                                                "Services",
+                                                "Consultancy",
+                                                "Other"
+                                            ]
+                                        },
+                                        "trContractType": {
+                                            "type": "string",
+                                            "title": "Type of Contract (translation) ",
+                                            "description": "Describes the main type of the contract",
+                                            "examples": [
+                                                "Suministros",
+                                                "Obras",
+                                                "Servicios",
+                                                "Consultoría",
+                                                "Otros"
+                                            ]
+                                        },
+                                        "Value": {
+                                            "type": "integer",
+                                            "title": "Value",
+                                            "description": "Number of contracts in this group"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ContractsList": {
+            "type": "array",
+            "title": "List of Contracts and Call for Tenders",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "VendorContractId": {
+                        "type": "string",
+                        "title": "Vendor Contract Id ",
+                        "description": "Vendor Contract Id for the contract (internal use only)"
+                    },
+                    "VendorContractorEntityId": {
+                        "type": "string",
+                        "title": "Vendor Contractor Entity Id",
+                        "description": "Vendor Id for the contractor entity (internal use only)"
+                    },
+                    "VendorReferenceId": {
+                        "type": "string",
+                        "title": "Vendor Reference Id ",
+                        "description": "Vendor Reference Id for the contract (internal use only)"
+                    },
+                    "ContractNumber": {
+                        "type": "string",
+                        "title": "Contract Number",
+                        "description": "Official Number or Id of the contract",
+                        "examples": [
+                            "2012-SS-15-032",
+                            "OC0047 DE 2011"
+                        ]
+                    },
+                    "ContractorEntity": {
+                        "type": "string",
+                        "title": "Contractor Entity",
+                        "description": "Public or Private whom order the contract",
+                        "examples": [
+                            "AYUNTAMIENTO DE VILLARROBLEDO",
+                            "DIPUTACION PROVINCIAL DE SALAMANCA"
+                        ]
+                    },
+                    "ContractObject": {
+                        "type": "string",
+                        "title": "Contract Object",
+                        "description": "Contains information about the main purpose of the contract",
+                        "examples": [
+                            "SUMINISTRO DE PRODUCTOS ALIMENTICIOS PARA EL TALLER COCINA DIA, S.A."
+                        ]
+                    },
+                    "ContractType": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumContractTypes",
+                        "title": "Type of Contract (enum)",
+                        "description": "Describes the main type of the contract",
+                        "examples": [
+                            "Supplies",
+                            "Works",
+                            "Services",
+                            "Consultancy",
+                            "Other"
+                        ]
+                    },
+                    "trContractType": {
+                        "type": "string",
+                        "title": "Type of Contract (translation) ",
+                        "description": "Describes the main type of the contract",
+                        "examples": [
+                            "Suministros",
+                            "Obras",
+                            "Servicios",
+                            "Consultoría",
+                            "Otros"
+                        ]
+                    },
+                    "CallDate": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Call Date",
+                        "description": "Date of publication of the contract in the media sources",
+                        "examples": [
+                            "2012-04-01"
+                        ]
+                    },
+                    "DecisionDate": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Decision Date",
+                        "description": "Date of adjudication of the contract to the entity awarded",
+                        "examples": [
+                            "2015-06-18"
+                        ]
+                    },
+                    "AmountGranted": {
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
+                        "title": "Contract Amount Granted",
+                        "description": "Total amount granted by the contract to the entity"
+                    },
+                    "InitialBudget": {
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
+                        "title": "Initial Budget",
+                        "description": "Initial budget value of the contract"
+                    },
+                    "Source": {
+                        "type": "string",
+                        "title": "Publication Source",
+                        "description": "Source used to obtain the information of the contract",
+                        "examples": [
+                            "PLATAFORMA DE CONTRATACIÓN DEL ESTADO (23/01/2020) Número 33"
+                        ]
+                    },
+                    "FileReference": {
+                        "type": "string",
+                        "title": "File Reference",
+                        "description": "Official code for the contract",
+                        "examples": [
+                            "359365T"
+                        ]
+                    },
+                    "Sector": {
+                        "type": "string",
+                        "title": "Contract Sector",
+                        "description": "Sector and/or type of activity of the object of the contract",
+                        "examples": [
+                            "SUMINISTROS / ALIMENTACION<br>SUMINISTROS / ALIMENTACION S.C.E.<br>"
+                        ]
+                    },
+                    "Status": {
+                        "type": "string",
+                        "title": "Contract Status",
+                        "description": "Current status of the contract",
+                        "examples": [
+                            "ADJUDICADA"
+                        ]
+                    },
+                    "Location": {
+                        "type": "string",
+                        "title ": "Contract Location",
+                        "description": "Place where the activities on the contract will be undertaken",
+                        "examples": [
+                            "País: ESPAÑA<br>Comunidad autónoma: CASTILLA LA MANCHA<br>Provincia: ALBACETE<br>Municipio: VILLARROBLEDO<br>Población: VILLARROBLEDO<br>"
+                        ]
+                    },
+                    "OtherDataList": {
+                        "type": "array",
+                        "title": "List of Other Data",
+                        "description": "Any other data relative to this publication",
+                        "additionalItems": false,
+                        "items": {
+                            "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                            "additionalProperties": false
+                        }
+                    },
+                    "ReferencesList": {
+                        "type": "array",
+                        "title": "References List",
+                        "description": "Contains a list ot the differents stages or references of the contract",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "VendorReferenceId": {
+                                    "type": "string",
+                                    "title": "Vendor Reference Id ",
+                                    "description": "Vendor Reference Id for the contract (internal use only)"
+                                },
+                                "ReferenceType": {
+                                    "type": "string",
+                                    "title": "Reference Type",
+                                    "description": "Detail about the type of fact for this reference",
+                                    "examples": [
+                                        "CONVOCATORIA DE LICITACIÓN",
+                                        "ADJUDICACIÓN DE LICITACIÓN",
+                                        "Inscripción"
+                                    ]
+                                },
+                                "ReferenceDate": {
+                                    "type": "string",
+                                    "format": "date",
+                                    "title": "Reference Date",
+                                    "description": "Date of the event or publication",
+                                    "examples": [
+                                        "2015-03-24"
+                                    ]
+                                },
+                                "FullText": {
+                                    "type": "string",
+                                    "title": "Full Text",
+                                    "description": "Contains the complete text of the contract announcement"
+                                }
+                            }
+                        }
+                    },
+                    "CompaniesList": {
+                        "type": "array",
+                        "title": "Companies List",
+                        "description": "Contains a list of the companies awarded with or tendering for contracts (one or more companies)",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "EntityName": {
+                                    "type": "string",
+                                    "title": "Entity Name",
+                                    "description": "Name of each entity awarded with this contract",
+                                    "examples": [
+                                        "DISTRIBUIDORA INTERNACIONAL DE ALIMENTACION SA"
+                                    ]
+                                },
+                                "EntityIdentificationNumber": {
+                                    "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                    "title": "Entity Identification Number"
+                                },
+                                "EntityId": {
+                                    "type": "integer",
+                                    "title": "Internal Id for the entity"
+                                },
+                                "TenderInfo": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "TenderingStatus": {
+                                            "type": "string",
+                                            "title": "Tendering Status",
+                                            "description": "Current situation of the company concerning call for tenders",
+                                            "examples": [
+                                                "ACTIVO",
+                                                "NO RENOVADO"
+                                            ]
+                                        },
+                                        "FilingDate": {
+                                            "type": "string",
+                                            "format": "date",
+                                            "title": "Decision Date",
+                                            "description": "When the entity started to be an official tender",
+                                            "examples": [
+                                                "2014-05-10"
+                                            ]
+                                        },
+                                        "RenewalDate": {
+                                            "type": "string",
+                                            "format": "date",
+                                            "title": "Decision Date",
+                                            "description": "When the entity renewed to continue being an official tender",
+                                            "examples": [
+                                                "2020-03-21"
+                                            ]
+                                        },
+                                        "CancelDate": {
+                                            "type": "string",
+                                            "format": "date",
+                                            "title": "Decision Date",
+                                            "description": "When the entity lost its status as an official tender",
+                                            "examples": [
+                                                "2018-06-18"
+                                            ]
+                                        },
+                                        "FiledIn": {
+                                            "type": "string",
+                                            "title": "Filed in",
+                                            "description": "Place or administration where the request to be a tender took place",
+                                            "examples": [
+                                                "Cámara de Comercio de Bogotá"
+                                            ]
+                                        },
+                                        "TenderId": {
+                                            "type": "string",
+                                            "title": "Tender Id",
+                                            "description": "Official tender code or id of the entity",
+                                            "examples": [
+                                                "55048"
+                                            ]
+                                        },
+                                        "OtherTenderDataList": {
+                                            "type": "array",
+                                            "title": "List of Tender's Other Data",
+                                            "description": "Any other data relative to this tender",
+                                            "additionalItems": false,
+                                            "items": {
+                                                "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                                                "additionalProperties": false
+                                            }
+                                        }
+                                    }
+                                },
+                                "ContractInfo": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "DecisionDate": {
+                                            "type": "string",
+                                            "format": "date",
+                                            "title": "Decision Date",
+                                            "description": "Date of adjudication of the contract to the entity awarded",
+                                            "examples": [
+                                                "2015-06-18"
+                                            ]
+                                        },
+                                        "AmountText": {
+                                            "type": "string",
+                                            "title": "Amount Text",
+                                            "description": "Contains a text (not amount type) with the total amount conceded to this company in the contract",
+                                            "examples": [
+                                                "44,45 EURO",
+                                                "4.00 EUR/m2/mes"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "FinesAndPenaltiesList": {
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "FinesAndPenalties": false
+}

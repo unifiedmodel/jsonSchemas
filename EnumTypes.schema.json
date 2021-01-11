@@ -312,6 +312,15 @@
                 "Clients",
                 "Providers"
             ]
+        },
+        "enumContractTypes": {
+            "enum": [
+                "Supplies",
+                "Works",
+                "Services",
+                "Consultancies",
+                "Other"
+            ]
         }
     }
 }
