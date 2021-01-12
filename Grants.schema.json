@@ -1,0 +1,140 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/Grants.schema.json",
+    "type": "object",
+    "title": "The Contracts Domain Schema",
+    "description": "Contains all the information about public or private grants awarded to an entity",
+    "additionalProperties": false,
+    "properties": {
+        "GrantsList": {
+            "type": "array",
+            "title": "List of Grants",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "VendorGrantId": {
+                        "type": "string",
+                        "title": "Vendor Grant Id ",
+                        "description": "Vendor Grant Id for the grant (internal use only)"
+                    },
+                    "FundedEntity": {
+                        "type": "string",
+                        "title": "Funded Entity",
+                        "description": "Public or Private entity whom provide the grant funds",
+                        "examples": [
+                            "CONSEJERÍA DE ECONOMÍA, INNOVACIÓN, CIENCIA Y EMPLEO. COMUNIDAD AUTONOMA DE ANDALUCIA",
+                            "COMUNITAT VALENCIANA - INSTITUTO VALENCIANO DE COMPETITIVIDAD EMPRESARIAL (IVACE)"
+                        ]
+                    },
+                    "GrantNumber": {
+                        "type": "string",
+                        "title": "Grant Number",
+                        "description": "Official Number or Id of the grant",
+                        "examples": [
+                            "EPIEXE/2009/411/46",
+                            "OC0047 DE 2011"
+                        ]
+                    },
+                    "GrantType": {
+                        "type": "string",
+                        "title": "Grant Type",
+                        "description": "Grant Type if applies",
+                        "examples": ["Subvención","Ayuda"]
+                    },
+                    "GrantSubject": {
+                        "type": "string",
+                        "title": "Grant Subject",
+                        "description": "Contains information about the subject of the grant",
+                        "examples": [
+                            "RESOLUCIÓN de 21 de febrero de 2018, del presidente del IVACE, por la que se convocan ayudas en materia de eficiencia energética en la industria y edificios sector terciario, para el ejercicio 2018.",
+                            "RESOLUCIÓN DE 21 DE FEBRERO DE 2017, DE LA DIRECCIÓN GENERAL DE EMPLEO, POR LA QUE SE PROPONE HACER PÚBLICAS LAS SUBVENCIONES CONCEDIDAS EN PROGRAMAS DE EMPLEO, DURANTE EL AÑO 2011, POR IMPORTE IGUAL O SUPERIOR A 3.000 EUROS"
+                        ]
+                    },
+                    "PublicationDate": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Call Date",
+                        "description": "Date of publication of the grant in the media sources",
+                        "examples": [
+                            "2012-04-01"
+                        ]
+                    },
+                    "Status": {
+                        "type": "string",
+                        "title": "Contract Status",
+                        "description": "Current status of the grant",
+                        "examples": [
+                            "SUBVENCIÓN CONCEDIDA"
+                        ]
+                    },
+                    "ProjectName": {
+                        "type": "string",
+                        "title": "Project Name",
+                        "description": "In some cases, the name of the project associated to the grant",
+                        "examples": [
+                            "CONTRATACIÓN INDEFINIDA DE DISCAPACITADOS",
+                            " FOMENTO DEL AHORRO Y LA EFICIENCIA ENERGÉTICA"
+                        ]
+                    },
+                    "Link": {
+                        "type": "string",
+                        "title": "URL Link",
+                        "description": "Link to documentation or other grant info",
+                        "examples": ["http://www.dogv.gva.es/datos/2017/05/09/pdf/2017_3881.pdf"]
+                    },
+                    "AmountGranted": {
+                        "$ref": "DataTypes.schema.json#/properties/Amount",
+                        "title": "Contract Amount Granted",
+                        "description": "Total amount granted to the entity"
+                    },
+                    "Comments": {
+                        "type": "string",
+                        "title": "Comments",
+                        "description": "Additional information about the grant",
+                        "examples": ["El importe de la subvención se abonará en tres pagos anuales"]
+                    },
+                    "OtherDataList": {
+                        "type": "array",
+                        "title": "List of Other Data",
+                        "description": "Any other data relative to this publication",
+                        "additionalItems": false,
+                        "items": {
+                            "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                            "additionalProperties": false
+                        }
+                    },
+                    "CompaniesList": {
+                        "type": "array",
+                        "title": "Companies List",
+                        "description": "Contains a list of the companies awarded with the grant",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "EntityName": {
+                                    "type": "string",
+                                    "title": "Entity Name",
+                                    "description": "Name of each entity awarded with this grant",
+                                    "examples": [
+                                        "DISTRIBUIDORA INTERNACIONAL DE ALIMENTACION SA"
+                                    ]
+                                },
+                                "EntityIdentificationNumber": {
+                                    "$ref": "DataTypes.schema.json#/properties/IdentificationNumber",
+                                    "title": "Entity Identification Number"
+                                },
+                                "EntityId": {
+                                    "type": "integer",
+                                    "title": "Internal Id for the entity"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
