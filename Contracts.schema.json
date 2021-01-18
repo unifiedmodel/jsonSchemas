@@ -200,14 +200,6 @@
                         "title": "Initial Budget",
                         "description": "Initial budget value of the contract"
                     },
-                    "Source": {
-                        "type": "string",
-                        "title": "Publication Source",
-                        "description": "Source used to obtain the information of the contract",
-                        "examples": [
-                            "PLATAFORMA DE CONTRATACIÓN DEL ESTADO (23/01/2020) Número 33"
-                        ]
-                    },
                     "FileReference": {
                         "type": "string",
                         "title": "File Reference",
@@ -281,6 +273,14 @@
                                     "description": "Date of the event or publication",
                                     "examples": [
                                         "2015-03-24"
+                                    ]
+                                },
+                                "Source": {
+                                    "type": "string",
+                                    "title": "Publication Source",
+                                    "description": "Source used to obtain the information of the contract",
+                                    "examples": [
+                                        "PLATAFORMA DE CONTRATACIÓN DEL ESTADO (23/01/2020) Número 33"
                                     ]
                                 },
                                 "FullText": {
