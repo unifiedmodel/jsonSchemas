@@ -44,10 +44,10 @@
             "enum": [
                 "RAI",
                 "ASNEF",
-                "Employment", 
-                "Civil", 
-                "PublicAdministrations", 
-                "Commercial", 
+                "Employment",
+                "Civil",
+                "PublicAdministrations",
+                "Commercial",
                 "Criminal",
                 "Banned",
                 "Taxes",
@@ -279,8 +279,8 @@
         },
         "enumCompanyBoardTypeGroup": {
             "enum": [
-                "BoardOfDirectors", 
-                "CorporateOfficers" 
+                "BoardOfDirectors",
+                "CorporateOfficers"
             ]
         },
         "enumAuditorsReportOpinion": {
@@ -292,7 +292,7 @@
                 "Other"
             ]
         },
-        "enumEntityType" : {
+        "enumEntityType": {
             "enum": [
                 "Business",
                 "NonBusiness",
@@ -319,7 +319,22 @@
                 "Works",
                 "Services",
                 "Consultancies",
+                "Other",
+                "Total"
+            ]
+        },
+        "enumBrandLevel": {
+            "enum": [
+                "National",
+                "Regional",
+                "EU-Wide",
+                "International",
                 "Other"
+            ]
+        },
+        "enumBrandRecordStatus": {
+            "enum": [
+                "Granted"
             ]
         }
     }

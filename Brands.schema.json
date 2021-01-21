@@ -1,0 +1,234 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/Brands.schema.json",
+    "type": "object",
+    "title": "The Brands Domain Schema",
+    "description": "Contains all the information about the different brands of a company or entity",
+    "additionalProperties": false,
+    "properties": {
+        "BrandsSummariesList": {
+            "type": "array",
+            "title": "Brands Summaries List",
+            "description": "Summary related th the number of brands, level and status",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "BrandLevel": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumBrandLevel",
+                        "title": "Brand Level (enum)",
+                        "description": "Geographical scope of the brand record",
+                        "examples": [
+                            "National",
+                            "EU-Wide"
+                        ]
+                    },
+                    "TrBrandLevel": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumBrandLevel",
+                        "title": "Brand Level (translateable)",
+                        "description": "Geographical scope of the brand record",
+                        "examples": [
+                            "Nacional",
+                            "Comunitaria"
+                        ]
+                    },
+                    "StatusList": {
+                        "type": "array",
+                        "title": "List of Records according their status",
+                        "description": "",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "RecordStatus": {
+                                    "$ref": "EnumTypes.schema.json#/properties/enumBrandRecordStatus",
+                                    "title": "Record Status (enum)",
+                                    "description": "Current status for this brand's specific record",
+                                    "examples": [
+                                        "Granted"
+                                    ]
+                                },
+                                "trRecordStatus": {
+                                    "type": "string",
+                                    "title": "Record Status (translateable)",
+                                    "description": "Current status for this brand's specific record",
+                                    "examples": [
+                                        "Concedida"
+                                    ]
+                                },
+                                "Total": {
+                                    "type": "integer",
+                                    "title": "Total Brands",
+                                    "description": "Number of brands under the current segmentation"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "BrandsList": {
+            "type": "array",
+            "title": "List of Brands",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "BrandName": {
+                        "type": "string",
+                        "title": "Brand name",
+                        "description": "Name registered of the brand",
+                        "examples": [
+                            "VIVACARD FINANDIA",
+                            "VITAL DIA %"
+                        ]
+                    },
+                    "PresentationOrder": {
+                        "type": "integer",
+                        "title": "Presentation Order",
+                        "description": "Order suggested by the vendor to sort the brands on screen"
+                    },
+                    "RecordsList": {
+                        "type": "array",
+                        "title": "List of Records related to the current brand",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "VendorBrandId": {
+                                    "type": "string",
+                                    "title": "Vendor Brand Id ",
+                                    "description": "Vendor Brand Id for the brand (internal use only)"
+                                },
+                                "FileNumber": {
+                                    "type": "string",
+                                    "title": "File number",
+                                    "description": "Record or file unique number or code for the brand",
+                                    "examples": [
+                                        "M4005550/7",
+                                        "M4005549/3",
+                                        "13499603"
+                                    ]
+                                },
+                                "RecordStatusDate": {
+                                    "type": "string",
+                                    "format": "date",
+                                    "title": "Status date",
+                                    "description": "Date of the last status or change in the brand's record",
+                                    "examples": [
+                                        "2008-12-21"
+                                    ]
+                                },
+                                "RecordStatus": {
+                                    "$ref": "EnumTypes.schema.json#/properties/enumBrandRecordStatus",
+                                    "title": "Record Status (enum)",
+                                    "description": "Current status for this brand's specific record",
+                                    "examples": [
+                                        "Granted"
+                                    ]
+                                },
+                                "trRecordStatus": {
+                                    "type": "string",
+                                    "title": "Record Status (translateable)",
+                                    "description": "Current status for this brand's specific record",
+                                    "examples": [
+                                        "Concedida"
+                                    ]
+                                },
+                                "BrandLevel": {
+                                    "$ref": "EnumTypes.schema.json#/properties/enumBrandLevel",
+                                    "title": "Brand Level (enum)",
+                                    "description": "Geographical scope of the brand record",
+                                    "examples": [
+                                        "National",
+                                        "EU-Wide"
+                                    ]
+                                },
+                                "TrBrandLevel": {
+                                    "$ref": "EnumTypes.schema.json#/properties/enumBrandLevel",
+                                    "title": "Brand Level (translateable)",
+                                    "description": "Geographical scope of the brand record",
+                                    "examples": [
+                                        "Nacional",
+                                        "Comunitaria"
+                                    ]
+                                },
+                                "PublicationSource": {
+                                    "type": "string",
+                                    "title": "Publication source",
+                                    "description": "Source of the publication where the brand record was published",
+                                    "examples": [
+                                        "BOPI",
+                                        "AOMI"
+                                    ]
+                                },
+                                "PublicationNumber": {
+                                    "type": "string",
+                                    "title": "Publication number",
+                                    "description": "Number of the publication where the brand record was published",
+                                    "examples": [
+                                        "3840",
+                                        "2375"
+                                    ]
+                                },
+                                "PublicationYear": {
+                                    "type": "string",
+                                    "title": "Publication year",
+                                    "description": "Year of the publication where the brand record was published",
+                                    "examples": [
+                                        "2018"
+                                    ]
+                                },
+                                "PublicationPage": {
+                                    "type": "integer",
+                                    "title": "Publication page",
+                                    "description": "Page Number of the publication where the brand recorj was published",
+                                    "examples": [
+                                        0,
+                                        15
+                                    ]
+                                },
+                                "ClassesList": {
+                                    "type": "array",
+                                    "title": "Brands Summaries List",
+                                    "description": "List of summaries related th the number of brands, type or status",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "ClassId": {
+                                                "type": "integer",
+                                                "title": "Class Id",
+                                                "description": "Number id used to identify the Nice Class",
+                                                "examples": [
+                                                    3,
+                                                    5,
+                                                    8,
+                                                    44
+                                                ]
+                                            },
+                                            "ClassDetail": {
+                                                "type": "string",
+                                                "title": "Class Detail",
+                                                "description": "Contains details about the Nice class used by the brand",
+                                                "examples": [
+                                                    "VESTIDOS, CALZADOS, SOMBRERERÍA.",
+                                                    "PRODUCTOS FARMACÉUTICOS Y VETERINARIOS; PRODUCTOS HIGIÉNICOS PARA LA MEDICINA; SUSTANCIAS DIETÉTICAS PARA USO MÉDICO, ALIMENTOS PARA BEBÉS; EMPLASTOS, MATERIAL PARA APÓSITOS; MATERIAL PARA EMPASTAR LOS DIENTES Y PARA IMPRONTAS DENTALES; DESINFECTANTES; PRODUCTOS PARA LA DESTRUCCIÓN DE ANIMALES DAÑINOS; FUNGICIDAS, HERBICIDAS."
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
