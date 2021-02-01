@@ -58,6 +58,14 @@
                                         "Concedida"
                                     ]
                                 },
+                                "DetailedStatus": {
+                                    "type": "string",
+                                    "title": "Detailed Record Status",
+                                    "description": "Detailed status for this brand's specific record",
+                                    "examples": [
+                                        "Concedida"
+                                    ]
+                                },
                                 "Total": {
                                     "type": "integer",
                                     "title": "Total Brands",
@@ -135,6 +143,14 @@
                                     "type": "string",
                                     "title": "Record Status (translateable)",
                                     "description": "Current status for this brand's specific record",
+                                    "examples": [
+                                        "Concedida"
+                                    ]
+                                },
+                                "DetailedStatus": {
+                                    "type": "string",
+                                    "title": "Detailed Record Status",
+                                    "description": "Detailed status for this brand's specific record",
                                     "examples": [
                                         "Concedida"
                                     ]
