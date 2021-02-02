@@ -167,7 +167,8 @@
                 "LongTermDebtsIncurredWithGroupCompaniesAndAffiliates",
                 "CapitalAndSharePremiums",
                 "EBIT",
-                "OperatingIncome"
+                "OperatingIncome",
+                "Warranty"
             ]
         },
         "enumDataTypes": {
@@ -280,7 +281,8 @@
         "enumCompanyBoardTypeGroup": {
             "enum": [
                 "BoardOfDirectors",
-                "CorporateOfficers"
+                "CorporateOfficers",
+                "Auditors"
             ]
         },
         "enumAuditorsReportOpinion": {
