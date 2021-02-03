@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://unifiedmodel.github.io/jsonSchemas/HistoricalChanges.schema.json",
+    "type": "object",
+    "title": "The Historical Changes Domain Schema",
+    "description": "Contains a list with important events happened along the entitys's history",
+    "additionalProperties": false,
+    "properties": {
+        "EventsList": {
+            "type": "array",
+            "title": "List of Events",
+            "description": "Contains a list of the main events happened across the entity's life",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Type": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumAuditorsReportOpinion",
+                        "title": "Event Type (enum)",
+                        "description": "Used to group similar types of events",
+                        "examples": [
+                            "ChangeOfAddress",
+                            "ChangeOfName",
+                            "ChangeOfActivity",
+                            "ChangeOfBusinessType",
+                            "CapitalMovements",
+                            "Other"
+                        ]
+                    },
+                    "TrType": {
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
+                        "title": "Event Type (translateable)",
+                        "description": "Used to group similar types of events",
+                        "examples": [
+                            "Cambios de Domicilio",
+                            "Cambios de Denominación Social",
+                            "Cambios de actividad",
+                            "Movimientos de Capital",
+                            "Otros"
+                        ]
+                    },
+                    "Description": {
+                        "type": "string",
+                        "title": "Event Description",
+                        "description": "Description of the event, not linked to an enum. Used also to tell more specific info rather than the event type",
+                        "examples": [
+                            "Ampliación de capital",
+                            "Domicilio anterior",
+                            "Denominación social anterior"
+                        ]
+                    },
+                    "Date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Event Date",
+                        "description": "Date of publication or exact date when then event happened",
+                        "examples": [
+                            "2020-03-21"
+                        ]
+                    },
+                    "Text": {
+                        "type": "string",
+                        "title": "Event Text",
+                        "description": "Specific text of the event, in case of being published, like the new share capital value or a previous address of the entity",
+                        "examples": [
+                            "COMERCIALIZACIÓN AL POR MAYOR O MENOR EN EN MERCADO DE PRODUCTOS DEL RAMO DE ALIMENTACIÓN. PRESTACIÓN DE SERVICIOS DE COLABORACIÓN EMPRESARIAL DE TODO TIPO PARA LA COMERCIALIZACIÓN DE PRODUCTOS Y SERVICIOS DE TELECOMUNICACIONES"
+                        ]
+                    },
+                    "VendorDescriptionId": {
+                        "type": "string",
+                        "title": "Vendor Description Id",
+                        "description": "Used for those vendor whom send a code linked to the description of the event. For example, act code"
+                    },
+                    "HelpText": {
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
+                        "title": "Help text",
+                        "description": "Optional text explaining the meaning of the current event"
+                    }
+                }
+            }
+        }
+    }
+}
