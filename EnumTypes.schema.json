@@ -338,6 +338,16 @@
             "enum": [
                 "Granted"
             ]
+        },
+        "enumHistoricalChanges": {
+            "enum": [
+                "ChangeOfAddress",
+                "ChangeOfName",
+                "ChangeOfActivity",
+                "ChangeOfBusinessType",
+                "CapitalMovements",
+                "Other"
+            ]
         }
     }
 }
