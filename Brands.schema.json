@@ -25,7 +25,7 @@
                         ]
                     },
                     "TrBrandLevel": {
-                        "$ref": "EnumTypes.schema.json#/properties/enumBrandLevel",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Brand Level (translateable)",
                         "description": "Geographical scope of the brand record",
                         "examples": [
@@ -51,7 +51,7 @@
                                     ]
                                 },
                                 "trRecordStatus": {
-                                    "type": "string",
+                                    "$ref": "DataTypes.schema.json#/properties/Translation",
                                     "title": "Record Status (translateable)",
                                     "description": "Current status for this brand's specific record",
                                     "examples": [
@@ -140,7 +140,7 @@
                                     ]
                                 },
                                 "trRecordStatus": {
-                                    "type": "string",
+                                    "$ref": "DataTypes.schema.json#/properties/Translation",
                                     "title": "Record Status (translateable)",
                                     "description": "Current status for this brand's specific record",
                                     "examples": [
@@ -165,7 +165,7 @@
                                     ]
                                 },
                                 "TrBrandLevel": {
-                                    "$ref": "EnumTypes.schema.json#/properties/enumBrandLevel",
+                                    "$ref": "DataTypes.schema.json#/properties/Translation",
                                     "title": "Brand Level (translateable)",
                                     "description": "Geographical scope of the brand record",
                                     "examples": [

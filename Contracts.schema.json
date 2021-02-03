@@ -75,7 +75,7 @@
                                             ]
                                         },
                                         "trContractType": {
-                                            "type": "string",
+                                            "$ref": "DataTypes.schema.json#/properties/Translation",
                                             "title": "Type of Contract (translation) ",
                                             "description": "Describes the main type of the contract",
                                             "examples": [
@@ -161,8 +161,8 @@
                         ]
                     },
                     "trContractType": {
-                        "type": "string",
-                        "title": "Type of Contract (translation) ",
+                        "$ref": "DataTypes.schema.json#/properties/Translation",
+                        "title": "Type of Contract (translateable) ",
                         "description": "Describes the main type of the contract",
                         "examples": [
                             "Suministros",
