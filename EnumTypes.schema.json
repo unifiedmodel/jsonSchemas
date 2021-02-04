@@ -329,7 +329,7 @@
             "enum": [
                 "National",
                 "Regional",
-                "EU-Wide",
+                "EUWide",
                 "International",
                 "Other"
             ]
