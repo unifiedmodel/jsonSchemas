@@ -98,6 +98,58 @@
                         "title": "Source page",
                         "description": "Page number where the specific info about the Report was published"
                     },
+                    "AccountsApproval": {
+                        "type":"boolean",
+                        "title": "Accounts Approval",
+                        "description": "True if the accounts were approved by the board"
+                    },
+                    "UnanimousApproval": {
+                        "type":"boolean",
+                        "title": "Accounts Approval",
+                        "description": "True if the accounts were approved unanimously by the board"
+                    },
+                    "DateOfApproval": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Date of Approval",
+                        "description": "Date when the decision of approving the accounts was undertaken by the board"
+                    },
+                    "PercentageOfVotes": {
+                        "$ref": "DataTypes.schema.json#/properties/FrequencyMeasure",
+                        "title": "Percentage Of Votes",
+                        "description": "Percentage of votes in favor to approve the accounts"
+                    },
+                    "AuditDetailsList": {
+                        "type": "array",
+                        "title": "Audit Details List",
+                        "description": "List that includes any other text details concerning the current audit",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "DetailType": {
+                                    "type": "string",
+                                    "title": "Detail Type",
+                                    "description": "Used to describe the type of detail specified within the auditor's report",
+                                    "examples": [
+                                        "Opinión del Consejo de Supervisión",
+                                        "Informe de Gestión",
+                                        "Certificación de las Cuentas"
+                                    ]
+                                },
+                                "DetailText": {
+                                    "type": "string",
+                                    "title": "Detail Text",
+                                    "description": "Used to include the text of a detail specified within the auditor's report",
+                                    "examples": [
+                                        "La entidad tiene un Consejo de Supervisión, que emitió una opinión",
+                                        "La entidad está obligada a tener las cuentas auditadas por el TEC/STEC"
+                                    ]
+                                }
+                            }
+                        }
+                    },
                     "OtherDataList": {
                         "type": "array",
                         "title": "List of Other Data",
