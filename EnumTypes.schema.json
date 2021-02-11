@@ -96,6 +96,7 @@
                 "TotalLiabilitiesAndEquitySectoral",
                 "IncomeStatementsSectoral",
                 "OtherResults",
+                "ApplicationOfProfits",
                 "Other"
             ]
         },
@@ -177,7 +178,8 @@
                 "TotalInvestment",
                 "GrossMargin",
                 "EBITMargin",
-                "Employees"
+                "Employees",
+                "TotalLiabilities"
             ]
         },
         "enumDataTypes": {
