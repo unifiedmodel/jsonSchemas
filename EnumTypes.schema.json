@@ -168,7 +168,16 @@
                 "CapitalAndSharePremiums",
                 "EBIT",
                 "OperatingIncome",
-                "Warranty"
+                "Warranty",
+                "Exports",
+                "Imports",
+                "Suppliers",
+                "Clients",
+                "DoubtfulDebts",
+                "TotalInvestment",
+                "GrossMargin",
+                "EBITMargin",
+                "Employees"
             ]
         },
         "enumDataTypes": {
