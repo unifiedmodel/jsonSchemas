@@ -221,7 +221,9 @@
                 "TotalDebt",
                 "BankGuarantee",
                 "BankFinancialInstrument",
-                "NonBankFinancialInstrument"
+                "NonBankFinancialInstrument",
+                "AccountRestrictions",
+                "Other"
             ]
         },
         "enumLinkedEntitiesSummaryType": {
