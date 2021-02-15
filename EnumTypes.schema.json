@@ -97,6 +97,7 @@
                 "IncomeStatementsSectoral",
                 "OtherResults",
                 "ApplicationOfProfits",
+                "AnalysisOfPayments",
                 "Other"
             ]
         },
