@@ -360,6 +360,7 @@
                 "ChangeOfActivity",
                 "ChangeOfBusinessType",
                 "CapitalMovements",
+                "AddressStatus",
                 "Other"
             ]
         }
