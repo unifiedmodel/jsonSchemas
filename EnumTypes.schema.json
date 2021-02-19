@@ -180,7 +180,9 @@
                 "GrossMargin",
                 "EBITMargin",
                 "Employees",
-                "TotalLiabilities"
+                "TotalLiabilities",
+                "PaidUpCapital",
+                "CashAndOtherEquivalentLiquidAssets"
             ]
         },
         "enumDataTypes": {
