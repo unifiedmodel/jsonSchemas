@@ -328,7 +328,11 @@
                 "RetributionOfMembersOfTheBoardOfDirectors",
                 "EnviromentalInfo",
                 "Clients",
-                "Providers"
+                "Providers",
+                "OtherGeneralData",
+                "OtherPaymentBehaviourData",
+                "OtherFinancialData",
+                "OtherRelevantData"
             ]
         },
         "enumContractTypes": {
