@@ -11,49 +11,52 @@
             "title": "List of sections",
             "additionalItems": false,
             "items": {
-                "SectionName": {
-                    "$ref": "EnumTypes.schema.json#/properties/enumOtherSectionsSectionName",
-                    "title": "Section Name (enum)",
-                    "description": "Name of the section",
-                    "examples": [
-                        "OtherData",
-                        "Duration",
-                        "PostBalanceSheetEvents",
-                        "InfoRequestsBySector",
-                        "Branches",
-                        "RetributionOfMembersOfTheBoardOfDirectors",
-                        "EnviromentalInfo"
-                    ]
-                },
-                "TrSection": {
-                    "type": "string",
-                    "title": "Section Name (translateable)",
-                    "description": "Name of the section",
-                    "examples": [
-                        "Otros Datos",
-                        "Antigüedad",
-                        "Sectores que han consultado la entidad",
-                        "Delegaciones, Instalaciones, Locales y Establecimientos",
-                        "Retribuciones al Consejo de Administración",
-                        "Información Medioambiental"
-                    ]
-                },
-                "RecordsList": {
-                    "type": "array",
-                    "title": "List of records",
-                    "additionalItems": false,
-                    "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                            "DataList": {
-                                "type": "array",
-                                "title": "List of data",
-                                "description": "Any data relative to this section",
-                                "additionalItems": false,
-                                "items": {
-                                    "$ref": "DataTypes.schema.json#/definitions/OtherData",
-                                    "additionalProperties": false
+                "additionalProperties": false,
+                "properties": {
+                    "SectionName": {
+                        "$ref": "EnumTypes.schema.json#/properties/enumOtherSectionsSectionName",
+                        "title": "Section Name (enum)",
+                        "description": "Name of the section",
+                        "examples": [
+                            "OtherData",
+                            "Duration",
+                            "PostBalanceSheetEvents",
+                            "InfoRequestsBySector",
+                            "Branches",
+                            "RetributionOfMembersOfTheBoardOfDirectors",
+                            "EnviromentalInfo"
+                        ]
+                    },
+                    "TrSection": {
+                        "type": "string",
+                        "title": "Section Name (translateable)",
+                        "description": "Name of the section",
+                        "examples": [
+                            "Otros Datos",
+                            "Antigüedad",
+                            "Sectores que han consultado la entidad",
+                            "Delegaciones, Instalaciones, Locales y Establecimientos",
+                            "Retribuciones al Consejo de Administración",
+                            "Información Medioambiental"
+                        ]
+                    },
+                    "RecordsList": {
+                        "type": "array",
+                        "title": "List of records",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "DataList": {
+                                    "type": "array",
+                                    "title": "List of data",
+                                    "description": "Any data relative to this section",
+                                    "additionalItems": false,
+                                    "items": {
+                                        "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                                        "additionalProperties": false
+                                    }
                                 }
                             }
                         }
