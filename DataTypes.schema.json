@@ -247,6 +247,22 @@
                             }
                         }
                     }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "Datatype": {
+                                "const": "OtherData"
+                            }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "Value": {
+                                "$ref": "#/properties/OtherData"
+                            }
+                        }
+                    }
                 }
             ]
         }
@@ -682,6 +698,9 @@
                     "type": "string"
                 }
             }
+        },
+        "OtherData": {
+            "$ref": "#definitions/OtherData"
         }
     }
 }
