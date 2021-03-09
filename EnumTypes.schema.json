@@ -53,6 +53,8 @@
                 "Taxes",
                 "SocialSecurity",
                 "DisputedInvoices",
+                "OmittedTaxes",
+                "CoactiveCollection",
                 "Other"
             ]
         },
