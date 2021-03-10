@@ -55,6 +55,8 @@
                 "DisputedInvoices",
                 "OmittedTaxes",
                 "CoactiveCollection",
+                "DefaultedPayments",
+                "FinancialDebts",
                 "Other"
             ]
         },
