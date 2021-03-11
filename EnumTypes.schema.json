@@ -187,7 +187,7 @@
                 "Employees",
                 "TotalLiabilities",
                 "PaidUpCapital",
-                "CashAndOtherEquivalentLiquidAssets"
+                "CashAndOtherEquivalentLiquidAssets",
                 "OperatingIncomeBeforeNonRecurringAndFinancialActivities"
             ]
         },
