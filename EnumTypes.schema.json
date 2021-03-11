@@ -188,6 +188,7 @@
                 "TotalLiabilities",
                 "PaidUpCapital",
                 "CashAndOtherEquivalentLiquidAssets"
+                "OperatingIncomeBeforeNonRecurringAndFinancialActivities"
             ]
         },
         "enumDataTypes": {
