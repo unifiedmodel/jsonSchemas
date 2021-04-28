@@ -37,6 +37,7 @@
                 "BankruptcyInsolvencyRestructuring",
                 "JudicialAdministrative",
                 "DefaultedPayments",
+                "RestrictiveLists",
                 "Other"
             ]
         },
@@ -44,6 +45,7 @@
             "enum": [
                 "RAI",
                 "ASNEF",
+                "Judicial",
                 "Employment",
                 "Civil",
                 "PublicAdministrations",
@@ -57,6 +59,12 @@
                 "CoactiveCollection",
                 "DefaultedPayments",
                 "FinancialDebts",
+                "RestrictiveLists",
+                "Accountancy",
+                "Comptroller",
+                "Attorney",
+                "PensionDebts",
+                "DefaultedBankPayments",
                 "Other"
             ]
         },
@@ -215,7 +223,9 @@
                 "ByProduct",
                 "ByDefaultTypology",
                 "ByAgeing",
-                "ByDebtor"
+                "ByDebtor",
+                "ByYear",
+                "ByCourtType"
             ]
         },
         "enumBankingInformationSummaryType": {
