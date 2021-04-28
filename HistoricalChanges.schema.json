@@ -76,6 +76,16 @@
                         "$ref": "DataTypes.schema.json#/properties/Translation",
                         "title": "Help text",
                         "description": "Optional text explaining the meaning of the current event"
+                    },
+                    "OtherDataList": {
+                        "type": "array",
+                        "title": "List of Other Data",
+                        "description": "Any other data relative to this publication",
+                        "additionalItems": false,
+                        "items": {
+                            "$ref": "DataTypes.schema.json#/definitions/OtherData",
+                            "additionalProperties": false
+                        }
                     }
                 }
             }
