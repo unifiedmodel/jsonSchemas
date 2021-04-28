@@ -48,7 +48,7 @@
                 "EUR"
             ]
         },
-        "ScaleFactor": {
+        "DefaultScale": {
             "$ref": "EnumTypes.schema.json#/properties/enumScale",
             "title": "Default amount scale",
             "description": "Indicates the fallback scale value used for eacht Amount datatype. Auto = Units",
@@ -73,7 +73,7 @@
             "title": "Vendor Id",
             "description": "Internal code to locate the vendor of the data"
         },
-        "BusinessType": {
+        "ReportType": {
             "type": "string",
             "title": "Entity Type",
             "description": "Indicates the generic type of the entity, in case of distinguish between them to process and show the data",
