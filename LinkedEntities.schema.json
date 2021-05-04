@@ -108,6 +108,11 @@
                                                         "$ref": "DataTypes.schema.json#/properties/Translation",
                                                         "title": "Group Type (translateable)"
                                                     },
+                                                    "Year": {
+                                                        "type": "number",
+                                                        "title": "Publication Year",
+                                                        "description": "Year of the publication where the relation was published"
+                                                    },
                                                     "StartDate": {
                                                         "type": "string",
                                                         "format": "date",
