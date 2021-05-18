@@ -287,6 +287,10 @@
                 "LinkedByBoardMemberAndAddress",
                 "HasInItsBoardOfDirectors",
                 "BelongsToTheBoardOfDirectorsOf",
+                "Affiliated",
+                "Investee",
+                "MergedWith",
+                "ControllingCompany",
                 "Other"
             ]
         },
