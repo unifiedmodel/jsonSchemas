@@ -29,6 +29,11 @@
                                 "$ref": "DataTypes.schema.json#/properties/Translation",
                                 "title": "Summary Type (translatable)"
                             },
+                            "SummaryInfo":{
+                                "type": "string",
+                                "title": "Summary Info",
+                                "description": "Used in case of free text information about the relationships of the entity"
+                            },
                             "EntitiesList": {
                                 "type": "array",
                                 "title": "List of summaries of Linked Entities",
@@ -63,6 +68,7 @@
                                             "title": "Is Ultimate Parent?",
                                             "description": "Flags if the entity is the ultimate parent company in a corporate group"
                                         },
+                                        ""
                                         "LinkedEntitiesList": {
                                             "type": "array",
                                             "title": "List of summaries of Linked Entities",
