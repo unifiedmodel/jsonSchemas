@@ -68,7 +68,6 @@
                                             "title": "Is Ultimate Parent?",
                                             "description": "Flags if the entity is the ultimate parent company in a corporate group"
                                         },
-                                        ""
                                         "LinkedEntitiesList": {
                                             "type": "array",
                                             "title": "List of summaries of Linked Entities",
