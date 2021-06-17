@@ -38,7 +38,9 @@
                 "JudicialAdministrative",
                 "DefaultedPayments",
                 "RestrictiveLists",
-                "Other"
+                "Other",
+                "JudicialAdministrativeAsPlaintiff",
+                "BankruptcyInsolvencyRestructuringAsPlaintiff"
             ]
         },
         "enumPublicRecordsType": {
